@@ -1,35 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Scriptcdn Scripturls</h1>
+<!-- Main Content -->
+<div class="wrapper wrapper-content">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4><i class="fa fa-code"></i> Script URL List</h4> <p></p>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered table-striped table-hover">
 
-<table>
-  <thead>
-    <tr>
-      <th>Scrpturlname</th>
-      <th>Scrpturlphc</th>
-      <th>Scrpturltype</th>
-      <th>Scriptversion</th>
-      <th>Script</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+				<thead>
+					<tr>
+						<th>Script Name</th>
+						<th>Script URL</th>
+						<th>Script Type</th>
+						<th>Script Version</th>
+						<th></th>
+					</tr>
+				</thead>
 
-  <tbody>
-    <% @scriptcdn_scripturls.each do |scriptcdn_scripturl| %>
-      <tr>
-        <td><%= scriptcdn_scripturl.scrpturlname %></td>
-        <td><%= scriptcdn_scripturl.scrpturlphc %></td>
-        <td><%= scriptcdn_scripturl.scrpturltype %></td>
-        <td><%= scriptcdn_scripturl.scriptversion %></td>
-        <td><%= scriptcdn_scripturl.script %></td>
-        <td><%= link_to 'Show', scriptcdn_scripturl %></td>
-        <td><%= link_to 'Edit', edit_scriptcdn_scripturl_path(scriptcdn_scripturl) %></td>
-        <td><%= link_to 'Destroy', scriptcdn_scripturl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+				<tbody>
+					<% @scriptcdn_scripturls.each do |scriptcdn_scripturl| %>
+						<tr>
+							<td><%= scriptcdn_scripturl.scrpturlname %></td>
+							<td><%= scriptcdn_scripturl.scrpturlphc %></td>
+							<td><%= scriptcdn_scripturl.scrpturltype %></td>
+							<td><%= scriptcdn_scripturl.scriptversion %></td>
+							<td><div class="btn-group" role="group" aria-label="Script CDN">
+								<%= link_to 'Show', scriptcdn_script_scripturl_path(scriptcdn_scripturl.script, scriptcdn_scripturl), class: "btn btn-w-m btn-primary btn-xs btn-phc-custom" %>
+								<%= link_to 'Edit', edit_scriptcdn_script_scripturl_path(scriptcdn_scripturl.script, scriptcdn_scripturl), class: "btn btn-w-m btn-primary btn-xs btn-phc-custom" %>
+								<%= link_to 'Destroy', scriptcdn_script_scripturl_path(scriptcdn_scripturl.script, class: "btn btn-w-m btn-danger btn-xs btn-phc-custom", scriptcdn_scripturl), method: :delete, data: { confirm: 'Are you sure?' } %>
+							</div></td>
+						</tr>
+					<% end %>
+				</tbody>
 
-<br>
-
-<%= link_to 'New Scripturl', new_scriptcdn_scripturl_path %>
+			</table>
+			<%= link_to 'New Script URL', new_scriptcdn_script_scripturl_path, class: "btn btn-w-m btn-primary btn-phc-custom" %>
+		</div>
+	</div>
+</div>
