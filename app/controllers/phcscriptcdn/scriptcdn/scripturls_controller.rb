@@ -1,62 +1,88 @@
 require_dependency "phcscriptcdn/application_controller"
 
 module Phcscriptcdn
-  class Scriptcdn::ScripturlsController < ApplicationController
-    before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
+	class Scriptcdn::ScripturlsController < ApplicationController
+		# Filters and Security
+		layout "layouts/scriptcdn/scriptcdn_all"
+		before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
 
-    # GET /scriptcdn/scripturls
-    def index
-      @scriptcdn_scripturls = Scriptcdn::Scripturl.all
-    end
+		# Index for Scriptcdn_script URLs
+		def index
+			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
+			@scriptcdn_scripturls = scriptcdn_script.scripturls
+		end
 
-    # GET /scriptcdn/scripturls/1
-    def show
-    end
+		# Scriptcdn_script URL Details Page
+		def show
+			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
+			@scriptcdn_scripturl = scriptcdn_script.scripturls.find(params[:id])
+		end
 
-    # GET /scriptcdn/scripturls/new
-    def new
-      @scriptcdn_scripturl = Scriptcdn::Scripturl.new
-    end
+		# New Scriptcdn_script URL
+		def new
+			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
+			@scriptcdn_scripturl = scriptcdn_script.scripturls.build
+			respond_to do |format|
+				format.html # new.html.erb
+				format.xml  { render :xml => @scriptcdn_script }
+			end
+		end
 
-    # GET /scriptcdn/scripturls/1/edit
-    def edit
-    end
+		# Edit Scriptcdn_script URL
+		def edit
+			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
+			@scriptcdn_scripturl = scriptcdn_script.scripturls.find(params[:id])
+		end
 
-    # POST /scriptcdn/scripturls
-    def create
-      @scriptcdn_scripturl = Scriptcdn::Scripturl.new(scriptcdn_scripturl_params)
+		# POST Scriptcdn_script URL
+		def create
+			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
+			@scriptcdn_scripturl = @scriptcdn_script.scripturls.create(scriptcdn_scripturl_params)
+			respond_to do |format|
+			if @scriptcdn_scripturl.save
+				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Comment for Scriptcdn_script was Successfully Created.' }
+				format.json { render action: 'show', status: :created, location: @scriptcdn_scripturl }
+				else
+					format.html { render action: 'new' }
+					format.json { render json: @scriptcdn_scripturl.errors, status: :unprocessable_entity }
+				end
+			end
+		end
 
-      if @scriptcdn_scripturl.save
-        redirect_to @scriptcdn_scripturl, notice: 'Scripturl was successfully created.'
-      else
-        render :new
-      end
-    end
+		# PATCH/PUT Scriptcdn_script URL
+		def update
+			respond_to do |format|
+			if @scriptcdn_scripturl.update(scriptcdn_scripturl_params)
+				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Comment for Scriptcdn_script was Successfully Updated.' }
+				format.json { head :no_content }
+				else
+					format.html { render action: 'edit' }
+					format.json { render json: @scriptcdn_scripturl.errors, status: :unprocessable_entity }
+				end
+			end
+		end
 
-    # PATCH/PUT /scriptcdn/scripturls/1
-    def update
-      if @scriptcdn_scripturl.update(scriptcdn_scripturl_params)
-        redirect_to @scriptcdn_scripturl, notice: 'Scripturl was successfully updated.'
-      else
-        render :edit
-      end
-    end
+		# Delete Scriptcdn_script URL
+		def destroy
+			@scriptcdn_script = Scriptcdn_script.find(params[:script_id])
+			@scriptcdn_scripturl = @scriptcdn_script.scripturls.find(params[:id])
+			@scriptcdn_scripturl.destroy
+			respond_to do |format|
+				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Comment for Scriptcdn_script was Successfully Deleted.'  }
+				format.json { head :no_content }
+			end
+		end
 
-    # DELETE /scriptcdn/scripturls/1
-    def destroy
-      @scriptcdn_scripturl.destroy
-      redirect_to scriptcdn_scripturls_url, notice: 'Scripturl was successfully destroyed.'
-    end
+		private
+		
+		# Callback
+		def set_scriptcdn_scripturl
+			@scriptcdn_scripturl = Scriptcdn::Script.find(params[:id])
+		end
 
-    private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_scriptcdn_scripturl
-        @scriptcdn_scripturl = Scriptcdn::Scripturl.find(params[:id])
-      end
-
-      # Only allow a trusted parameter "white list" through.
-      def scriptcdn_scripturl_params
-        params.require(:scriptcdn_scripturl).permit(:scrpturlname, :scrpturlphc, :scrpturltype, :scriptversion_id, :script_id)
-      end
-  end
+		# Whitelist
+		def scriptcdn_scripturl_params
+			params.require(:scriptcdn_scripturl).permit(:scrpturlname, :scrpturlphc, :scrpturltype, :scriptversion_id)
+		end
+	end
 end

@@ -1,62 +1,67 @@
 require_dependency "phcscriptcdn/application_controller"
 
 module Phcscriptcdn
-  class Scriptcdn::ScriptsController < ApplicationController
-    before_action :set_scriptcdn_script, only: [:show, :edit, :update, :destroy]
+	class Scriptcdn::ScriptsController < ApplicationController
 
-    # GET /scriptcdn/scripts
-    def index
-      @scriptcdn_scripts = Scriptcdn::Script.all
-    end
+		# Filters and Security
+		layout "layouts/scriptcdn/scriptcdn_all"
+		before_action :set_scriptcdn_script, only: [:show, :edit, :update, :destroy]
 
-    # GET /scriptcdn/scripts/1
-    def show
-    end
+		# ScriptCDN Index
+		def index
+			@scriptcdn_scripts = Scriptcdn::Script.all
+		end
 
-    # GET /scriptcdn/scripts/new
-    def new
-      @scriptcdn_script = Scriptcdn::Script.new
-    end
+		# Detailed Script CDN Profile
+		def show
+		end
 
-    # GET /scriptcdn/scripts/1/edit
-    def edit
-    end
+		# New Script for CDN
+		def new
+			@scriptcdn_script = Scriptcdn::Script.new
+		end
 
-    # POST /scriptcdn/scripts
-    def create
-      @scriptcdn_script = Scriptcdn::Script.new(scriptcdn_script_params)
+		# Edit Script
+		def edit
+		end
 
-      if @scriptcdn_script.save
-        redirect_to @scriptcdn_script, notice: 'Script was successfully created.'
-      else
-        render :new
-      end
-    end
+		# POST Script
+		def create
+			@scriptcdn_script = Scriptcdn::Script.new(scriptcdn_script_params)
 
-    # PATCH/PUT /scriptcdn/scripts/1
-    def update
-      if @scriptcdn_script.update(scriptcdn_script_params)
-        redirect_to @scriptcdn_script, notice: 'Script was successfully updated.'
-      else
-        render :edit
-      end
-    end
+			if @scriptcdn_script.save
+				redirect_to scriptcdn_scripts_path, notice: 'Script was successfully created.'
+			else
+				render :new
+			end
+		end
 
-    # DELETE /scriptcdn/scripts/1
-    def destroy
-      @scriptcdn_script.destroy
-      redirect_to scriptcdn_scripts_url, notice: 'Script was successfully destroyed.'
-    end
+		# PATCH/PUT Script
+		def update
+			if @scriptcdn_script.update(scriptcdn_script_params)
+				redirect_to scriptcdn_scripts_path, notice: 'Script was successfully updated.'
+			else
+				render :edit
+			end
+		end
 
-    private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_scriptcdn_script
-        @scriptcdn_script = Scriptcdn::Script.find(params[:id])
-      end
+		# DELETE Script from CDN
+		def destroy
+			@scriptcdn_script.destroy
+			redirect_to scriptcdn_scripts_path, notice: 'Script was successfully destroyed.'
+		end
 
-      # Only allow a trusted parameter "white list" through.
-      def scriptcdn_script_params
-        params.require(:scriptcdn_script).permit(:scrptname, :scrptdescription, :scriptversion_id)
-      end
-  end
+		private
+
+		# Callbacks
+		def set_scriptcdn_script
+			@scriptcdn_script = Scriptcdn::Script.find(params[:id])
+		end
+
+		# Whitelist
+		def scriptcdn_script_params
+			params.require(:scriptcdn_script).permit(:scrptname, :scrptdescription, :scriptversion_id)
+		end
+
+	end
 end
