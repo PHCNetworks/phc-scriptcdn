@@ -1,27 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Scriptcdn Scriptversions</h1>
+<!-- Main Content -->
+<div class="wrapper wrapper-content">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<i class="fa fa-code"></i> Script Version List
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered table-striped table-hover">
 
-<table>
-  <thead>
-    <tr>
-      <th>Scrptversion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+				<thead>
+					<tr>
+						<th>Script Version</th>
+						<th></th>
+					</tr>
+				</thead>
 
-  <tbody>
-    <% @scriptcdn_scriptversions.each do |scriptcdn_scriptversion| %>
-      <tr>
-        <td><%= scriptcdn_scriptversion.scrptversion %></td>
-        <td><%= link_to 'Show', scriptcdn_scriptversion %></td>
-        <td><%= link_to 'Edit', edit_scriptcdn_scriptversion_path(scriptcdn_scriptversion) %></td>
-        <td><%= link_to 'Destroy', scriptcdn_scriptversion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+				<tbody>
+					<% @scriptcdn_scriptversions.each do |scriptcdn_scriptversion| %>
+						<tr>
+							<td><%= scriptcdn_scriptversion.scrptversion %></td>
+							<td>
+								<%= link_to 'Edit', edit_scriptcdn_scriptversion_path(scriptcdn_scriptversion), class: "btn btn-w-m btn-primary btn-xs btn-phc-custom" %>
+								<%= link_to 'Destroy', scriptcdn_scriptversion, class: "btn btn-w-m btn-primary btn-phc-custom btn-xs btn-phc-custom",  method: :delete, data: { confirm: 'Are you sure?' } %>
+							</td>
+						</tr>
+					<% end %>
+				</tbody>
 
-<br>
-
-<%= link_to 'New Scriptversion', new_scriptcdn_scriptversion_path %>
+			</table>
+			<%= link_to 'Add a New Version Option', new_scriptcdn_scriptversion_path, class: "btn btn-w-m btn-primary btn-phc-custom" %>
+		</div>
+	</div>
+</div>
