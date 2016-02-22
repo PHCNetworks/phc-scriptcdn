@@ -1,0 +1,37 @@
+<%= form_for(@scriptcdn_scripturl) do |f| %>
+  <% if @scriptcdn_scripturl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scriptcdn_scripturl.errors.count, "error") %> prohibited this scriptcdn_scripturl from being saved:</h2>
+
+      <ul>
+      <% @scriptcdn_scripturl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scrpturlname %><br>
+    <%= f.text_field :scrpturlname %>
+  </div>
+  <div class="field">
+    <%= f.label :scrpturlphc %><br>
+    <%= f.text_field :scrpturlphc %>
+  </div>
+  <div class="field">
+    <%= f.label :scrpturltype %><br>
+    <%= f.text_field :scrpturltype %>
+  </div>
+  <div class="field">
+    <%= f.label :scriptversion_id %><br>
+    <%= f.text_field :scriptversion_id %>
+  </div>
+  <div class="field">
+    <%= f.label :script_id %><br>
+    <%= f.text_field :script_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

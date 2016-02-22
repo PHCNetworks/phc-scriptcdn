@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scriptcdn Scriptversions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scrptversion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scriptcdn_scriptversions.each do |scriptcdn_scriptversion| %>
+      <tr>
+        <td><%= scriptcdn_scriptversion.scrptversion %></td>
+        <td><%= link_to 'Show', scriptcdn_scriptversion %></td>
+        <td><%= link_to 'Edit', edit_scriptcdn_scriptversion_path(scriptcdn_scriptversion) %></td>
+        <td><%= link_to 'Destroy', scriptcdn_scriptversion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scriptversion', new_scriptcdn_scriptversion_path %>
