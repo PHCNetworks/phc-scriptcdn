@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Phcscriptcdn</title>
-  <%= stylesheet_link_tag    "phcscriptcdn/application", media: "all" %>
-  <%= javascript_include_tag "phcscriptcdn/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+		<title>PHCNetworks - Online Applications &amp; Digital Services</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body class="backend">
+		<div class="wrapper wrapper-content">
+			<%= yield %>
+		</div>
+		<div class="footer">
+			<%= render 'layouts/template-backend/footer' %>
+		</div>
+	</body>
 </html>
