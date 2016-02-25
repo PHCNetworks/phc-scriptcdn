@@ -1,12 +1,13 @@
 [![security](https://hakiri.io/github/PHCNetworks/phc-scrtipcdn/master.svg)](https://hakiri.io/github/PHCNetworks/phc-scrtipcdn/master)
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn)
-
+[![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
+  
 ### PHC-ScriptCDN (Script Listing Engine) Documentation
 PHC-ScriptCDN is similar to PHCNetworks own script CDN listing system.
 
 #### Step 1 - Add PHCScriptCDN to your gemfile  
 
-	gem 'phcscriptcdn', '~> 0.1.5'
+	gem 'phcscriptcdn', '~> 0.5.5'
 	bundle exec install  
   
 #### Step 2 - Add PHCScriptCDN database migration files  
