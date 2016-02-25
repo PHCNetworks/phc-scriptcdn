@@ -1,6 +1,6 @@
 require 'rails/generators/base'
 
-module phcscriptcdn
+module Phcscriptcdn
 
 	module Generators
 
