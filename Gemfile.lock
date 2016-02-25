@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (0.2.0)
+    phcscriptcdn (0.2.1)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       font-awesome-rails (~> 4.5)
       jquery-rails (~> 4.0, >= 4.0.5)
