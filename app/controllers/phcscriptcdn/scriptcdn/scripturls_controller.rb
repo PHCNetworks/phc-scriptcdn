@@ -3,7 +3,6 @@ require_dependency "phcscriptcdn/application_controller"
 module Phcscriptcdn
 	class Scriptcdn::ScripturlsController < ApplicationController
 		# Filters and Security
-		layout "layouts/scriptcdn/scriptcdn_all"
 		before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
 
 		# Index for Scriptcdn_script URLs
