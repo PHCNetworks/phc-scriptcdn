@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 	s.email       = ["bradley.j.potts@gmail.com"]
 	s.homepage    = "http://www.phcnetworks.net"
 	s.summary     = "ScriptCDN Listing Engine."
-	s.description = "PHCNetworks uses a similar engine to list their scripts off their cdn."
+	s.description = "PHCNetworks uses a similar engine to list their scripts on their own cdn."
 	s.license     = "MIT"
 
 	s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
