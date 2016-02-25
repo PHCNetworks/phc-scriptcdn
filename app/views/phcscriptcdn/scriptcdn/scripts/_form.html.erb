@@ -21,7 +21,7 @@
 	</div>
 	<div class="form-group">
 		<label><%= f.label :scriptversion_id, "Script Version" %></label>
-		<%= collection_select(:scriptcdn_script, :scriptversion_id, Scriptcdn::Scriptversion.order('scrptversion'), :id, :scrptversion, {}, {class: "form-control form-control-sm"}) %>
+		<%= collection_select(:scriptcdn_script, :scriptversion_id, Phcscriptcdn::Scriptcdn::Scriptversion.order('scrptversion'), :id, :scrptversion, {}, {class: "form-control form-control-sm"}) %>
 	</div>
 
 	<div class="actions">
