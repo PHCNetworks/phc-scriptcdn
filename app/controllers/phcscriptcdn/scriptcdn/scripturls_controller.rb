@@ -38,12 +38,12 @@ module Phcscriptcdn
 			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
 			@scriptcdn_scripturl = @scriptcdn_script.scripturls.create(scriptcdn_scripturl_params)
 			respond_to do |format|
-			if @scriptcdn_scripturl.save
-				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Comment for Scriptcdn_script was Successfully Created.' }
-				format.json { render action: 'show', status: :created, location: @scriptcdn_scripturl }
-				else
-					format.html { render action: 'new' }
-					format.json { render json: @scriptcdn_scripturl.errors, status: :unprocessable_entity }
+				if @scriptcdn_scripturl.save
+					format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Script URL was Successfully Created.' }
+					format.json { render action: 'show', status: :created, location: @scriptcdn_scripturl }
+					else
+						format.html { render action: 'new' }
+						format.json { render json: @scriptcdn_scripturl.errors, status: :unprocessable_entity }
 				end
 			end
 		end
@@ -51,12 +51,12 @@ module Phcscriptcdn
 		# PATCH/PUT Scriptcdn_script URL
 		def update
 			respond_to do |format|
-			if @scriptcdn_scripturl.update(scriptcdn_scripturl_params)
-				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Comment for Scriptcdn_script was Successfully Updated.' }
-				format.json { head :no_content }
-				else
-					format.html { render action: 'edit' }
-					format.json { render json: @scriptcdn_scripturl.errors, status: :unprocessable_entity }
+				if @scriptcdn_scripturl.update(scriptcdn_scripturl_params)
+					format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Script URL was Successfully Updated.' }
+					format.json { head :no_content }
+					else
+						format.html { render action: 'edit' }
+						format.json { render json: @scriptcdn_scripturl.errors, status: :unprocessable_entity }
 				end
 			end
 		end
@@ -64,10 +64,10 @@ module Phcscriptcdn
 		# Delete Scriptcdn_script URL
 		def destroy
 			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = @scriptcdn_script.scripturls.find(params[:id])
+			@scriptcdn_scripturl = @scriptcdn_script.scriptcdn_scripturls.find(params[:id])
 			@scriptcdn_scripturl.destroy
 			respond_to do |format|
-				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Comment for Scriptcdn_script was Successfully Deleted.'  }
+				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Script URL was Successfully Deleted.'  }
 				format.json { head :no_content }
 			end
 		end
