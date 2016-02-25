@@ -64,7 +64,7 @@ module Phcscriptcdn
 		# Delete Scriptcdn_script URL
 		def destroy
 			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = @scriptcdn_script.scriptcdn_scripturls.find(params[:id])
+			@scriptcdn_scripturl = @scriptcdn_script.scripturls.find(params[:id])
 			@scriptcdn_scripturl.destroy
 			respond_to do |format|
 				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Script URL was Successfully Deleted.'  }
