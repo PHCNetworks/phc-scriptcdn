@@ -29,7 +29,7 @@ module Phcscriptcdn
 			@scriptcdn_script = Scriptcdn::Script.new(scriptcdn_script_params)
 
 			if @scriptcdn_script.save
-				redirect_to scriptcdn_scripts_path, notice: 'Script was successfully created.'
+				redirect_to scriptcdn_scripts_path, notice: 'Script listing was successfully created.'
 			else
 				render :new
 			end
@@ -38,7 +38,7 @@ module Phcscriptcdn
 		# PATCH/PUT Script
 		def update
 			if @scriptcdn_script.update(scriptcdn_script_params)
-				redirect_to scriptcdn_scripts_path, notice: 'Script was successfully updated.'
+				redirect_to scriptcdn_scripts_path, notice: 'Script listing was successfully updated.'
 			else
 				render :edit
 			end
@@ -47,7 +47,7 @@ module Phcscriptcdn
 		# DELETE Script from CDN
 		def destroy
 			@scriptcdn_script.destroy
-			redirect_to scriptcdn_scripts_path, notice: 'Script was successfully destroyed.'
+			redirect_to scriptcdn_scripts_path, notice: 'Script listing & Script URLs was successfully destroyed.'
 		end
 
 		private
