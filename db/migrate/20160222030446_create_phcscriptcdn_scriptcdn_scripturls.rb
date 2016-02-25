@@ -6,7 +6,7 @@ class CreatePhcscriptcdnScriptcdnScripturls < ActiveRecord::Migration
 			t.string :scrpturlphc
 			t.string :scrpturltype
 			t.references :scriptversion, index: true
-			t.references :script
+			t.references :script, index: true
 
 			t.timestamps null: false
 

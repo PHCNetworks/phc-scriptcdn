@@ -76,7 +76,7 @@ module Phcscriptcdn
 		
 		# Callback
 		def set_scriptcdn_scripturl
-			@scriptcdn_scripturl = Scriptcdn::Script.find(params[:id])
+			@scriptcdn_scripturl = Scriptcdn::Scripturl.find(params[:id])
 		end
 
 		# Whitelist
