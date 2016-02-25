@@ -38,5 +38,4 @@ Gem::Specification.new do |s|
 	s.add_development_dependency 'faker', '~> 1.6'
 	s.add_development_dependency 'selenium-webdriver', '~> 2.52'
 
-
 end
