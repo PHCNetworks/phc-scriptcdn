@@ -63,7 +63,7 @@ module Phcscriptcdn
 
 		# Delete Scriptcdn_script URL
 		def destroy
-			@scriptcdn_script = Scriptcdn_script.find(params[:script_id])
+			@scriptcdn_script = Scriptcdn::Scriptcdn_script.find(params[:script_id])
 			@scriptcdn_scripturl = @scriptcdn_script.scripturls.find(params[:id])
 			@scriptcdn_scripturl.destroy
 			respond_to do |format|
