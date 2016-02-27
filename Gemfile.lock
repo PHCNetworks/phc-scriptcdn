@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (0.5.5)
+    phcscriptcdn (0.5.6)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       font-awesome-rails (~> 4.5)
       jquery-rails (~> 4.0, >= 4.0.5)
@@ -64,7 +64,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
-    concurrent-ruby (1.0.0)
+    concurrent-ruby (1.0.1)
     database_cleaner (1.5.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)

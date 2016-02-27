@@ -13,9 +13,9 @@ Gem::Specification.new do |s|
 	s.homepage    = "http://www.phcnetworks.net"
 	s.summary     = "ScriptCDN Listing Engine."
 	s.description = "PHCNetworks uses a similar engine to list their scripts on their own cdn."
-	s.license     = "MIT"
+	s.license     = "GPL-3.0"
 
-	s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+	s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
 	# Main Dependencies
 	s.add_dependency 'pg', '~> 0.18.4'
