@@ -7,7 +7,7 @@ PHC-ScriptCDN is similar to PHCNetworks own script CDN listing system.
 
 #### Step 1 - Add PHCScriptCDN to your gemfile  
 
-	gem 'phcscriptcdn', '~> 0.5.5'
+	gem 'phcscriptcdn', '~> 0.5.6'
 	bundle exec install  
   
 #### Step 2 - Add PHCScriptCDN database migration files  
