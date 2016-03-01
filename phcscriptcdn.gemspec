@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
 	# Main Dependencies
 	s.add_dependency 'pg', '~> 0.18.4'
-	s.add_dependency 'rails', '~> 4.2', '>= 4.2.5.1'
+	s.add_dependency 'rails', '~> 4.2', '>= 4.2.5.2'
 
 	# UI & Frontend Elements
 	s.add_dependency 'jquery-rails', '~> 4.0', '>= 4.0.5'
