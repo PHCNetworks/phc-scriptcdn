@@ -1,12 +1,12 @@
-# Load UI Dependecies
-require 'jquery-rails'
-require 'sass-rails'
-require 'bootstrap-sass'
-require 'font-awesome-rails'
-
 module Phcscriptcdn
 	class Engine < ::Rails::Engine
-		
+				
+		# Load UI Dependecies
+		require 'jquery-rails'
+		require 'sass-rails'
+		require 'bootstrap-sass'
+		require 'font-awesome-rails'
+
 		# Give PHCScriptCDN Own Namespace
 		isolate_namespace Phcscriptcdn
 
