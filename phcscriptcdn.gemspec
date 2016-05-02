@@ -4,40 +4,47 @@ $:.push File.expand_path("../lib", __FILE__)
 require "phcscriptcdn/version"
 
 # Gem and Engine Specifications
-Gem::Specification.new do |s|
+Gem::Specification.new do |spec|
 
-	s.name        = "phcscriptcdn"
-	s.version     = Phcscriptcdn::VERSION
-	s.authors     = ["BradPotts"]
-	s.email       = ["bradley.j.potts@gmail.com"]
-	s.homepage    = "http://www.phcnetworks.net"
-	s.summary     = "ScriptCDN Listing Engine."
-	s.description = "PHCNetworks uses a similar engine to list their scripts on their own cdn."
-	s.license     = "GPL-3.0"
+	spec.name        = "phcscriptcdn"
+	spec.version     = Phcscriptcdn::VERSION
+	spec.authors     = ["BradPotts"]
+	spec.email       = ["bradley.j.potts@gmail.com"]
+	spec.homepage    = "https://www.phcnetworks.net/content-delivery-networks-scripts"
+	spec.summary     = "ScriptCDN Listing Engine."
+	spec.description = "PHC ScriptCDN is a Script CDN listing engine for ruby on rails apps."
+	spec.license     = "GPL-3.0"
 
-	s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
+	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
 	# Main Dependencies
-	s.add_dependency 'pg', '~> 0.18.4'
-	s.add_dependency 'rails', '~> 4.2', '>= 4.2.5.2'
+	spec.add_dependency 'rails', '~> 4.2', '>= 4.2.6'
+	spec.add_dependency 'phcnotifi', '~> 2.6', '>= 2.6.8'
+	spec.add_dependency 'phctitler', '~> 1.8', '>= 1.8.8'
 
 	# UI & Frontend Elements
-	s.add_dependency 'jquery-rails', '~> 4.0', '>= 4.0.5'
-	s.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-	s.add_dependency 'font-awesome-rails', '~> 4.5'
-	s.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
-	s.add_dependency 'phcnotifi'
+	spec.add_dependency 'jquery-rails', '~> 4.1', '>= 4.1.1'
+	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+	spec.add_dependency 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'
+	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
+	spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
-	
+	# API and Rabl
+	spec.add_dependency 'oj', '~> 2.15'
+	spec.add_dependency 'rabl', '~> 0.12.0'
+
 	# Development & Testing Dependencies
-	s.add_development_dependency 'sqlite3', '~> 1.3'
-	s.add_development_dependency 'database_cleaner', '~> 1.5'
+	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
+	spec.add_development_dependency 'database_cleaner', '~> 1.5', '>= 1.5.1'
 
-	s.add_development_dependency 'factory_girl_rails', '~> 4.4', '>= 4.4.1'
-	s.add_development_dependency 'rspec-rails', '~> 3.4'
-	s.add_development_dependency 'capybara', '~> 2.6'
+	spec.add_development_dependency 'factory_girl_rails', '~> 4.7'
+	spec.add_development_dependency 'rspec-rails', '~> 3.4', '>= 3.4.2'
+	spec.add_development_dependency 'capybara', '~> 2.7'
 
-	s.add_development_dependency 'faker', '~> 1.6'
-	s.add_development_dependency 'selenium-webdriver', '~> 2.52'
+	spec.add_development_dependency 'better_errors', '~> 2.1', '>= 2.1.1'
+	spec.add_development_dependency 'binding_of_caller', '~> 0.7.2'
+
+	spec.add_development_dependency 'faker', '~> 1.6', '>= 1.6.3'
+	spec.add_development_dependency 'selenium-webdriver', '~> 2.53'
 
 end
