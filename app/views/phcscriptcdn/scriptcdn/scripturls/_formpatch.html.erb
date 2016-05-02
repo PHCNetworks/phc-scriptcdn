@@ -1,15 +1,6 @@
-<%= form_for([@scriptcdn_scripturl.script, @scriptcdn_scripturl], url: scriptcdn_script_scripturl_path, method: :patch) do |f| %>
+<%= form_for([@scriptcdn_scripturl.script, @scriptcdn_scripturl], url: scriptcdn_scriptversion_scripturl_path, method: :patch) do |f| %>
 
-	<% if @scriptcdn_scripturl.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@scriptcdn_scripturl.errors.count, "error") %> prohibited this scriptcdn_scripturl from being saved:</h2>
-			<ul>
-				<% @scriptcdn_scripturl.errors.full_messages.each do |message| %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
+	<%= render 'phcnotifi/validations', :object => @scriptcdn_scripturl %>
 
 	<div class="field">
 		<label><%= f.label :scrpturlname, "Script Name" %></label>

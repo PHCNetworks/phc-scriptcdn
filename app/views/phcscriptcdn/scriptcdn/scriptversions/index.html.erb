@@ -11,7 +11,8 @@
 
 				<thead>
 					<tr>
-						<th>Script Version</th>
+						<th>Script Version Packages</th>
+						<th></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -19,6 +20,7 @@
 				<tbody>
 					<% @scriptcdn_scriptversions.each do |scriptcdn_scriptversion| %>
 						<tr>
+							<td><%= scriptcdn_scriptversion.scrptversionpakname %></td>
 							<td><%= scriptcdn_scriptversion.scrptversion %></td>
 							<td>
 								<%= link_to 'Edit', edit_scriptcdn_scriptversion_path(scriptcdn_scriptversion), class: "btn btn-w-m btn-primary btn-xs btn-phc-custom" %>

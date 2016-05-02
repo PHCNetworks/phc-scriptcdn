@@ -1,19 +1,14 @@
 <%= form_for(@scriptcdn_scriptversion) do |f| %>
 
-	<% if @scriptcdn_scriptversion.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@scriptcdn_scriptversion.errors.count, "error") %> prohibited this scriptcdn_scriptversion from being saved:</h2>
-
-			<ul>
-				<% @scriptcdn_scriptversion.errors.full_messages.each do |message| %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
+	<%= render 'phcnotifi/validations', :object => @example_object %>
 
 	<div class="form-group">
-		<label><%= f.label :scrptversion, "Version" %></label>
+		<label><%= f.label :scrptversionpakname, "Version Pak Name" %></label>
+		<%= f.text_field :scrptversionpakname %>
+	</div>
+
+	<div class="form-group">
+		<label><%= f.label :scrptversion, "Script Versions" %></label>
 		<%= f.text_field :scrptversion %>
 	</div>
 
