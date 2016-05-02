@@ -7,20 +7,20 @@ module Phcscriptcdn
 
 		# Index for Scriptcdn_script URLs
 		def index
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturls = scriptcdn_script.scripturls
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scripturls = scriptcdn_scriptversion.scripturls
 		end
 
 		# Scriptcdn_script URL Details Page
 		def show
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = scriptcdn_script.scripturls.find(params[:id])
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scripturl = scriptcdn_scriptversion.scripturls.find(params[:id])
 		end
 
 		# New Scriptcdn_script URL
 		def new
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = scriptcdn_script.scripturls.build
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scripturl = scriptcdn_scriptversion.scripturls.build
 			respond_to do |format|
 				format.html # new.html.erb
 				format.xml  { render :xml => @scriptcdn_script }
@@ -29,14 +29,14 @@ module Phcscriptcdn
 
 		# Edit Scriptcdn_script URL
 		def edit
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = scriptcdn_script.scripturls.find(params[:id])
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scripturl = scriptcdn_scriptversion.scripturls.find(params[:id])
 		end
 
 		# POST Scriptcdn_script URL
 		def create
-			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = @scriptcdn_script.scripturls.create(scriptcdn_scripturl_params)
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scripturl = @scriptcdn_scriptversion.scripturls.create(scriptcdn_scripturl_params)
 			respond_to do |format|
 				if @scriptcdn_scripturl.save
 					format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Script URL was Successfully Created.' }
@@ -63,8 +63,8 @@ module Phcscriptcdn
 
 		# Delete Scriptcdn_script URL
 		def destroy
-			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scripturl = @scriptcdn_script.scripturls.find(params[:id])
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scripturl = @scriptcdn_scriptversion.scripturls.find(params[:id])
 			@scriptcdn_scripturl.destroy
 			respond_to do |format|
 				format.html { redirect_to scriptcdn_script_scripturls_path, notice: 'Script URL was Successfully Deleted.'  }

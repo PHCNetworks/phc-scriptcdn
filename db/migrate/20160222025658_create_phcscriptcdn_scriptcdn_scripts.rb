@@ -4,7 +4,6 @@ class CreatePhcscriptcdnScriptcdnScripts < ActiveRecord::Migration
 
 			t.string :scrptname
 			t.text :scrptdescription
-			t.references :scriptversion, index: true
 
 			t.timestamps null: false
 
