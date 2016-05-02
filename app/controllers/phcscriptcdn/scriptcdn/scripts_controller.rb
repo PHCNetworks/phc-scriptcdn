@@ -4,7 +4,7 @@ module Phcscriptcdn
 	class Scriptcdn::ScriptsController < ApplicationController
 
 		# Filters and Security
-		before_action :set_scriptcdn_script, only: [:show, :edit, :update, :destroy]
+		before_action :set_scriptcdn_scriptversion, only: [:show, :edit, :update, :destroy]
 
 		# ScriptCDN Index
 		def index

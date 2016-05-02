@@ -4,85 +4,58 @@ module Phcscriptcdn
 	class Scriptcdn::ScriptversionsController < ApplicationController
 
 		# Filters and Security
-		before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
+		before_action :set_scriptcdn_scriptversion, only: [:edit, :update, :destroy]
 
-		# Index for Scriptcdn_script URLs
+		# Script Version Index
 		def index
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scriptversions = scriptcdn_script.scriptversions
+			@scriptcdn_scriptversions = Scriptcdn::Scriptversion.all
 		end
 
-		# Scriptcdn_script URL Details Page
-		def show
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scriptversion = scriptcdn_script.scriptversions.find(params[:id])
-		end
-
-		# New Scriptcdn_script URL
+		# New Script Version for CDN
 		def new
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scriptversion = scriptcdn_script.scriptversions.build
-			respond_to do |format|
-				format.html # new.html.erb
-				format.xml  { render :xml => @scriptcdn_script }
-			end
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.new
 		end
 
-		# Edit Scriptcdn_script URL
+		# Edit Script Version
 		def edit
-			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scriptversion = scriptcdn_script.scriptversions.find(params[:id])
 		end
 
-		# POST Scriptcdn_script URL
+		# POST Script Version
 		def create
-			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scriptversion = @scriptcdn_script.scriptversions.create(scriptcdn_scripturl_params)
-			respond_to do |format|
-				if @scriptcdn_scriptversion.save
-					format.html { redirect_to scriptcdn_script_scriptversions_path, notice: 'Script URL was Successfully Created.' }
-					format.json { render action: 'show', status: :created, location: @scriptcdn_scriptversion }
-					else
-						format.html { render action: 'new' }
-						format.json { render json: @scriptcdn_scriptversion.errors, status: :unprocessable_entity }
-				end
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.new(scriptcdn_scriptversion_params)
+
+			if @scriptcdn_scriptversion.save
+				redirect_to scriptcdn_scriptversions_path, notice: 'Script version was successfully created.'
+			else
+				render :new
 			end
 		end
 
-		# PATCH/PUT Scriptcdn_script URL
+		# PATCH/PUT Script Version
 		def update
-			respond_to do |format|
-				if @scriptcdn_scriptversion.update(scriptcdn_scripturl_params)
-					format.html { redirect_to scriptcdn_script_scriptversions_path, notice: 'Script URL was Successfully Updated.' }
-					format.json { head :no_content }
-					else
-						format.html { render action: 'edit' }
-						format.json { render json: @scriptcdn_scriptversion.errors, status: :unprocessable_entity }
-				end
+			if @scriptcdn_scriptversion.update(scriptcdn_scriptversion_params)
+				redirect_to scriptcdn_scriptversions_path, notice: 'Script version was successfully updated.'
+			else
+				render :edit
 			end
 		end
 
-		# Delete Scriptcdn_script URL
+		# DELETE Script Version
 		def destroy
-			@scriptcdn_script = Scriptcdn::Script.find(params[:script_id])
-			@scriptcdn_scriptversion = @scriptcdn_script.scriptversions.find(params[:id])
 			@scriptcdn_scriptversion.destroy
-			respond_to do |format|
-				format.html { redirect_to scriptcdn_script_scriptversions_path, notice: 'Script URL was Successfully Deleted.'  }
-				format.json { head :no_content }
-			end
+			redirect_to scriptcdn_scriptversions_path, notice: 'Script version was successfully destroyed.'
 		end
 
 		private
 		
-		# Callback
-		def set_scriptcdn_scripturl
-			@scriptcdn_scriptversion = Scriptcdn::Scripturl.find(params[:id])
+		# Callbacks
+		def set_scriptcdn_scriptversion
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:id])
 		end
 
 		# Whitelist
-		def scriptcdn_scripturl_params
-			params.require(:scriptcdn_scriptversion).permit(:scrpturlname, :scrpturlphc, :scrpturltype, :scriptversion_id, :script_id)
+		def scriptcdn_scriptversion_params
+			params.require(:scriptcdn_scriptversion).permit(:scrptversion, :scrptversionpakname)
 		end
 
 	end
