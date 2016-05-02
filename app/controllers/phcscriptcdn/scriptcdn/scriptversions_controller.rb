@@ -3,6 +3,9 @@ require_dependency "phcscriptcdn/application_controller"
 module Phcscriptcdn
 	class Scriptcdn::ScriptversionsController < ApplicationController
 
+		# Filters and Security
+		before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
+
 		# Index for Scriptcdn_script URLs
 		def index
 			scriptcdn_script = Scriptcdn::Script.find(params[:script_id])

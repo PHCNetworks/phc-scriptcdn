@@ -7,6 +7,10 @@ module Phcscriptcdn
 		require 'bootstrap-sass'
 		require 'font-awesome-rails'
 
+		# PHCEngines
+		require 'phcnotifi'
+		require 'phctitler'
+
 		# Give PHCScriptCDN Own Namespace
 		isolate_namespace Phcscriptcdn
 
