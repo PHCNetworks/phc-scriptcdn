@@ -12,15 +12,15 @@
 	<% end %>
 
 	<div class="form-group">
-		<label><%= f.label :scrptname, "Script Name" %></label>
+		<%= f.label :scrptname, "Script Name" %>
 		<%= f.text_field :scrptname, class: "form-control" %>
 	</div>
 	<div class="form-group">
-		<label><%= f.label :scrptdescription, "Script Description" %></label>
+		<%= f.label :scrptdescription, "Script Description" %>
 		<%= f.text_area :scrptdescription, class: "form-control" %>
 	</div>
 	<div class="form-group">
-		<label><%= f.label :scriptversion_id, "Script Version" %></label>
+		<%= f.label :scriptversion_id, "Script Version" %>
 		<%= collection_select(:scriptcdn_script, :scriptversion_id, Phcscriptcdn::Scriptcdn::Scriptversion.order('scrptversion'), :id, :scrptversion, {}, {class: "form-control form-control-sm"}) %>
 	</div>
 
