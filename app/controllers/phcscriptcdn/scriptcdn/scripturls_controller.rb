@@ -7,19 +7,19 @@ module Phcscriptcdn
 
 		# Index for Scriptcdn_script URLs
 		def index
-			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:scriptversion_id])
 			@scriptcdn_scripturls = scriptcdn_scriptversion.scripturls
 		end
 
 		# Scriptcdn_script URL Details Page
 		def show
-			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:scriptversion_id])
 			@scriptcdn_scripturl = scriptcdn_scriptversion.scripturls.find(params[:id])
 		end
 
 		# New Scriptcdn_script URL
 		def new
-			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:scriptversion_id])
 			@scriptcdn_scripturl = scriptcdn_scriptversion.scripturls.build
 			respond_to do |format|
 				format.html # new.html.erb
@@ -29,13 +29,13 @@ module Phcscriptcdn
 
 		# Edit Scriptcdn_script URL
 		def edit
-			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:scriptversion_id])
 			@scriptcdn_scripturl = scriptcdn_scriptversion.scripturls.find(params[:id])
 		end
 
 		# POST Scriptcdn_script URL
 		def create
-			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:scriptversion_id])
 			@scriptcdn_scripturl = @scriptcdn_scriptversion.scripturls.create(scriptcdn_scripturl_params)
 			respond_to do |format|
 				if @scriptcdn_scripturl.save
@@ -63,7 +63,7 @@ module Phcscriptcdn
 
 		# Delete Scriptcdn_script URL
 		def destroy
-			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:script_id])
+			@scriptcdn_scriptversion = Scriptcdn::Scriptversion.find(params[:scriptversion_id])
 			@scriptcdn_scripturl = @scriptcdn_scriptversion.scripturls.find(params[:id])
 			@scriptcdn_scripturl.destroy
 			respond_to do |format|
