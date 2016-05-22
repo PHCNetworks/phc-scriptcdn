@@ -81,7 +81,7 @@ module Phcscriptcdn
 
 		# Whitelist
 		def scriptcdn_scripturl_params
-			params.require(:scriptcdn_scripturl).permit(:scrpturlname, :scrpturlphc, :scrpturltype, :scriptversion_id)
+			params.require(:scriptcdn_scripturl).permit(:scrpturlphc, :scrpturltype, :scriptversion_id)
 		end
 	end
 end
