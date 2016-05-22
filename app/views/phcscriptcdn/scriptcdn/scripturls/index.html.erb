@@ -27,8 +27,8 @@
 							<td><%= scriptcdn_scripturl.scrpturltype %></td>
 							<td><%= scriptcdn_scripturl.scriptversion %></td>
 							<td><div class="btn-group" role="group" aria-label="Script CDN">
-								<%= link_to 'Edit', edit_scriptcdn_script_scripturl_path(scriptcdn_scripturl.script, scriptcdn_scripturl), class: "btn btn-w-m btn-primary btn-xs btn-phc-custom" %>
-								<%= link_to 'Destroy', scriptcdn_script_scripturl_path(scriptcdn_scripturl.script, scriptcdn_scripturl), class: "btn btn-w-m btn-danger btn-xs btn-phc-custom", method: :delete, data: { confirm: 'Are you sure?' } %>
+								<%= link_to 'Edit', edit_scriptcdn_scriptversion_scripturl_path(scriptcdn_scripturl.scriptversion, scriptcdn_scripturl), class: "btn btn-w-m btn-primary btn-xs btn-phc-custom" %>
+								<%= link_to 'Destroy', scriptcdn_scriptversion_scripturl_path(scriptcdn_scripturl.scriptversion, scriptcdn_scripturl), class: "btn btn-w-m btn-danger btn-xs btn-phc-custom", method: :delete, data: { confirm: 'Are you sure?' } %>
 							</div></td>
 						</tr>
 					<% end %>
