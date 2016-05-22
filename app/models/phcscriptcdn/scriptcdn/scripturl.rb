@@ -10,9 +10,5 @@ module Phcscriptcdn
 			presence: true,
 			length: { minimum: 3 }
 
-		validates :mlcontactname,
-			presence: true,
-			length: { minimum: 2 }
-
 	end
 end
