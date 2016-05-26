@@ -9,7 +9,7 @@ module Phcscriptcdn
 
 		# PHCEngines
 		require 'phcnotifi'
-		require 'phctitler'
+		require 'phctitleseo'
 
 		# Give PHCScriptCDN Own Namespace
 		isolate_namespace Phcscriptcdn
@@ -30,7 +30,7 @@ module Phcscriptcdn
 		config.to_prepare do
 			ApplicationController.helper(ApplicationHelper)
 			Phcnotifi::ApplicationController.helper(ApplicationHelper)
-			Phctitler::ApplicationController.helper(ApplicationHelper)
+			Phctitleseo::ApplicationController.helper(ApplicationHelper)
 		end
 
 	end

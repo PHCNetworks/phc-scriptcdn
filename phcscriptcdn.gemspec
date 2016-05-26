@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
 	spec.version     = Phcscriptcdn::VERSION
 	spec.authors     = ["BradPotts"]
 	spec.email       = ["bradley.j.potts@gmail.com"]
-	spec.homepage    = "https://www.phcnetworks.net/content-delivery-networks-scripts"
+	spec.homepage    = "https://www.phcnetworks.net/script-cdn"
 	spec.summary     = "ScriptCDN Listing Engine."
-	spec.description = "PHCScript CDN is script listing software to manage script CDN listings."
+	spec.description = "PHCScriptCDN is script listing software to manage PHCNetworks script CDN listings."
 	spec.license     = "GPL-3.0"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
