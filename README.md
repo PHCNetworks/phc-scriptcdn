@@ -4,22 +4,19 @@
 [![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
   
 ### PHCScript CDN (Script Listing Engine) Documentation
-PHCScript CDN is listing software to manage script CDN website directories.
+PHCScriptCDN(1) script listing software we use to manage PHCNetworks Script CDN.
 
-- Script listing description and title.
-- Script version and url packs to generate listings.
-
-#### Step 1 - Add PHC-Script CDN to your gemfile  
+#### Step 1 - Add PHCScriptCDN Engine to your gemfile  
 
 	gem 'phcscriptcdn', '~> 1.0', '>= 1.0.2'
-	bundle exec install  
+	bundle install
   
-#### Step 2 - Add database migration files  
+#### Step 2 - Add Database Migration Files  
 
-	rake railties:install:migrations  
-	rake db:migrate  
+	rake phcscriptcdn:install:migrations
+	rake db:migrate
   
-#### Step 3 - Mount PHC-Script CDN in your Routes File  
+#### Step 3 - Mount PHCScriptCDN in your Routes File  
 Mount the Engine in your Routes File (App must have Root route)  
   
 	mount Phcscriptcdn::Engine, :at => '/'  
@@ -30,7 +27,7 @@ Generate views for customization and app integration.
 	rails generate phcscriptcdn:views
 
 #### Step 5 - Recompile Assets  
-PHCPress UI requires bootstrap and fontawesome to operate.  
+PHCScriptCDN UI requires bootstrap and fontawesome to operate.  
   
 	rake assets:clobber
 	rake assets:precompile  

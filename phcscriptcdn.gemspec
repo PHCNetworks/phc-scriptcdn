@@ -9,10 +9,10 @@ Gem::Specification.new do |spec|
 	spec.name        = "phcscriptcdn"
 	spec.version     = Phcscriptcdn::VERSION
 	spec.authors     = ["BradPotts"]
-	spec.email       = ["bradley.j.potts@gmail.com"]
-	spec.homepage    = "https://www.phcnetworks.net/script-cdn"
-	spec.summary     = "ScriptCDN Listing Engine."
-	spec.description = "PHCScriptCDN is script listing software to manage PHCNetworks script CDN listings."
+	spec.email       = ["developers@phcnetworks.net"]
+	spec.homepage    = "https://www.phcnetworks.net/"
+	spec.summary     = "ScriptCDN Listing Engine"
+	spec.description = "PHCScriptCDN script listing software to manage PHCNetworks Script CDN."
 	spec.license     = "GPL-3.0"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
@@ -21,14 +21,15 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'rails', '~> 4.2', '>= 4.2.6'
 	spec.add_dependency 'phcnotifi', '~> 2.6', '>= 2.6.5'
 	spec.add_dependency 'phctitleseo', '~> 2.0'
+	spec.add_dependency 'authrocket', '~> 1.5'
 	spec.add_dependency 'pg', '~> 0.18.4'
 
 	# UI & Frontend Elements
 	spec.add_dependency 'jquery-rails', '~> 4.1', '>= 4.1.1'
+	spec.add_dependency 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	spec.add_dependency 'font-awesome-rails', '~> 4.6', '>= 4.6.1.0'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
-	spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
 	# API and Rabl
 	spec.add_dependency 'oj', '~> 2.15'
