@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 	spec.email       = ["developers@phcnetworks.net"]
 	spec.homepage    = "https://www.phcnetworks.net/"
 	spec.summary     = "ScriptCDN Listing Engine"
-	spec.description = "PHCScriptCDN script listing software to manage PHCNetworks Script CDN."
+	spec.description = "PHCScriptCDN(1) script listing software to manage your online script CDN."
 	spec.license     = "GPL-3.0"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'rails', '~> 4.2', '>= 4.2.6'
 	spec.add_dependency 'phcnotifi', '~> 2.6', '>= 2.6.5'
 	spec.add_dependency 'phctitleseo', '~> 2.0'
-	spec.add_dependency 'authrocket', '~> 1.5'
 	spec.add_dependency 'pg', '~> 0.18.4'
 
 	# UI & Frontend Elements
