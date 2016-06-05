@@ -13,12 +13,17 @@ module Phcscriptcdn
 			if current_user
 				render 'index'
 			else
-				render 'scriptlist'
+				render 'index_scriptlist'
 			end
 		end
 
 		# Detailed Script CDN Profile
 		def show
+			if current_user
+				render 'show'
+			else
+				render 'show_scriptlisting'
+			end
 		end
 
 		# New Script for CDN
