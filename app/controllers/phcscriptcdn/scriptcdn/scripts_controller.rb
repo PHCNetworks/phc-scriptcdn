@@ -4,9 +4,10 @@ module Phcscriptcdn
 	class Scriptcdn::ScriptsController < ApplicationController
 
 		# Filters and Security
+		before_action :require_user, except: [:index, :show]
 		before_action :set_scriptcdn_scriptversion, only: [:show, :edit, :update, :destroy]
 
-		# ScriptCDN Index
+		# Script CDN Index
 		def index
 			@scriptcdn_scripts = Scriptcdn::Script.all
 			if current_user
@@ -29,7 +30,7 @@ module Phcscriptcdn
 		def edit
 		end
 
-		# POST Script
+		# Create Script
 		def create
 			@scriptcdn_script = Scriptcdn::Script.new(scriptcdn_script_params)
 

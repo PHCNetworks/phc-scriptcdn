@@ -2,7 +2,9 @@ require_dependency "phcscriptcdn/application_controller"
 
 module Phcscriptcdn
 	class Scriptcdn::ScripturlsController < ApplicationController
+
 		# Filters and Security
+		before_action :require_user
 		before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
 
 		# Index for Scriptcdn_script URLs
@@ -73,7 +75,7 @@ module Phcscriptcdn
 		end
 
 		private
-		
+
 		# Callback
 		def set_scriptcdn_scripturl
 			@scriptcdn_scripturl = Scriptcdn::Scripturl.find(params[:id])

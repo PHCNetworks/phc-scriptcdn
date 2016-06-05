@@ -3,7 +3,8 @@ require_dependency "phcscriptcdn/application_controller"
 module Phcscriptcdn
 	class Scriptcdn::ScriptversionsController < ApplicationController
 
-		# Filters and Security
+		# Security & Action Filters
+		before_action :require_user
 		before_action :set_scriptcdn_scriptversion, only: [:edit, :update, :destroy]
 
 		# Script Version Index
