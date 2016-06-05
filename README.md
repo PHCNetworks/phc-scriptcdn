@@ -4,7 +4,10 @@
 [![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
   
 ### PHCScript CDN (Script Listing Engine) Documentation
-PHCScriptCDN(1) script listing software we use to manage PHCNetworks Script CDN.
+PHCScriptCDN(1) script listing software to manage your online script CDN.
+
+- Main script title and description.
+- Script versions and script urls.
 
 #### Step 1 - Add PHCScriptCDN Engine to your gemfile  
 
