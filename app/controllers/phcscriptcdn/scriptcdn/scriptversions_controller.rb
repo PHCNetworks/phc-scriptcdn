@@ -4,7 +4,6 @@ module Phcscriptcdn
 	class Scriptcdn::ScriptversionsController < ApplicationController
 
 		# Security & Action Filters
-		before_action :require_user
 		before_action :set_scriptcdn_scriptversion, only: [:edit, :update, :destroy]
 
 		# Script Version Index

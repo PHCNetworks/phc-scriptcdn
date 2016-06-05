@@ -3,27 +3,16 @@ require_dependency "phcscriptcdn/application_controller"
 module Phcscriptcdn
 	class Scriptcdn::ScriptsController < ApplicationController
 
-		# Filters and Security
-		before_action :require_user, except: [:index, :show]
+		# Filters & Security
 		before_action :set_scriptcdn_scriptversion, only: [:show, :edit, :update, :destroy]
 
 		# Script CDN Index
 		def index
 			@scriptcdn_scripts = Scriptcdn::Script.all
-			if current_user
-				render 'index'
-			else
-				render 'index_scriptlist'
-			end
 		end
 
 		# Detailed Script CDN Profile
 		def show
-			if current_user
-				render 'show'
-			else
-				render 'show_scriptlisting'
-			end
 		end
 
 		# New Script for CDN
@@ -62,11 +51,6 @@ module Phcscriptcdn
 		end
 
 		private
-
-		# Grab User Session Key (For ID)
-		def current_user
-			@_current_user ||= AuthRocket::Session.from_token(session[:ar_token]).try(:user)
-		end
 
 		# Callbacks
 		def set_scriptcdn_script

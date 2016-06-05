@@ -4,7 +4,6 @@ module Phcscriptcdn
 	class Scriptcdn::ScripturlsController < ApplicationController
 
 		# Filters and Security
-		before_action :require_user
 		before_action :set_scriptcdn_scripturl, only: [:show, :edit, :update, :destroy]
 
 		# Index for Scriptcdn_script URLs
