@@ -9,6 +9,11 @@ module Phcscriptcdn
 		# ScriptCDN Index
 		def index
 			@scriptcdn_scripts = Scriptcdn::Script.all
+			if current_user
+				render 'index'
+			else
+				render 'scriptlist'
+			end
 		end
 
 		# Detailed Script CDN Profile
@@ -51,6 +56,11 @@ module Phcscriptcdn
 		end
 
 		private
+
+		# Grab User Session Key (For ID)
+		def current_user
+			@_current_user ||= AuthRocket::Session.from_token(session[:ar_token]).try(:user)
+		end
 
 		# Callbacks
 		def set_scriptcdn_script
