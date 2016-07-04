@@ -10,7 +10,7 @@ PATH
       multi_json (~> 1.12, >= 1.12.1)
       pg (~> 0.18.4)
       phcnotifi (~> 3.0, >= 3.0.1)
-      phctitleseo (~> 3.0)
+      phctitleseo (~> 3.0, >= 3.0.1)
       rails (~> 5.0, >= 5.0.0)
       sass-rails (~> 5.0, >= 5.0.5)
 
@@ -131,7 +131,7 @@ GEM
       pg (~> 0.18.4)
       rails (~> 5.0, >= 5.0.0)
       sass-rails (~> 5.0, >= 5.0.5)
-    phctitleseo (3.0.0)
+    phctitleseo (3.0.1)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       country_select (~> 2.5, >= 2.5.2)
       font-awesome-rails (~> 4.6, >= 4.6.3.1)
