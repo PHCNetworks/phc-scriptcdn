@@ -6,7 +6,7 @@ module Phcscriptcdn
 
 		# Load Helpers
 		helper Phctitleseo::Engine.helpers
-		#helper Phcnotifi::Engine.helpers
+		helper Phcnotifi::Engine.helpers
 
 	end
 end
