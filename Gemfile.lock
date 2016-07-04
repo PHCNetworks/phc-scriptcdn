@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (2.0.1)
+    phcscriptcdn (2.0.3)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       country_select (~> 2.5, >= 2.5.2)
       font-awesome-rails (~> 4.6, >= 4.6.3.1)
