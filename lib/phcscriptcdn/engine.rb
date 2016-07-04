@@ -8,7 +8,7 @@ module Phcscriptcdn
 		require 'font-awesome-rails'
 
 		# PHCEngines
-		# require 'phcnotifi'
+		require 'phcnotifi'
 		require 'phctitleseo'
 
 		# Give PHCScriptCDN Own Namespace
