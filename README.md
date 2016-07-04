@@ -11,7 +11,7 @@ PHCScriptCDN(2) script listing software to manage your online script CDN.
 
 #### Step 1 - Add PHCScriptCDN Engine to your gemfile  
 
-	gem 'phcscriptcdn', '~> 1.2'
+	gem 'phcscriptcdn', '~> 2.0'
 	bundle install
   
 #### Step 2 - Add Database Migration Files  
@@ -30,7 +30,7 @@ Generate views for customization and app integration.
 	rails generate phcscriptcdn:views
 
 #### Step 5 - Recompile Assets  
-PHCScriptCDN UI requires bootstrap and fontawesome to operate.  
+PHCScriptCDN UI requires Bootstrap and FontAwesome to operate.  
   
 	rake assets:clobber
 	rake assets:precompile  
