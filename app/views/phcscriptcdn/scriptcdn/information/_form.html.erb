@@ -1,0 +1,49 @@
+<%= form_for([@scriptcdn_information.main, @scriptcdn_information], url: scriptcdn_main_informations_path) do |f| %>
+
+	<%= render 'phcnotifi/validations', :object => @scriptcdn_information %>
+
+	<div class="form-group field_with_error">
+		<%= f.label :scripttitle, "Script Title" %>
+		<%= f.text_field :scripttitle, placeholder: "Script Information Title", class: "form-control"  %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptdescription, "Script Description" %>
+		<%= f.text_field :scriptdescription, placeholder: "Script Information Description", class: "form-control"  %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptcategory, "Script Category" %>
+		<%= f.select( :scriptcategory, [['HTML','html'],['CSS','css']], { :multiple => true, :size => 5 }, {class: "form-control form-control"}) %>
+	</div>	
+	<div class="form-group field_with_error">
+		<%= f.label :scriptwebsite, "Script Website" %>
+		<%= f.text_field :scriptwebsite, placeholder: "Script Information Website", class: "form-control" %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scripttwitter, "Script Twitter" %>
+		<%= f.text_field :scripttwitter, placeholder: "Script Information Twitter Address", class: "form-control" %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptgithub, "Script Github" %>
+		<%= f.text_field :scriptgithub, placeholder: "Script Information Github Address", class: "form-control" %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptinitialrelease, "Initial Release" %>
+		<%= f.date_select :scriptinitialrelease, class: "form-control" %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptlicence, "Script Licence" %>
+		<%= f.select( :scriptlicence, [['MIT','MIT'],['Apache 2.0','Apache v2']], {}, {class: "form-control form-control-sm"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptplatform, "Script Platform" %>
+		<%= f.select( :scriptplatform, [['Web Engine','Web Engine']], {}, {class: "form-control form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptstatus, "Script Status" %>
+		<%= f.select( :scriptstatus, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.submit class: "btn blue-hoki" %>
+	</div>
+
+<% end %>

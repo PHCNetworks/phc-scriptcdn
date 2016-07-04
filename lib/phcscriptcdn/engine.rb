@@ -8,7 +8,7 @@ module Phcscriptcdn
 		require 'font-awesome-rails'
 
 		# PHCEngines
-		require 'phcnotifi'
+		# require 'phcnotifi'
 		require 'phctitleseo'
 
 		# Give PHCScriptCDN Own Namespace
@@ -29,7 +29,7 @@ module Phcscriptcdn
 		# Load Helper Files
 		config.to_prepare do
 			ApplicationController.helper(ApplicationHelper)
-			Phcnotifi::ApplicationController.helper(ApplicationHelper)
+			#Phcnotifi::ApplicationController.helper(ApplicationHelper)
 			Phctitleseo::ApplicationController.helper(ApplicationHelper)
 		end
 

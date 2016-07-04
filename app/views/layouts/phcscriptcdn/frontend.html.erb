@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>PHCScriptCDN - Script Listing Engine Frontend</title>
+
+		<%= stylesheet_link_tag    "phcscriptcdn/application", media: "all" %>
+		<%= javascript_include_tag "phcscriptcdn/application" %>
+		<%= csrf_meta_tags %>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<%= yield %>
+			</div> 
+		</div>
+	</body>
+
+</html>

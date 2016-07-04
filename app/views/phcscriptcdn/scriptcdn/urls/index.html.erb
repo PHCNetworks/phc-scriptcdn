@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scriptcdn Url List</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>URL Path</th>
+			<th></th>
+		</tr
+	</thead>
+
+	<tbody>
+		<% @scriptcdn_urls.each do |scriptcdn_url| %>
+			<tr>
+				<td><%= link_to scriptcdn_url.scripturl, edit_scriptcdn_main_url_path(scriptcdn_url.main, scriptcdn_url) %></td>
+				<td><%= link_to 'Destroy', scriptcdn_main_url_path(scriptcdn_url.main, scriptcdn_url), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red-mint" %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

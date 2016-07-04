@@ -1,0 +1,13 @@
+<%= form_for([@scriptcdn_version.main, @scriptcdn_version], url: scriptcdn_main_versions_path) do |f| %>
+
+	<%= render 'phcnotifi/validations', :object => @scriptcdn_version %>
+
+	<div class="form-group field_with_error">
+		<%= f.label :versionnumber %>
+		<%= f.text_field :versionnumber, placeholder: "Script Version", class: "form-control" %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.submit class: "btn blue-hoki" %>
+	</div>
+
+<% end %>

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<h1>Information</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Category</th>
+			<th>Licence</th>
+			<th>Platform</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @scriptcdn_informations.each do |scriptcdn_information| %>
+			<tr>
+				<td><%= link_to scriptcdn_information.scripttitle, edit_scriptcdn_main_information_path(scriptcdn_information.main, scriptcdn_information) %></td>
+				<td><%= link_to scriptcdn_information.scriptcategory, edit_scriptcdn_main_information_path(scriptcdn_information.main, scriptcdn_information) %></td>
+				<td><%= link_to scriptcdn_information.scriptlicence, edit_scriptcdn_main_information_path(scriptcdn_information.main, scriptcdn_information) %></td>
+				<td><%= link_to scriptcdn_information.scriptplatform, edit_scriptcdn_main_information_path(scriptcdn_information.main, scriptcdn_information) %></td>
+				<td><%= link_to 'Destroy', scriptcdn_main_information_path(scriptcdn_information.main, scriptcdn_information), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red-mint" %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
