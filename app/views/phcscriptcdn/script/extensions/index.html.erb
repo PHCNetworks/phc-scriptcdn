@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Script Extensions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @script_extensions.each do |script_extension| %>
+      <tr>
+        <td><%= link_to 'Show', script_extension %></td>
+        <td><%= link_to 'Edit', edit_script_extension_path(script_extension) %></td>
+        <td><%= link_to 'Destroy', script_extension, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Script Extension', new_script_extension_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Script Urls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @script_urls.each do |script_url| %>
+      <tr>
+        <td><%= link_to 'Show', script_url %></td>
+        <td><%= link_to 'Edit', edit_script_url_path(script_url) %></td>
+        <td><%= link_to 'Destroy', script_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Script Url', new_script_url_path %>

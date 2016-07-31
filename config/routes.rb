@@ -1,5 +1,20 @@
 Phcscriptcdn::Engine.routes.draw do
 
+  namespace :script do
+    resources :versions
+  end
+  namespace :script do
+    resources :listings
+  end
+  namespace :script do
+    resources :extensions
+  end
+  namespace :script do
+    resources :authors
+  end
+  namespace :script do
+    resources :urls
+  end
 	# CDN Frontend
 	namespace :frontend do
 
