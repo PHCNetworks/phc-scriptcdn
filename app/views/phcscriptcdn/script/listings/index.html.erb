@@ -1,6 +1,6 @@
 <!-- Title System -->
-<% phc_title "PHCScriptCDN - Script CDN Listing Manager" %>
-<% phc_title_tagline "ScriptCDN Listing Index" %>
+<% phc_title "Script Listing Manager" %>
+<% phc_title_tagline "Script Listing Index" %>
 
 <!-- Page Header -->
 <div class="row">
@@ -8,7 +8,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Information", script_informations_path %></li>
+			<li><%= link_to "Script Information", script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -22,25 +22,28 @@
 </div>
 
 <!-- Main Content -->
-
 <table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Category</th>
+			<th>Licence</th>
+			<th>Platform</th>
+			<th></th>
+		</tr>
+	</thead>
 
-  <tbody>
-    <% @script_listings.each do |script_listing| %>
-      <tr>
-        <td><%= link_to 'Show', script_listing %></td>
-        <td><%= link_to 'Edit', edit_script_listing_path(script_listing) %></td>
-        <td><%= link_to 'Destroy', script_listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @script_listings.each do |script_listing| %>
+			<tr>
+				<td><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
+				<td><%= link_to script_listing.scriptinitialrelease, script_listing(script_listing) %></td>
+				<td><%= link_to script_listing.scriptlastestreleasecdn, script_listing(script_listing) %></td>
+				<td><%= link_to script_listing.scriptplatform, script_listing(script_listing) %></td>
+				<td><%= link_to 'Destroy', script_listing_path(script_listing), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red-mint" %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
-
-<br>
 
 <%= link_to 'New Script Listing', new_script_listing_path %>

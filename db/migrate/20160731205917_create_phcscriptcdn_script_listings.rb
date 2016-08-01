@@ -9,9 +9,11 @@ class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.0]
 			t.string :scripttwitter
 			t.string :scriptgithub
 
+
 			t.date :scriptinitialrelease
 			t.date :scriptlastestrelease
 			t.date :scriptbetarelease
+			t.date :scriptlastestreleasecdn
 
 			t.string :scriptstatus
 

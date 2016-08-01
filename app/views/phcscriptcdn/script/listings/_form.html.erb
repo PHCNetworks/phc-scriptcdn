@@ -13,11 +13,6 @@
 	</div>
 
 	<div class="form-group field_with_error">
-		<%= f.label :scriptcategory, "Script Category" %>
-		<%= f.select( :scriptcategory, [['HTML','html'],['CSS','css']], { :multiple => true, :size => 5 }, {class: "form-control form-control"}) %>
-	</div>	
-
-	<div class="form-group field_with_error">
 		<%= f.label :scriptwebsite, "Script Website" %>
 		<%= f.text_field :scriptwebsite, placeholder: "Script Information Website", class: "form-control" %>
 	</div>
@@ -38,13 +33,13 @@
 	</div>
 
 	<div class="form-group field_with_error">
-		<%= f.label :scriptlicence, "Script Licence" %>
-		<%= f.select( :scriptlicence, [['MIT','MIT'],['Apache 2.0','Apache v2']], {}, {class: "form-control form-control-sm"}) %>
+		<%= f.label :scriptlastestrelease, "Latest Release" %>
+		<%= f.date_select :scriptlastestrelease, class: "form-control" %>
 	</div>
 
 	<div class="form-group field_with_error">
-		<%= f.label :scriptplatform, "Script Platform" %>
-		<%= f.select( :scriptplatform, [['Web Engine','Web Engine']], {}, {class: "form-control form-control"}) %>
+		<%= f.label :scriptbetarelease, "Next Release" %>
+		<%= f.date_select :scriptbetarelease, class: "form-control" %>
 	</div>
 
 	<div class="form-group field_with_error">
@@ -53,7 +48,7 @@
 	</div>
 
 	<div class="form-group field_with_error">
-		<%= f.submit class: "btn brtn-primary" %>
+		<%= f.submit class: "btn btn-primary" %>
 	</div>
 
 <% end %>

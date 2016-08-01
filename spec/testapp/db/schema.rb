@@ -10,7 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160704023112) do
+ActiveRecord::Schema.define(version: 20160801032225) do
+
+  create_table "phcscriptcdn_script_authors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phcscriptcdn_script_extensions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phcscriptcdn_script_licences", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phcscriptcdn_script_listings", force: :cascade do |t|
+    t.string   "scripttitle"
+    t.text     "scriptdescription"
+    t.string   "scriptwebsite"
+    t.string   "scripttwitter"
+    t.string   "scriptgithub"
+    t.date     "scriptinitialrelease"
+    t.date     "scriptlastestrelease"
+    t.date     "scriptbetarelease"
+    t.string   "scriptstatus"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "phcscriptcdn_script_urls", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phcscriptcdn_script_versions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "phcscriptcdn_scriptcdn_authors", force: :cascade do |t|
     t.string   "authorfirstname"
