@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 	spec.email       = ["developers@phcnetworks.net"]
 	spec.homepage    = "https://www.phcnetworks.net/"
 	spec.summary     = "ScriptCDN Listing Engine"
-	spec.description = "PHCScriptCDN(2) script listing software to manage your online script CDN."
+	spec.description = "PHCScriptCDN(3) script listing software to manage your online script CDN."
 	spec.license     = "MIT"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

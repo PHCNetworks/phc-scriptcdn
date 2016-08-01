@@ -17,7 +17,7 @@ module Phcscriptcdn
 
 		# NEW - Script Listings
 		def new
-		@script_listing = Script::Listing.new
+			@script_listing = Script::Listing.new
 		end
 
 		# EDIT - Script Listings
