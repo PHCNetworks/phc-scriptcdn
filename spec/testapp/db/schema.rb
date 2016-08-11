@@ -36,9 +36,10 @@ ActiveRecord::Schema.define(version: 20160801032225) do
     t.date     "scriptinitialrelease"
     t.date     "scriptlastestrelease"
     t.date     "scriptbetarelease"
+    t.date     "scriptlastestreleasecdn"
     t.string   "scriptstatus"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "phcscriptcdn_script_urls", force: :cascade do |t|

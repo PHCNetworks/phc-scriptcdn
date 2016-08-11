@@ -18,29 +18,29 @@ Gem::Specification.new do |spec|
 	spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
 	# Main Dependencies
-	spec.add_dependency 'rails', '~> 5.0', '>= 5.0.0'
+	spec.add_dependency 'rails', '~> 5.0', '>= 5.0.0.1'
 	spec.add_dependency 'authrocket', '~> 2.0', '>= 2.0.2'
 	spec.add_dependency 'paper_trail', '~> 5.2'
 	spec.add_dependency 'pg', '~> 0.18.4'
 
 	# PHC Engines & Themes
 	spec.add_dependency 'phcaccountspro', '~> 2.8', '>= 2.8.2'
-	spec.add_dependency 'phctitleseo', '~> 3.0', '>= 3.0.5'
-	spec.add_dependency 'phcnotifi', '~> 3.0', '>= 3.0.5'
-	spec.add_dependency 'phcadmins', '~> 3.7', '>= 3.7.2'
+	spec.add_dependency 'phctitleseo', '~> 3.2'
+	spec.add_dependency 'phcnotifi', '~> 3.2'
+	spec.add_dependency 'phcadmins', '~> 3.8'
 
 	# UI & Frontend Elements
 	spec.add_dependency 'jquery-rails', '~> 4.1', '>= 4.1.1'
 	spec.add_dependency 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 	spec.add_dependency 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
-	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.5'
+	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.6'
 	spec.add_dependency 'country_select', '~> 2.5', '>= 2.5.2'
 	spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
-	# API and Rabl
+	# API
 	spec.add_dependency 'oj', '~> 2.17', '>= 2.17.1'
-	spec.add_dependency 'rabl', '~> 0.12.0'
+	spec.add_dependency 'rabl', '~> 0.13.0'
 	spec.add_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
 
 	# Development & Testing Dependencies
@@ -52,7 +52,7 @@ Gem::Specification.new do |spec|
 	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
 	spec.add_development_dependency 'database_cleaner', '~> 1.5', '>= 1.5.3'
 
-	spec.add_development_dependency 'faker', '~> 1.6', '>= 1.6.5'
+	spec.add_development_dependency 'faker', '~> 1.6', '>= 1.6.6'
 	spec.add_development_dependency 'launchy', '~> 2.4', '>= 2.4.3'
 	spec.add_development_dependency 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
 
