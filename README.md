@@ -34,3 +34,7 @@ PHCScriptCDN UI requires Bootstrap and FontAwesome to operate.
   
 	rake assets:clobber
 	rake assets:precompile  
+
+#### Additional Information
+
+- [Critical Security Updates](https://github.com/PHCNetworks/phc-scriptcdn/wiki/Critical-Security-Updates)
