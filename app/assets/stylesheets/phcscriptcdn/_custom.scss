@@ -1,0 +1,9 @@
+// Top Padding Override
+.container {
+	padding-top: 50px;
+}
+
+// Vertical Align TD Cell
+.table tbody>tr>td.vert-align{
+    vertical-align: middle;
+}

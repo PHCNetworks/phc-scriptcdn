@@ -21,29 +21,33 @@
 	</div>
 </div>
 
-<!-- Main Content -->
-<table>
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>Category</th>
-			<th>Licence</th>
-			<th>Platform</th>
-			<th></th>
-		</tr>
-	</thead>
+<div class="row">
+	<div class="col-lg-12">
 
-	<tbody>
-		<% @script_listings.each do |script_listing| %>
-			<tr>
-				<td><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
-				<td><%= link_to script_listing.scriptinitialrelease, script_listing(script_listing) %></td>
-				<td><%= link_to script_listing.scriptlastestreleasecdn, script_listing(script_listing) %></td>
-				<td><%= link_to script_listing.scriptplatform, script_listing(script_listing) %></td>
-				<td><%= link_to 'Destroy', script_listing_path(script_listing), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red-mint" %></td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+		<!-- Main Content -->
+		<table class="table table-bordered table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Category</th>
+					<th>Licence</th>
+					<th></th>
+				</tr>
+			</thead>
 
-<%= link_to 'New Script Listing', new_script_listing_path %>
+			<tbody>
+				<% @script_listings.each do |script_listing| %>
+					<tr>
+						<td class="vert-align"><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to script_listing.scriptinitialrelease, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to script_listing.scriptlastestreleasecdn, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to 'Destroy', script_listing_path(script_listing), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+
+		<%= link_to 'New Script Listing', new_script_listing_path, class: "btn btn-primary" %>
+
+	</div>
+</div>
