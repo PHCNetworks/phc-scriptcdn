@@ -28,7 +28,7 @@ module Phcscriptcdn
 		def create
 			@script_licence = Script::Licence.new(script_licence_params)
 			if @script_licence.save
-				redirect_to @script_licence, notice: 'Licence was successfully created.'
+				redirect_to script_licences_url, notice: 'Licence was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +37,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Licences
 		def update
 			if @script_licence.update(script_licence_params)
-				redirect_to @script_licence, notice: 'Licence was successfully updated.'
+				redirect_to script_licences_url, notice: 'Licence was successfully updated.'
 				else
 					render :edit
 			end
@@ -58,7 +58,7 @@ module Phcscriptcdn
 
 		# Whitelists
 		def script_licence_params
-			params.fetch(:script_licence, {})
+			params.require(:member_profile).permit(:script_licence)
 		end
 
 	end

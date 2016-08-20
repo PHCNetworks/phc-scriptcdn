@@ -28,7 +28,7 @@ module Phcscriptcdn
 		def create
 			@script_extension = Script::Extension.new(script_extension_params)
 			if @script_extension.save
-				redirect_to @script_extension, notice: 'Extension was successfully created.'
+				redirect_to script_extensions_url, notice: 'Extension was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +37,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Extension
 		def update
 			if @script_extension.update(script_extension_params)
-				redirect_to @script_extension, notice: 'Extension was successfully updated.'
+				redirect_to script_extensions_url, notice: 'Extension was successfully updated.'
 				else
 					render :edit
 			end

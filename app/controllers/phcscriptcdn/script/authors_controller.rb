@@ -28,7 +28,7 @@ module Phcscriptcdn
 		def create
 			@script_author = Script::Author.new(script_author_params)
 			if @script_author.save
-				redirect_to @script_author, notice: 'Author was successfully created.'
+				redirect_to script_authors_url, notice: 'Author was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +37,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Athors
 		def update
 			if @script_author.update(script_author_params)
-				redirect_to @script_author, notice: 'Author was successfully updated.'
+				redirect_to script_authors_url, notice: 'Author was successfully updated.'
 				else
 					render :edit
 			end

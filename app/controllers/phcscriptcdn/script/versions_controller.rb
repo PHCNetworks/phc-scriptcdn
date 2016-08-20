@@ -28,7 +28,7 @@ module Phcscriptcdn
 		def create
 			@script_version = Script::Version.new(script_version_params)
 			if @script_version.save
-				redirect_to @script_version, notice: 'Version was successfully created.'
+				redirect_to script_versions_url, notice: 'Version was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +37,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Versions
 		def update
 			if @script_version.update(script_version_params)
-				redirect_to @script_version, notice: 'Version was successfully updated.'
+				redirect_to script_versions_url, notice: 'Version was successfully updated.'
 				else
 					render :edit
 			end

@@ -28,7 +28,7 @@ module Phcscriptcdn
 		def create
 			@script_listing = Script::Listing.new(script_listing_params)
 			if @script_listing.save
-				redirect_to @script_listing, notice: 'Listing was successfully created.'
+				redirect_to script_listings_url, notice: 'Listing was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +37,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Listings
 		def update
 			if @script_listing.update(script_listing_params)
-				redirect_to @script_listing, notice: 'Listing was successfully updated.'
+				redirect_to script_listings_url, notice: 'Listing was successfully updated.'
 				else
 					render :edit
 			end
