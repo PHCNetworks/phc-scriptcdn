@@ -10,6 +10,8 @@ class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.0]
 			t.string :authorgithub
 			t.string :authortwitter
 
+			t.references :listing
+
 			t.timestamps
 
 		end

@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 20160801032225) do
     t.string   "authorwebsite"
     t.string   "authorgithub"
     t.string   "authortwitter"
+    t.integer  "listing_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["listing_id"], name: "index_phcscriptcdn_script_authors_on_listing_id"
   end
 
   create_table "phcscriptcdn_script_extensions", force: :cascade do |t|
@@ -60,8 +62,10 @@ ActiveRecord::Schema.define(version: 20160801032225) do
 
   create_table "phcscriptcdn_script_urls", force: :cascade do |t|
     t.string   "scripturl"
+    t.integer  "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["listing_id"], name: "index_phcscriptcdn_script_urls_on_listing_id"
   end
 
   create_table "phcscriptcdn_script_versions", force: :cascade do |t|

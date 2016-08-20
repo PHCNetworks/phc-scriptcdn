@@ -8,7 +8,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Author Index", script_authors_path %></li>
+			<li><%= link_to "Script Author Index", script_listing_authors_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -28,24 +28,28 @@
 		<table class="table table-striped table-bordered table-advance table-hover">
 			<thead>
 				<tr>
-					<th>Script Extensions</th>
+					<th>Author Firstname</th>
+					<th>Author Lastname</th>
+					<th>Author Website</th>
+					<th>Author Github</th>
+					<th>Author Twitter</th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<% @script_authors.each do |script_author| %>
 					<tr>
-						<td><%= link_to script_author.authorfirstname, script_author %></td>
-						<td><%= link_to script_author.authorlastname, script_author %></td>
-						<td><%= link_to script_author.authorwebsite, script_author %></td>
-						<td><%= link_to script_author.authorgithub, script_author %></td>
-						<td><%= link_to script_author.authortwitter, script_author %></td>
+						<td><%= link_to script_author.authorfirstname, script_listing_author_path(script_author.listing, script_author) %></td>
+						<td><%= link_to script_author.authorlastname, script_listing_author_path(script_author.listing, script_author) %></td>
+						<td><%= link_to script_author.authorwebsite, script_listing_author_path(script_author.listing, script_author) %></td>
+						<td><%= link_to script_author.authorgithub, script_listing_author_path(script_author.listing, script_author) %></td>
+						<td><%= link_to script_author.authortwitter, script_listing_author_path(script_author.listing, script_author) %></td>
 					</tr>
 				<% end %>
 			</tbody>
 		</table>
 
-		<%= link_to 'New Script Author', new_script_author_path, class: "btn btn-primary" %>
+		<%= link_to 'New Script Author', new_script_listing_author_path, class: "btn btn-primary" %>
 
 	</div>
 </div>

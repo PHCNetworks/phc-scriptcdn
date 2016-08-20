@@ -5,6 +5,8 @@ class CreatePhcscriptcdnScriptUrls < ActiveRecord::Migration[5.0]
 
 			t.string :scripturl
 
+			t.references :listing
+
 			t.timestamps
 
 

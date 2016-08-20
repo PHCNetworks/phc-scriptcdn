@@ -1,7 +1,28 @@
-<%= form_for(script_author) do |f| %>
+<%= form_for([@script_author.listing, @script_author], url: form_url) do |f| %>
+
 	<div class="form-group field_with_error">
-		<%= f.label :lcncarvlfedora, "Fedora Approval" %>
-		<%= f.select( :lcncarvlfedora, [['No','No'],['Yes','Yes']], {}, {class: "form-control form-control"}) %>
+		<%= f.label :authorfirstname, "Author First Name" %>
+		<%= f.text_field :authorfirstname, placeholder: "Author First Name", class: "form-control"  %>
+	</div>
+
+	<div class="form-group field_with_error">
+		<%= f.label :authorlastname, "Author Last Name" %>
+		<%= f.text_field :authorlastname, placeholder: "Author Last Name", class: "form-control"  %>
+	</div>
+
+	<div class="form-group field_with_error">
+		<%= f.label :authorwebsite, "Author Website" %>
+		<%= f.text_field :authorwebsite, placeholder: "Author Website", class: "form-control"  %>
+	</div>
+	
+	<div class="form-group field_with_error">
+		<%= f.label :authorgithub, "Author Github Address" %>
+		<%= f.text_field :authorgithub, placeholder: "Author Github Address", class: "form-control"  %>
+	</div>
+	
+	<div class="form-group field_with_error">
+		<%= f.label :authortwitter, "Author Twitter Addresss" %>
+		<%= f.text_field :authortwitter, placeholder: "Author Twitter Addresss", class: "form-control"  %>
 	</div>
 
 	<div class="actions">

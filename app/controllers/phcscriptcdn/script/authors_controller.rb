@@ -6,29 +6,36 @@ module Phcscriptcdn
 		# Filters & Security
 		before_action :set_script_author, only: [:show, :edit, :update, :destroy]
 
-		# INDEX - Script Athors
+		# INDEX - Script Authors
 		def index
-		@script_authors = Script::Author.all
+			script_listing = Script::Listing.find(params[:listing_id])
+			@script_authors = script_listing.authors
 		end
 
-		# DETAILED PROFILE - Script Athors
+		# DETAILED PROFILE - Script Authors
 		def show
+			script_listing = Script::Listing.find(params[:listing_id])
+			@script_author = script_listing.authors.find(params[:id])
 		end
 
 		# NEW - Script Athors
 		def new
-		@script_author = Script::Author.new
+			script_listing = Script::Listing.find(params[:listing_id])
+			@script_author = script_listing.authors.build
 		end
 
 		# EDIT - Script Athors
 		def edit
+			script_listing = Script::Listing.find(params[:listing_id])
+			@script_author = script_listing.authors.find(params[:id])
 		end
 
 		# POST - Script Athors
 		def create
-			@script_author = Script::Author.new(script_author_params)
+			@script_listing = Script::Listing.find(params[:listing_id])
+			@script_author = @script_listing.authors.create(script_author_params)
 			if @script_author.save
-				redirect_to script_authors_url, notice: 'Author was successfully created.'
+				redirect_to script_listing_authors_path, notice: 'Author was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +44,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Athors
 		def update
 			if @script_author.update(script_author_params)
-				redirect_to script_authors_url, notice: 'Author was successfully updated.'
+				redirect_to script_listing_authors_path, notice: 'Author was successfully updated.'
 				else
 					render :edit
 			end
@@ -45,8 +52,10 @@ module Phcscriptcdn
 
 		# DELETE - Script Athors
 		def destroy
+			@script_listing = Script::Listing.find(params[:listing_id])
+			@script_author = @script_listing.authors.find(params[:id])
 			@script_author.destroy
-			redirect_to script_authors_url, notice: 'Author was successfully destroyed.'
+			redirect_to script_listing_authors_path, notice: 'Author was successfully destroyed.'
 		end
 
 		private
@@ -58,7 +67,7 @@ module Phcscriptcdn
 
 		# Whitelist
 		def script_author_params
-			params.require(:script_author).permit(:authorfirstname, :authorlastname, :authorwebsite, :authorgithub, :authortwitter)
+			params.require(:script_author).permit(:authorfirstname, :authorlastname, :authorwebsite, :authorgithub, :authortwitter, :listing_id)
 		end
 
 	end
