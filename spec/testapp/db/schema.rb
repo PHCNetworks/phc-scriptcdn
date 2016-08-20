@@ -24,12 +24,15 @@ ActiveRecord::Schema.define(version: 20160801032225) do
 
   create_table "phcscriptcdn_script_extensions", force: :cascade do |t|
     t.string   "scriptextension"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "scriptextensiondes"
+    t.string   "scriptextensiontxt"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "phcscriptcdn_script_licences", force: :cascade do |t|
     t.string   "lcncname"
+    t.string   "lcncdescript"
     t.string   "lcnccomgpl"
     t.string   "lcncarvlfsf"
     t.string   "lcncarvlosi"

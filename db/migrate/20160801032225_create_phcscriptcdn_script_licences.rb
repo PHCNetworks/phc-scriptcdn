@@ -4,6 +4,7 @@ class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.0]
 		create_table :phcscriptcdn_script_licences do |t|
 
 			t.string :lcncname
+			t.string :lcncdescript
 
 			t.string :lcnccomgpl
 			t.string :lcncarvlfsf
