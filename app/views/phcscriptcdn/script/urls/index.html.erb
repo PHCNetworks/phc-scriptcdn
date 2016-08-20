@@ -8,7 +8,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Listings Index", script_listings_path %></li>
+			<li><%= link_to "Script Listings Index", script_listing_urls_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -35,13 +35,13 @@
 			<tbody>
 				<% @script_urls.each do |script_url| %>
 					<tr>
-						<td><%= link_to script_url.scripturl, script_url %></td>
+						<td><%= link_to script_url.scripturl, script_listing_url_path(script_url.listing, script_url) %></td>
 					</tr>
 				<% end %>
 			</tbody>
 		</table>
 
-		<%= link_to 'New Script Url', new_script_url_path, class: "btn btn-primary" %>
+		<%= link_to 'New Script Url', new_script_listing_url_path, class: "btn btn-primary" %>
 
 	</div>
 </div>

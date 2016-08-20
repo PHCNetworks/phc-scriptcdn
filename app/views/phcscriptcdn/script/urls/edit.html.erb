@@ -26,9 +26,8 @@
 <div class="row">
 	<div class="col-lg-12">
 
-		<%= render 'form', script_url: @script_url %>
-		<%= link_to 'Show', @script_url, class: "btn btn-primary"  %> |
-		<%= link_to 'Back', script_urls_path, class: "btn btn-primary"  %>
+		<%= render 'form', { form_url: script_listing_url_path } %>
+		<%= link_to 'Back', script_listing_urls_path, class: "btn btn-primary"  %>
 
 	</div>
 </div>

@@ -1,4 +1,4 @@
-<%= form_for(script_url) do |f| %>
+<%= form_for([@script_url.listing, @script_url], url: form_url) do |f| %>
 
 	<div class="form-group field_with_error">
 		<%= f.label :scripturl, "Script URL" %>

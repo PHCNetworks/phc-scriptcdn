@@ -6,53 +6,60 @@ module Phcscriptcdn
 		# Filters & Security
 		before_action :set_script_url, only: [:show, :edit, :update, :destroy]
 
-		# INDEX - Script Information/Urls
+		# INDEX - Script Authors
 		def index
-			script_listing = Script::Listing.find(params[:information_id])
+			script_listing = Script::Listing.find(params[:listing_id])
 			@script_urls = script_listing.urls
 		end
 
-		# NEW - Script Listing/Urls
-		def new
-			script_listing = Script::Listing.find(params[:information_id])
-			@script_url = script_listing.urls.build
-		end
-
-		# EDIT - Script Listing/Urls
-		def edit
-			script_listing = Script::Listing.find(params[:information_id])
+		# DETAILED PROFILE - Script Authors
+		def show
+			script_listing = Script::Listing.find(params[:listing_id])
 			@script_url = script_listing.urls.find(params[:id])
 		end
 
-		# POST - Script Listing/Urls
+		# NEW - Script Athors
+		def new
+			script_listing = Script::Listing.find(params[:listing_id])
+			@script_url = script_listing.urls.build
+		end
+
+		# EDIT - Script Athors
+		def edit
+			script_listing = Script::Listing.find(params[:listing_id])
+			@script_url = script_listing.urls.find(params[:id])
+		end
+
+		# POST - Script Athors
 		def create
-			@script_listing = Script::Listing.find(params[:information_id])
+			@script_listing = Script::Listing.find(params[:listing_id])
 			@script_url = @script_listing.urls.create(script_url_params)
-			if @script_listing.save
-				redirect_to script_listing_urls_path, notice: 'Listing was successfully created.'
+			if @script_url.save
+				redirect_to script_listing_urls_path, notice: 'Author was successfully created.'
 				else
 					render :new
 			end
 		end
 
-		# PATCH/PUT - Script Listing/Urls
+		# PATCH/PUT - Script Athors
 		def update
-			if @script_listing.update(member_address_params)
-				redirect_to script_listing_urls_path, notice: 'Listing was successfully updated.'
+			if @script_url.update(script_url_params)
+				redirect_to script_listing_urls_path, notice: 'Author was successfully updated.'
 				else
 					render :edit
 			end
 		end
 
-		# DELETE - Script Listing/Urls
+		# DELETE - Script Athors
 		def destroy
-			@script_listing = Script::Listing.find(params[:information_id])
+			@script_listing = Script::Listing.find(params[:listing_id])
 			@script_url = @script_listing.urls.find(params[:id])
 			@script_url.destroy
-			redirect_to script_listing_urls_path, notice: 'Listing was successfully destroyed.'
+			redirect_to script_listing_urls_path, notice: 'Author was successfully destroyed.'
 		end
 
 		private
+
 
 		# Common Callbacks
 		def set_script_url
@@ -61,7 +68,7 @@ module Phcscriptcdn
 
 		# Whitelists
 		def script_url_params
-			params.require(:script_url).permit(:scripturl)
+			params.require(:script_url).permit(:scripturl, :listing_id)
 		end
 
 	end
