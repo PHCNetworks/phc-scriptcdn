@@ -5,6 +5,11 @@
 		<%= f.text_field :scriptextension, placeholder: "Script Information Website", class: "form-control" %>
 	</div>
 
+	<div class="form-group field_with_error">
+		<%= f.label :scriptextensiondes, "Script Website" %>
+		<%= f.text_box :scriptextensiondes, placeholder: "Script Information Website", class: "form-control" %>
+	</div>
+
 	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>

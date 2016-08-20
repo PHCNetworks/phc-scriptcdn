@@ -58,7 +58,7 @@ module Phcscriptcdn
 
 		# Whitelists
 		def script_extension_params
-			params.require(:script_extension).permit(:scriptextname, :scriptext, :scriptextdesciprtion)
+			params.require(:script_extension).permit(:scriptextension, :scriptextensiondes, :scriptextensiontxt)
 		end
 
 	end

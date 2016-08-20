@@ -1,4 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_script_extension_path(@script_extension) %> |
-<%= link_to 'Back', script_extensions_path %>
+<%= link_to 'Edit', edit_script_extension_path(@script_extension), class: "btn btn-primary" %>
+<%= link_to 'Destroy', script_extension_path(@script_extension), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>

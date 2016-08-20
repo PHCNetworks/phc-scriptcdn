@@ -1,4 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_script_author_path(@script_author) %> |
-<%= link_to 'Back', script_authors_path %>
+<%= link_to 'Edit', edit_script_author_path(@script_author), class: "btn btn-primary" %>
+<%= link_to 'Destroy', script_author_path(@script_author), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
