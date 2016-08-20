@@ -1,6 +1,6 @@
 <!-- Title System -->
-<% phc_title "PHCMembers - Member Listing Manager" %>
-<% phc_title_tagline "Update Listing Information for " + @members_profile_info.mfirstname + " " + @members_profile_info.mlastname %>
+<% phc_title "Script Version" %>
+<% phc_title_tagline "Update Script Version" %>
 
 <!-- Page Header -->
 <div class="row">
@@ -8,9 +8,8 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Dashboard", member_root_path %></li>
-			<li><%= link_to "Member Profile List", member_profiles_path %></li>
-			<li><%= link_to @members_profile_info.mfirstname + " " + @members_profile_info.mlastname + " Address Index", member_profile_addresses_path %></li>
+			<li><%= link_to "Script Listings Index", script_listings_path %></li>
+			<li><%= link_to "URL Index", script_urls_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -24,6 +23,11 @@
 </div>
 
 <!-- Main Content -->
-<%= render 'form', script_url: @script_url %>
+<div class="row">
+	<div class="col-lg-12">
 
-<%= link_to 'Back', script_urls_path %>
+		<%= render 'form', script_url: @script_url %>
+		<%= link_to 'Back', script_urls_path, class: "btn btn-primary"  %>
+
+	</div>
+</div>

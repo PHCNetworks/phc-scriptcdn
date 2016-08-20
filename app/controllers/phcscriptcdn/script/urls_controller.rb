@@ -61,7 +61,7 @@ module Phcscriptcdn
 
 		# Whitelists
 		def script_url_params
-			params.require(:script_url).permit(:scripturl, :scripturlext, :main_id)
+			params.require(:script_url).permit(:scripturl)
 		end
 
 	end
