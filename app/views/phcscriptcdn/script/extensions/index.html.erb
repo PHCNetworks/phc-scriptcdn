@@ -28,20 +28,16 @@
 		<table class="table table-striped table-bordered table-advance table-hover">
 			<thead>
 				<tr>
-					<th>Script Extensions</th>
+					<th>Script Extension Name</th>
+					<th>Script Extension</th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<% @script_extensions.each do |script_extension| %>
 					<tr>
-						<td><%= link_to script_extension.lcncname, script_extension %></td>
-						<td><%= link_to script_extension.lcnccomgpl, script_extension %></td>
-						<td><%= link_to script_extension.lcncarvlfsf, script_extension %></td>
-						<td><%= link_to script_extension.lcncarvlosi, script_extension %></td>
-						<td><%= link_to script_extension.lcncarvlcopyfree, script_extension %></td>
-						<td><%= link_to script_extension.lcncarvldebian, script_extension %></td>
-						<td><%= link_to script_extension.lcncarvlfedora, script_extension %></td>
+						<td><%= link_to script_extension.scriptextensionname, script_extension %></td>
+						<td><%= link_to script_extension.scriptextension, script_extension %></td>
 					</tr>
 				<% end %>
 			</tbody>
