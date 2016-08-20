@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20160801032225) do
   end
 
   create_table "phcscriptcdn_script_extensions", force: :cascade do |t|
+    t.string   "scriptextensionname"
+    t.text     "scriptextensiondes"
     t.string   "scriptextension"
-    t.string   "scriptextensiondes"
-    t.string   "scriptextensiontxt"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "phcscriptcdn_script_licences", force: :cascade do |t|
