@@ -12,10 +12,6 @@ class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.0]
 			t.string :lcncarvldebian
 			t.string :lcncarvlfedora
 
-			t.string :user_id
-			t.string :membership_id
-			t.string :oganization_id
-
 			t.timestamps
 
 		end

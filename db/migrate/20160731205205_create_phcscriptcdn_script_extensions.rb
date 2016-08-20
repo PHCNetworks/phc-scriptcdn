@@ -5,10 +5,6 @@ class CreatePhcscriptcdnScriptExtensions < ActiveRecord::Migration[5.0]
 
 			t.string :scriptextension
 
-			t.string :user_id
-			t.string :membership_id
-			t.string :oganization_id
-
 			t.timestamps
 
 		end
