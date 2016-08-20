@@ -1,6 +1,6 @@
 <!-- Title System -->
-<% phc_title "Script Listing Manager" %>
-<% phc_title_tagline "Update Script Listing" %>
+<% phc_title "Script URL Manager" %>
+<% phc_title_tagline "Script URL Index" %>
 
 <!-- Page Header -->
 <div class="row">
@@ -8,7 +8,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Information", script_listings_path %></li>
+			<li><%= link_to "Script Listings Index", script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -22,7 +22,12 @@
 </div>
 
 <!-- Main Content -->
-<%= render 'form', script_listing: @script_listing %>
+<div class="row">
+	<div class="col-lg-12">
 
-<%= link_to 'Show', @script_listing %> |
-<%= link_to 'Back', script_listings_path %>
+		<%= render 'form', script_listing: @script_listing %>
+		<%= link_to 'Show', @script_listing, class: "btn btn-primary" %> |
+		<%= link_to 'Back', script_listings_path, class: "btn btn-primary" %>
+
+	</div>
+</div>

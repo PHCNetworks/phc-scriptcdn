@@ -8,7 +8,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Information", script_listings_path %></li>
+			<li><%= link_to "Script Listings Index", script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -22,7 +22,11 @@
 </div>
 
 <!-- Main Content -->
+<div class="row">
+	<div class="col-lg-12">
 
-<%= render 'form', script_listing: @script_listing %>
+		<%= render 'form', script_listing: @script_listing %>
+		<%= link_to 'Back', script_listings_path, class: "btn btn-primary"  %>
 
-<%= link_to 'Back', script_listings_path %>
+	</div>
+</div>
