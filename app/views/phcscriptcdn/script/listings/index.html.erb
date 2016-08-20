@@ -30,9 +30,9 @@
 			<thead>
 				<tr>
 					<th>Title</th>
-					<th>Category</th>
-					<th>Licence</th>
-					<th></th>
+					<th>Release Date</th>
+					<th>Latest Release Date</th>
+					<th>Beta Release Date</th>
 				</tr>
 			</thead>
 
@@ -41,8 +41,8 @@
 					<tr>
 						<td class="vert-align"><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
 						<td class="vert-align"><%= link_to script_listing.scriptinitialrelease, script_listing_path(script_listing) %></td>
-						<td class="vert-align"><%= link_to script_listing.scriptlastestreleasecdn, script_listing_path(script_listing) %></td>
-						<td class="vert-align"><%= link_to 'Destroy', script_listing_path(script_listing), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+						<td class="vert-align"><%= link_to script_listing.scriptlastestrelease, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to script_listing.scriptbetarelease, script_listing_path(script_listing) %></td>
 					</tr>
 				<% end %>
 			</tbody>
