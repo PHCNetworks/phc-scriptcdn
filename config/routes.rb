@@ -1,8 +1,5 @@
 Phcscriptcdn::Engine.routes.draw do
 
-  namespace :script do
-    resources :licences
-  end
 	# CDN Frontend
 	namespace :frontend do
 		# Frontend Routes
@@ -15,17 +12,22 @@ Phcscriptcdn::Engine.routes.draw do
 		resources :listings, class_name: 'Phcscriptcdn::Script::Listing' do
 			resources :urls, class_name: 'Phcscriptcdn::Script::Url'
 		end
-		resources :extensions, class_name: 'Phcscriptcdn::Script::Extensions'
-		resources :versions, class_name: 'Phcscriptcdn::Script::Versions'
-		resources :authors, class_name: 'Phcscriptcdn::Script::Authors'
+		resources :authors, class_name: 'Phcscriptcdn::Script::Author'
+		resources :extensions, class_name: 'Phcscriptcdn::Script::Extension'
+		resources :versions, class_name: 'Phcscriptcdn::Script::Version'
+		resources :licences, class_name: 'Phcscriptcdn::Script::Licence'
 	end
 	
 	# Application API
-	namespace :api, :path => "", :constraints => {:subdomain => "api"} do
-		# Routes for API
-		resources :mains, defaults: {format: 'json'}
-		resources :informations, defaults: {format: 'json'}
-		resources :versions, defaults: {format: 'json'}
+	namespace :api do, :path => "", :constraints => {:subdomain => "api"}
+		namespace :v1 do
+
+			# Routes for API
+			resources :mains, defaults: {format: 'json'}
+			resources :informations, defaults: {format: 'json'}
+			resources :versions, defaults: {format: 'json'}
+
+		end
 	end
 
 end
