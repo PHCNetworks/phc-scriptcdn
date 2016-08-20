@@ -12,6 +12,7 @@
   <tbody>
     <% @script_authors.each do |script_author| %>
       <tr>
+				<td><%= script_author.scriptversion %></td>
         <td><%= link_to 'Show', script_author %></td>
         <td><%= link_to 'Edit', edit_script_author_path(script_author) %></td>
         <td><%= link_to 'Destroy', script_author, method: :delete, data: { confirm: 'Are you sure?' } %></td>

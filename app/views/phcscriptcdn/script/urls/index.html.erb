@@ -35,6 +35,7 @@
   <tbody>
     <% @script_urls.each do |script_url| %>
       <tr>
+				<td><%= script_url.scriptversion %></td>
         <td><%= link_to 'Show', script_url %></td>
         <td><%= link_to 'Edit', edit_script_url_path(script_url) %></td>
         <td><%= link_to 'Destroy', script_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>

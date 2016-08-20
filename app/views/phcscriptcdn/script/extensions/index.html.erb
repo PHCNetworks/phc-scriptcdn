@@ -12,6 +12,7 @@
   <tbody>
     <% @script_extensions.each do |script_extension| %>
       <tr>
+				<td><%= script_extension.scriptversion %></td>
         <td><%= link_to 'Show', script_extension %></td>
         <td><%= link_to 'Edit', edit_script_extension_path(script_extension) %></td>
         <td><%= link_to 'Destroy', script_extension, method: :delete, data: { confirm: 'Are you sure?' } %></td>

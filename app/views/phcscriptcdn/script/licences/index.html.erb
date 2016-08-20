@@ -12,6 +12,7 @@
   <tbody>
     <% @script_licences.each do |script_licence| %>
       <tr>
+				<td><%= script_licence.scriptversion %></td>
         <td><%= link_to 'Show', script_licence %></td>
         <td><%= link_to 'Edit', edit_script_licence_path(script_licence) %></td>
         <td><%= link_to 'Destroy', script_licence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
