@@ -1,5 +1,25 @@
-<h1>New Script Licence</h1>
+<!-- Title System -->
+<% phc_title "Script Listing Manager" %>
+<% phc_title_tagline "Create a New Script Listing" %>
 
+<!-- Page Header -->
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Bread Crumbs -->
+		<ol class="breadcrumb">
+			<li><%= link_to "Script Information", script_listings_path %></li>
+			<li class="active"><%= yield(:phc_title_tagline) %></li>
+		</ol>
+
+		<!-- Page Title -->
+		<h3 class="page-title">
+			<%= yield(:phc_title) %> </br>
+			<small><%= yield(:phc_title_tagline) %></small>
+		</h3>
+
+	</div>
+</div>
+
+<!-- Main Content -->
 <%= render 'form', script_licence: @script_licence %>
-
-<%= link_to 'Back', script_licences_path %>

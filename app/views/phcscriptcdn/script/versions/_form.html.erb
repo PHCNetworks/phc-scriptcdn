@@ -1,17 +1,12 @@
 <%= form_for(script_version) do |f| %>
-  <% if script_version.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(script_version.errors.count, "error") %> prohibited this script_version from being saved:</h2>
 
-      <ul>
-      <% script_version.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<div class="form-group field_with_error">
+		<%= f.label :scriptversion, "Licence Name" %>
+		<%= f.text_field :scriptversion, placeholder: "Version Number", class: "form-control"  %>
+	</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="actions">
+		<%= f.submit class: "btn btn-primary" %>
+	</div>
+
 <% end %>

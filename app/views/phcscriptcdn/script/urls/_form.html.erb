@@ -1,17 +1,12 @@
 <%= form_for(script_url) do |f| %>
-  <% if script_url.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(script_url.errors.count, "error") %> prohibited this script_url from being saved:</h2>
 
-      <ul>
-      <% script_url.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<div class="form-group field_with_error">
+		<%= f.label :scripturl, "Script URL" %>
+		<%= f.text_field :scripturl, placeholder: "Script URL", class: "form-control"  %>
+	</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="actions">
+		<%= f.submit class: "btn btn-primary" %>
+	</div>
+
 <% end %>
