@@ -60,7 +60,6 @@ module Phcscriptcdn
 
 		private
 
-
 		# Common Callbacks
 		def set_script_url
 			@script_url = Script::Url.find(params[:id])
@@ -68,7 +67,7 @@ module Phcscriptcdn
 
 		# Whitelists
 		def script_url_params
-			params.require(:script_url).permit(:scripturl, :listing_id)
+			params.require(:script_url).permit(:scripturl, :scripturlrelease, :scripturlcdnupdate, :listing_id, :version_id, :extension_id)
 		end
 
 	end

@@ -29,6 +29,8 @@
 			<thead>
 				<tr>
 					<th>Script URL</th>
+					<th>Release Date</th>
+					<th>CDN Update Date</th>
 				</tr>
 			</thead>
 
@@ -36,6 +38,8 @@
 				<% @script_urls.each do |script_url| %>
 					<tr>
 						<td><%= link_to script_url.scripturl, script_listing_url_path(script_url.listing, script_url) %></td>
+						<td><%= link_to script_url.scripturlrelease, script_listing_url_path(script_url.listing, script_url) %></td>
+						<td><%= link_to script_url.scripturlcdnupdate, script_listing_url_path(script_url.listing, script_url) %></td>
 					</tr>
 				<% end %>
 			</tbody>

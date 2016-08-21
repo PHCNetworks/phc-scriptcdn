@@ -62,10 +62,16 @@ ActiveRecord::Schema.define(version: 20160801032225) do
 
   create_table "phcscriptcdn_script_urls", force: :cascade do |t|
     t.string   "scripturl"
+    t.date     "scripturlrelease"
+    t.date     "scripturlcdnupdate"
     t.integer  "listing_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "version_id"
+    t.integer  "extension_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["extension_id"], name: "index_phcscriptcdn_script_urls_on_extension_id"
     t.index ["listing_id"], name: "index_phcscriptcdn_script_urls_on_listing_id"
+    t.index ["version_id"], name: "index_phcscriptcdn_script_urls_on_version_id"
   end
 
   create_table "phcscriptcdn_script_versions", force: :cascade do |t|
