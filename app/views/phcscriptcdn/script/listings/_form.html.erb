@@ -42,6 +42,11 @@
 		<%= f.date_select :scriptbetarelease, class: "form-control" %>
 	</div>
 
+	<div class="form-group field_with_errors">
+		<label>Script Version</label>
+		<%= collection_select(:script_listing, :version_id, Phcscriptcdn::Script::Version.order('scriptversion'), :id, :scriptversion, {}, {class: "form-control"}) %>
+	</div>
+
 	<div class="form-group field_with_error">
 		<%= f.label :scriptstatus, "Script Status" %>
 		<%= f.select( :scriptstatus, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control form-control"}) %>

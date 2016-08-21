@@ -18,6 +18,8 @@ class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.0]
 
 			t.string :scriptstatus
 
+			t.references :version
+
 			t.timestamps
 
 		end
