@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'pg', '~> 0.18.4'
 
 	# PHC Engines & Themes
-	spec.add_dependency 'phctitleseo', '~> 3.3', '>= 3.3.2'
-	spec.add_dependency 'phcnotifi', '~> 3.3', '>= 3.3.2'
+	spec.add_dependency 'phctitleseo', '~> 3.3', '>= 3.3.3'
+	spec.add_dependency 'phcnotifi', '~> 3.3', '>= 3.3.3'
 
 	# UI & Frontend Elements
 	spec.add_dependency 'jquery-rails', '~> 4.2', '>= 4.2.1'
