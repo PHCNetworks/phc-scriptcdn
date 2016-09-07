@@ -2,16 +2,17 @@
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn)
 [![Issue Count](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn/badges/issue_count.svg)](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn)
 [![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
+[![Dependency Status](https://gemnasium.com/badges/github.com/PHCNetworks/phc-scriptcdn.svg)](https://gemnasium.com/github.com/PHCNetworks/phc-scriptcdn)
   
-### PHCScriptCDN(2) (Script Listing Engine) Documentation
-PHCScriptCDN(2) script listing software to manage your online script CDN.
+### PHCScriptCDN(3) (Script Listing Engine) Documentation
+PHCScriptCDN(3) script listing software to manage your online script CDN.
 
 - Main script title and description.
 - Script versions and script URLs.
 
 #### Step 1 - Add PHCScriptCDN Engine to your gemfile  
 
-	gem 'phcscriptcdn', '~> 2.0', '>= 2.0.4'
+	gem 'phcscriptcdn', '~> 3.0', '>= 3.0.1'
 	bundle install
   
 #### Step 2 - Add Database Migration Files  
