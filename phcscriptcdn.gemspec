@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
 	# Main Dependencies
 	spec.add_dependency 'rails', '~> 5.0', '>= 5.0.0.1'
-	spec.add_dependency 'paper_trail', '~> 5.2'
+	spec.add_dependency 'paper_trail', '~> 5.2', '>= 5.2.1'
 	spec.add_dependency 'pg', '~> 0.18.4'
 
 	# PHC Engines & Themes
@@ -36,14 +36,14 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
 	# API
-	spec.add_dependency 'oj', '~> 2.17', '>= 2.17.1'
+	spec.add_dependency 'oj', '~> 2.17', '>= 2.17.4'
 	spec.add_dependency 'rabl', '~> 0.13.0'
 	spec.add_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
 
 	# Development & Testing Dependencies
-	spec.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5.1'
+	spec.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5.2'
 	spec.add_development_dependency 'factory_girl_rails', '~> 4.7'
-	spec.add_development_dependency 'capybara', '~> 2.7', '>= 2.7.1'
+	spec.add_development_dependency 'capybara', '~> 2.8', '>= 2.8.1'
 	spec.add_development_dependency 'byebug', '~> 9.0', '>= 9.0.5'
 
 	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
