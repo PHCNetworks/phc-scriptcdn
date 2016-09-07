@@ -1,8 +1,7 @@
 [![security](https://hakiri.io/github/PHCNetworks/phc-scriptcdn/master.svg)](https://hakiri.io/github/PHCNetworks/phc-scriptcdn/master)
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn)
-[![Issue Count](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn/badges/issue_count.svg)](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn)
-[![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PHCNetworks/phc-scriptcdn.svg)](https://gemnasium.com/github.com/PHCNetworks/phc-scriptcdn)
+[![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
   
 ### PHCScriptCDN(3) (Script Listing Engine) Documentation
 PHCScriptCDN(3) script listing software to manage your online script CDN.
