@@ -19,12 +19,12 @@ Gem::Specification.new do |spec|
 
 	# Main Dependencies
 	spec.add_dependency 'rails', '~> 5.0', '>= 5.0.0.1'
-	spec.add_dependency 'paper_trail', '~> 5.2', '>= 5.2.2'
-	spec.add_dependency 'pg', '~> 0.18.4'
+	spec.add_dependency 'pg', '~> 0.19.0'
+	spec.add_dependency 'paper_trail', '~> 5.2', '>= 5.2.1'
 
 	# PHC Engines & Themes
-	spec.add_dependency 'phctitleseo', '~> 3.3', '>= 3.3.3'
-	spec.add_dependency 'phcnotifi', '~> 3.3', '>= 3.3.3'
+	spec.add_dependency 'phctitleseo', '~> 3.3', '>= 3.3.4'
+	spec.add_dependency 'phcnotifi', '~> 3.3', '>= 3.3.4'
 
 	# UI & Frontend Elements
 	spec.add_dependency 'jquery-rails', '~> 4.2', '>= 4.2.1'
@@ -43,7 +43,7 @@ Gem::Specification.new do |spec|
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5.2'
 	spec.add_development_dependency 'factory_girl_rails', '~> 4.7'
-	spec.add_development_dependency 'capybara', '~> 2.8', '>= 2.8.1'
+	spec.add_development_dependency 'capybara', '~> 2.9', '>= 2.9.1'
 	spec.add_development_dependency 'byebug', '~> 9.0', '>= 9.0.5'
 
 	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
