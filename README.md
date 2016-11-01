@@ -11,7 +11,7 @@ PHCScriptCDN(3) script listing software to manage your online script CDN.
 
 #### Step 1 - Add PHCScriptCDN Engine to your gemfile  
 
-	gem 'phcscriptcdn', '~> 3.0', '>= 3.0.4'
+	gem 'phcscriptcdn', '~> 3.0', '>= 3.0.5'
 	bundle install
   
 #### Step 2 - Add Database Migration Files  
