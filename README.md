@@ -4,8 +4,9 @@
 [![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
   
 ### PHCScriptCDN(3) (Script Listing Engine) Documentation
-PHCScriptCDN(3) script listing software to manage your online script CDN.
+PHCScriptCDN(3) rails script management engine for website script CDN listings.
 
+- Manage script CDN listings for websites.
 - Main script title and description.
 - Script versions and script URLs.
 
