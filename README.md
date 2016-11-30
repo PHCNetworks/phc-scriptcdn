@@ -10,32 +10,28 @@ PHCScriptCDN(3) rails script management engine for website script CDN listings.
 - Main script title and description.
 - Script versions and script URLs.
 
-#### Step 1 - Add PHCScriptCDN Engine to your gemfile  
+#### Step 1 - Add PHCScriptCDN to your gemfile 
 
-	gem 'phcscriptcdn', '~> 3.0', '>= 3.0.6'
+	gem 'phcscriptcdn', '~> 3.1'
 	bundle install
   
-#### Step 2 - Add Database Migration Files  
+#### Step 2 - Copy PHCScriptCDN Database Tables
+To copy PHCScriptCDN's requried database migrations, copy each command individually to your terminal's command line. 
 
-	rake phcscriptcdn:install:migrations
-	rake db:migrate
+	rails phcscriptcdn:install:migrations
+	rails db:migrate
   
-#### Step 3 - Mount PHCScriptCDN in your Routes File  
-Mount the Engine in your Routes File (App must have Root route)  
+#### Step 3 - Recompile Assets  
+To properly function re-compile your application's assets to copy over requried files.
   
-	mount Phcscriptcdn::Engine, :at => '/'  
-  
-#### Step 4 - Generate Views  
-Generate views for customization and app integration.  
-  
+	rails assets:clobber
+	rails assets:precompile  
+
+#### Step 4 - Generate Contact Form View (Customization)  
+All PHCScriptCDN views and layouts can be overwritten by copying files to your application.
+
 	rails generate phcscriptcdn:views
-
-#### Step 5 - Recompile Assets  
-PHCScriptCDN UI requires Bootstrap and FontAwesome to operate.  
   
-	rake assets:clobber
-	rake assets:precompile  
-
 #### Additional Information
 
 - [Critical Security Updates](https://github.com/PHCNetworks/phc-scriptcdn/wiki/Critical-Security-Updates)
