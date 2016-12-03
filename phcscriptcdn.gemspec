@@ -22,12 +22,12 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'pg', '~> 0.19.0'
 	spec.add_dependency 'paper_trail', '~> 5.2', '>= 5.2.3'
 
-	# PHC Engines & Themes
+	# PHCEngines & Theme Dependencies
 	spec.add_dependency 'phcadmin3', '~> 0.6.0'
 	spec.add_dependency 'phctitleseo', '~> 3.4'
 	spec.add_dependency 'phcnotifi', '~> 3.4'
 
-	# UI & Frontend Elements
+	# UI & Frontend Dependencies
 	spec.add_dependency 'jquery-rails', '~> 4.2', '>= 4.2.1'
 	spec.add_dependency 'jquery-ui-rails', '~> 6.0'
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
@@ -36,10 +36,19 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'country_select', '~> 3.0'
 	spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
-	# API
+	# API Dependencies
 	spec.add_dependency 'oj', '~> 2.18'
 	spec.add_dependency 'rabl', '~> 0.13.1'
 	spec.add_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
+	spec.add_dependency 'responders', '~> 2.3'
+
+	# WYSIWYG Editor Dependencies
+	spec.add_dependency 'summernote-rails', '~> 0.8.2.0'
+	spec.add_dependency 'codemirror-rails', '~> 5.16'
+
+	# Upload & Media Dependencies
+	spec.add_dependency 'carrierwave', '~> 0.11.2'
+	spec.add_dependency 'cloudinary', '~> 1.2', '>= 1.2.4'
 
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5.2'

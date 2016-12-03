@@ -1,17 +1,32 @@
 module Phcscriptcdn
 	class Engine < ::Rails::Engine
-				
-		# Load UI Dependecies
+
+		# Main Dependencies
+		require 'rails'
+		require 'pg'
+		require 'paper_trail'
+
+		# PHCEngines & Theme Dependencies
+		require 'phcnotifi'
+		require 'phctitleseo'
+		require 'phcadmin3'
+
+		# UI & Frontend Dependencies
 		require 'jquery-rails'
+		require 'jquery-ui-rails'
 		require 'sass-rails'
 		require 'bootstrap-sass'
 		require 'font-awesome-rails'
-
-		# PHCEngines
-		require 'phcnotifi'
-		require 'phctitleseo'
-
-		# Give PHCScriptCDN Own Namespace
+		require 'country_select'
+		require 'gravtastic'
+		
+		# API Dependencies
+		require 'rabl'
+		require 'oj'
+		require 'multi_json'
+		require 'responders'
+	
+		# Isolate Namespace
 		isolate_namespace Phcscriptcdn
 
 		# Testing Generator
@@ -25,10 +40,9 @@ module Phcscriptcdn
 			request_specs: false
 			g.fixture_replacement :factory_girl, dir: "spec/factories"
 		end
-		
-		# Load Helper Files
+
+		# Load Requried Helper Files
 		config.to_prepare do
-			ApplicationController.helper(ApplicationHelper)
 			Phcnotifi::ApplicationController.helper(ApplicationHelper)
 			Phctitleseo::ApplicationController.helper(ApplicationHelper)
 		end
