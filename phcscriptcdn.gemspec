@@ -23,13 +23,13 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'paper_trail', '~> 5.2', '>= 5.2.3'
 
 	# PHCEngines & Theme Dependencies
-	spec.add_dependency 'phcadmin3', '~> 0.6.0'
-	spec.add_dependency 'phctitleseo', '~> 3.4'
-	spec.add_dependency 'phcnotifi', '~> 3.4'
+	spec.add_dependency 'phcadmin3', '~> 0.6.1'
+	spec.add_dependency 'phctitleseo', '~> 3.4', '>= 3.4.1'
+	spec.add_dependency 'phcnotifi', '~> 3.4', '>= 3.4.1'
 
 	# UI & Frontend Dependencies
 	spec.add_dependency 'jquery-rails', '~> 4.2', '>= 4.2.1'
-	spec.add_dependency 'jquery-ui-rails', '~> 6.0'
+	spec.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 	spec.add_dependency 'font-awesome-rails', '~> 4.7'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.6'
@@ -53,7 +53,7 @@ Gem::Specification.new do |spec|
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5.2'
 	spec.add_development_dependency 'factory_girl_rails', '~> 4.7'
-	spec.add_development_dependency 'capybara', '~> 2.10', '>= 2.10.1'
+	spec.add_development_dependency 'capybara', '~> 2.10', '>= 2.10.2'
 	spec.add_development_dependency 'byebug', '~> 9.0', '>= 9.0.6'
 
 	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.12'
