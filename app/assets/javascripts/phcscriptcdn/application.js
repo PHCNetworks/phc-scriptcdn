@@ -1,4 +1,2 @@
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap-sprockets
-//= require_tree .
+// Load PHCAdmin3 Javascript
+//= require phc_admins_main_three
