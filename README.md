@@ -24,7 +24,7 @@ To copy PHCScriptCDN's requried database migrations, copy each command individua
 #### Step 3 - Mount PHCMembers & Add Routes
 Mount PHCMembers by adding code below to your routes file.  
   
-	mount Phcmembers::Engine, :at => '/'
+	mount Phcscriptcdn::Engine, :at => '/'
   
 #### Step 4 - Recompile Assets  
 To properly function re-compile your application's assets to copy over requried files.
