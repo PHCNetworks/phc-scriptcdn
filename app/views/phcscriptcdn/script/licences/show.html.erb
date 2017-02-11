@@ -1,3 +1,28 @@
+<!-- Title System -->
+<% phc_title "Script Listings Manager" %>
+<% phc_title_tagline "Script Licence Details" %>
+<!-- Title System -->
+
+<!-- Page Header -->
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Bread Crumbs -->
+		<ol class="breadcrumb">
+			<li><%= link_to "Script Licence Index", phcscriptcdnpro.script_licences_path %></li>
+			<li class="active"><%= yield(:phc_title_tagline) %></li>
+		</ol>
+
+		<!-- Page Title -->
+		<h3 class="page-title">
+			<%= yield(:phc_title) %> </br>
+			<small><%= yield(:phc_title_tagline) %></small>
+		</h3>
+
+	</div>
+</div>
+<!-- Page Header -->
+
 <div class="btn-group" role="group" aria-label="licence_button_group">
 	<%= link_to 'Edit', edit_script_licence_path(@script_licence), class: "btn btn-primary" %>
 	<%= link_to 'Destroy', script_licence_path(@script_licence), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>

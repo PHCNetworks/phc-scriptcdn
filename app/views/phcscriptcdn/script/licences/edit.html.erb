@@ -9,8 +9,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Listings Index", script_listings_path %></li>
-			<li><%= link_to "Licence Index", script_licences_path %></li>
+			<li><%= link_to "Script Licence Index", phcscriptcdnpro.script_licences_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 
@@ -22,12 +21,15 @@
 
 	</div>
 </div>
+<!-- Page Header -->
 
 <!-- Main Content -->
 <div class="row">
 	<div class="col-lg-12">
 
+		<!-- Form Requries URL to Function Properly -->
 		<%= render 'form', script_licence: @script_licence %>
 
 	</div>
 </div>
+<!-- Main Content -->
