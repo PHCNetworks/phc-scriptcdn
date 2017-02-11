@@ -1,6 +1,7 @@
 <!-- Title System -->
-<% phc_title "Script Listing Manager" %>
-<% phc_title_tagline "Script Listing" %>
+<% phc_title "Script Listings Manager" %>
+<% phc_title_tagline "Script Listings" %>
+<!-- Title System -->
 
 <!-- Page Header -->
 <div class="row">
@@ -8,18 +9,21 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Information", script_listings_path %></li>
+			<li><%= link_to "Listing Index", phcscriptcdnpro.script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
+		<!-- Bread Crumbs -->
 
 		<!-- Page Title -->
 		<h3 class="page-title">
 			<%= yield(:phc_title) %> </br>
 			<small><%= yield(:phc_title_tagline) %></small>
 		</h3>
+		<!-- Page Title -->
 
 	</div>
 </div>
+<!-- Page Header -->
 
 <!-- Main Content -->
 

@@ -1,30 +1,27 @@
 <%= form_for([@script_url.listing, @script_url], url: form_url) do |f| %>
 
+	<%= render 'phcnotifi/validations', :object => @script_url %>
+
 	<div class="form-group field_with_error">
 		<%= f.label :scripturl, "Script URL" %>
 		<%= f.text_field :scripturl, placeholder: "Script URL", class: "form-control"  %>
 	</div>
-
 	<div class="form-group field_with_error">
 		<%= f.label :scripturlrelease, "Initial Release" %>
 		<%= f.date_select :scripturlrelease, class: "form-control" %>
 	</div>
-
 	<div class="form-group field_with_error">
 		<%= f.label :scripturlcdnupdate, "Latest Release" %>
 		<%= f.date_select :scripturlcdnupdate, class: "form-control" %>
 	</div>
-
 	<div class="form-group field_with_errors">
 		<label>Script Version</label>
-		<%= collection_select(:script_url, :version_id, Phcscriptcdn::Script::Version.order('scriptversion'), :id, :scriptversion, {}, {class: "form-control"}) %>
+		<%= collection_select(:script_url, :version_id, Phcscriptcdnpro::Script::Version.order('scriptversion'), :id, :scriptversion, {}, {class: "form-control"}) %>
 	</div>
-
 	<div class="form-group field_with_errors">
 		<label>Script Extensions</label>
-		<%= collection_select(:script_url, :extension_id, Phcscriptcdn::Script::Extension.order('scriptextensionname'), :id, :scriptextension, {}, {class: "form-control"}) %>
+		<%= collection_select(:script_url, :extension_id, Phcscriptcdnpro::Script::Extension.order('scriptextensionname'), :id, :scriptextension, {}, {class: "form-control"}) %>
 	</div>
-
 	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>
