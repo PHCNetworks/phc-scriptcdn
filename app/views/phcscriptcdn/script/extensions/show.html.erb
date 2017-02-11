@@ -1,3 +1,31 @@
+<!-- Title System -->
+<% phc_title "Script Listings Manager" %>
+<% phc_title_tagline "Script Extension Details" %>
+<!-- Title System -->
+
+<!-- Page Header -->
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Bread Crumbs -->
+		<ol class="breadcrumb">
+			<li><%= link_to "Script Extension Index", phcscriptcdnpro.script_extensions_path %></li>
+			<li class="active"><%= yield(:phc_title_tagline) %></li>
+		</ol>
+		<!-- Bread Crumbs -->
+
+		<!-- Page Title -->
+		<h3 class="page-title">
+			<%= yield(:phc_title) %> </br>
+			<small><%= yield(:phc_title_tagline) %></small>
+		</h3>
+		<!-- Page Title -->
+
+	</div>
+</div>
+<!-- Page Header -->
+
+
 <div class="btn-group" role="group" aria-label="extension_button_group">
 	<%= link_to 'Edit', edit_script_extension_path(@script_extension), class: "btn btn-primary" %>
 	<%= link_to 'Destroy', script_extension_path(@script_extension), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>

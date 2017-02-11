@@ -1,15 +1,15 @@
 <%= form_for(script_extension) do |f| %>
 
+	<%= render 'phcnotifi/validations', :object => @script_extension %>
+
 	<div class="form-group field_with_error">
 		<%= f.label :scriptextensionname, "Extension Name" %>
 		<%= f.text_field :scriptextensionname, placeholder: "Extension Name", class: "form-control" %>
 	</div>
-
 	<div class="form-group field_with_error">
 		<%= f.label :scriptextensiondes, "Extension Description" %>
 		<%= f.text_area :scriptextensiondes, placeholder: "Extension Description", class: "form-control" %>
 	</div>
-	
 	<div class="form-group field_with_error">
 		<%= f.label :scriptextension, "Script Extension" %>
 		<%= f.text_field :scriptextension, placeholder: "Script Extension (.js/.css)", class: "form-control" %>

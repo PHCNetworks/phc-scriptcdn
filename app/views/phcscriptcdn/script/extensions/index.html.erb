@@ -1,6 +1,7 @@
 <!-- Title System -->
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Extension Index" %>
+<!-- Title System -->
 
 <!-- Page Header -->
 <div class="row">
@@ -8,18 +9,20 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Listings Index", script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
+		<!-- Bread Crumbs -->
 
 		<!-- Page Title -->
 		<h3 class="page-title">
 			<%= yield(:phc_title) %> </br>
 			<small><%= yield(:phc_title_tagline) %></small>
 		</h3>
+		<!-- Page Title -->
 
 	</div>
 </div>
+<!-- Page Header -->
 
 <!-- Main Content -->
 <div class="row">
@@ -32,7 +35,6 @@
 					<th>Script Extension</th>
 				</tr>
 			</thead>
-
 			<tbody>
 				<% @script_extensions.each do |script_extension| %>
 					<tr>
@@ -47,3 +49,4 @@
 
 	</div>
 </div>
+<!-- Main Content -->
