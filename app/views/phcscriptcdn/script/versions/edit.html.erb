@@ -1,6 +1,7 @@
 <!-- Title System -->
-<% phc_title "Script Version" %>
+<% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Update Script Version Information" %>
+<!-- Title System -->
 
 <!-- Page Header -->
 <div class="row">
@@ -8,25 +9,30 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Listings Index", script_listings_path %></li>
-			<li><%= link_to "Versions Index", script_versions_path %></li>
+			<li><%= link_to "Script Listing Index", phcscriptcdnpro.script_listings_path %></li>
+			<li><%= link_to "Script URLs", phcscriptcdnpro.script_listing_urls_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
+		<!-- Bread Crumbs -->
 
 		<!-- Page Title -->
 		<h3 class="page-title">
 			<%= yield(:phc_title) %> </br>
 			<small><%= yield(:phc_title_tagline) %></small>
 		</h3>
+		<!-- Page Title -->
 
 	</div>
 </div>
+<!-- Page Header -->
 
 <!-- Main Content -->
 <div class="row">
 	<div class="col-lg-12">
 
+		<!-- Form Requries URL to Function Properly -->
 		<%= render 'form', script_version: @script_version %>
 
 	</div>
 </div>
+<!-- Main Content -->

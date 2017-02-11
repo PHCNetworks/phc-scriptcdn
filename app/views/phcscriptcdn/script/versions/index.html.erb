@@ -1,13 +1,14 @@
 <!-- Title System -->
-<% phc_title "Script Version" %>
+<% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Version Index" %>
-
+<!-- Title System -->
 <!-- Page Header -->
 <div class="row">
 	<div class="col-lg-12">
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
+			<li><%= link_to "Script Listing Index", phcscriptcdnpro.script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 		<!-- Bread Crumbs -->
@@ -33,7 +34,6 @@
 					<th>Script Version</th>
 				</tr>
 			</thead>
-
 			<tbody>
 				<% @script_versions.each do |script_version| %>
 					<tr>
