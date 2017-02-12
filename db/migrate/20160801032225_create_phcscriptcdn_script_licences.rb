@@ -5,6 +5,7 @@ class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.0]
 
 			t.string :lcncname
 			t.string :lcncdescript
+			t.text   :lcncdescription
 
 			t.string :lcnccomgpl
 			t.string :lcncarvlfsf
@@ -12,6 +13,9 @@ class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.0]
 			t.string :lcncarvlcopyfree
 			t.string :lcncarvldebian
 			t.string :lcncarvlfedora
+
+			t.string :user_id
+			t.string :user_name
 
 			t.timestamps
 

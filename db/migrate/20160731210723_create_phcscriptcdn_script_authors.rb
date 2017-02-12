@@ -5,12 +5,13 @@ class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.0]
 
 			t.string :authorfirstname
 			t.string :authorlastname
-			
+
 			t.string :authorwebsite
 			t.string :authorgithub
 			t.string :authortwitter
 
-			t.references :listing
+			t.string :user_id
+			t.string :user_name
 
 			t.timestamps
 

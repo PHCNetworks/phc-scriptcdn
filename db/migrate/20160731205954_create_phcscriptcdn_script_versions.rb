@@ -5,6 +5,9 @@ class CreatePhcscriptcdnScriptVersions < ActiveRecord::Migration[5.0]
 
 			t.string :scriptversion
 
+			t.string :user_id
+			t.string :user_name
+
 			t.timestamps
 
 		end

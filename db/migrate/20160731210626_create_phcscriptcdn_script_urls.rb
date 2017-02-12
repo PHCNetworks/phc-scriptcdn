@@ -11,8 +11,10 @@ class CreatePhcscriptcdnScriptUrls < ActiveRecord::Migration[5.0]
 			t.references :version
 			t.references :extension
 
-			t.timestamps
+			t.string :user_id
+			t.string :user_name
 
+			t.timestamps
 
 		end
 
