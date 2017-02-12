@@ -9,8 +9,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Script Listing Index", phcscriptcdnpro.script_listings_path %></li>
-			<li><%= link_to "Script URLs", phcscriptcdnpro.script_listing_urls_path %></li>
+			<li><%= link_to "Script Version Index", phcscriptcdn.script_versions_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 		<!-- Bread Crumbs -->
@@ -26,7 +25,15 @@
 </div>
 <!-- Page Header -->
 
-<div class="btn-group" role="group" aria-label="version_button_group">
-	<%= link_to 'Edit', edit_script_version_path(@script_version), class: "btn btn-primary" %>
-	<%= link_to 'Destroy', script_version_path(@script_version), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+<!-- Main Content -->
+<div class="row">
+	<div class="col-lg-12">
+
+		<div class="btn-group" role="group" aria-label="version_button_group">
+			<%= link_to 'Edit', edit_script_version_path(@script_version), class: "btn btn-primary" %>
+			<%= link_to 'Destroy', script_version_path(@script_version), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+		</div>
+
+	</div>
 </div>
+<!-- Main Content -->

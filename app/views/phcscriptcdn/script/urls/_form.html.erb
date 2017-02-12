@@ -22,6 +22,7 @@
 		<label>Script Extensions</label>
 		<%= collection_select(:script_url, :extension_id, Phcscriptcdnpro::Script::Extension.order('scriptextensionname'), :id, :scriptextension, {}, {class: "form-control"}) %>
 	</div>
+
 	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>
