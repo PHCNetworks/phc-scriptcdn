@@ -21,7 +21,7 @@ To copy PHCScriptCDN's required database migrations, copy each command individua
 	rails phcscriptcdn:install:migrations
 	rails db:migrate
   
-#### Step 3 - Mount PHCMembers & Add Routes
+#### Step 3 - Mount PHCScriptCDN & Add Routes
 Mount PHCMembers by adding code below to your routes file.  
   
 	mount Phcscriptcdn::Engine, :at => '/'
