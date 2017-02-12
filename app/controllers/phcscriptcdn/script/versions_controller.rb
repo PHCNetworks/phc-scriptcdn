@@ -45,20 +45,20 @@ module Phcscriptcdn
 
 		# DELETE - Script Versions
 		def destroy
-		@script_version.destroy
-		redirect_to script_versions_url, notice: 'Version was successfully destroyed.'
+			@script_version.destroy
+			redirect_to script_versions_url, notice: 'Version was successfully destroyed.'
 		end
 
 		private
 
 		# Common Callbacks
 		def set_script_version
-		@script_version = Script::Version.find(params[:id])
+			@script_version = Script::Version.find(params[:id])
 		end
 
 		# Only allow a trusted parameter "white list" through.
 		def script_version_params
-			params.require(:script_version).permit(:scriptversion)
+			params.require(:script_version).permit(:scriptversion, :user_id, :user_name)
 		end
 
 	end

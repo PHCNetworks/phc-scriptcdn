@@ -3,7 +3,7 @@ require_dependency "phcscriptcdn/application_controller"
 module Phcscriptcdn
 	class Script::LicencesController < ApplicationController
 
-		#Secrity & Filters
+		# Filters & Security
 		before_action :set_script_licence, only: [:show, :edit, :update, :destroy]
 
 		# INDEX - Script Licences
@@ -58,7 +58,7 @@ module Phcscriptcdn
 
 		# Whitelists
 		def script_licence_params
-			params.require(:script_licence).permit(:lcncname, :lcncdescript, :lcnccomgpl, :lcncarvlfsf, :lcncarvlosi, :lcncarvlcopyfree, :lcncarvldebian, :lcncarvlfedora)
+			params.require(:script_licence).permit(:lcncname, :lcncdescription, :lcncdescript, :lcnccomgpl, :lcncarvlfsf, :lcncarvlosi, :lcncarvlcopyfree, :lcncarvldebian, :lcncarvlfedora, :user_id, :user_name)
 		end
 
 	end

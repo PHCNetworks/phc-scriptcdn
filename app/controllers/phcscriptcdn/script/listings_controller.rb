@@ -3,7 +3,7 @@ require_dependency "phcscriptcdn/application_controller"
 module Phcscriptcdn
 	class Script::ListingsController < ApplicationController
 
-		# Security & Filters
+		# Filters & Security
 		before_action :set_script_listing, only: [:show, :edit, :update, :destroy]
 
 		# INDEX - Script Listings
@@ -28,7 +28,7 @@ module Phcscriptcdn
 		def create
 			@script_listing = Script::Listing.new(script_listing_params)
 			if @script_listing.save
-				redirect_to script_listings_url, notice: 'Listing was successfully created.'
+				redirect_to script_listings_path, notice: 'Listing was successfully created.'
 				else
 					render :new
 			end
@@ -37,7 +37,7 @@ module Phcscriptcdn
 		# PATCH/PUT - Script Listings
 		def update
 			if @script_listing.update(script_listing_params)
-				redirect_to script_listings_url, notice: 'Listing was successfully updated.'
+				redirect_to script_listings_path, notice: 'Listing was successfully updated.'
 				else
 					render :edit
 			end
@@ -46,7 +46,7 @@ module Phcscriptcdn
 		# DELETE - Script Listings
 		def destroy
 			@script_listing.destroy
-			redirect_to script_listings_url, notice: 'Listing was successfully destroyed.'
+			redirect_to script_listings_path, notice: 'Listing was successfully destroyed.'
 		end
 
 		private
@@ -58,7 +58,7 @@ module Phcscriptcdn
 
 		# Whitelist
 		def script_listing_params
-			params.require(:script_listing).permit(:scripttitle, :scriptdescription, :scriptwebsite, :scripttwitter, :scriptgithub, :scriptinitialrelease, :scriptlastestrelease, :scriptbetarelease, :scriptstatus, :version_id)
+			params.require(:script_listing).permit(:scripttitle, :scriptdescription, :descriptionsource, :scriptwebsite, :scripttwitter, :scriptgithub, :scriptinitialrelease, :scriptlastestrelease, :scriptbetarelease, :scriptstatus, :user_id, :user_name, :version_id, :author_id, :licence_id)
 		end
 
 	end
