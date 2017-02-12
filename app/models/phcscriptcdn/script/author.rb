@@ -3,8 +3,8 @@ module Phcscriptcdn
 
 		# Relationships
 
-		# Attach to Listings
-		belongs_to :listing, class_name: 'Phcscriptcdn::Script::Listing'
+		# Listing (None Nested)
+		has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
 
 	end
 end

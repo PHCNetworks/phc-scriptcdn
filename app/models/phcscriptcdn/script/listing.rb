@@ -3,15 +3,17 @@ module Phcscriptcdn
 
 		# Relationships
 
-		#has_many :informations, class_name: 'Phcscriptcdn::Script::Version'
-		# URL Nested
+		# Attach to URL (Nested)
 		has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
-		# Author Nested
-		has_many :authors, class_name: 'Phcscriptcdn::Script::Author'
+		# Attach to Author (None Nested)
+		belongs_to :author, class_name: 'Phcscriptcdn::Script::Author'
 
-		# Attach to Version
+		# Attach to Version (None Nested)
 		belongs_to :version, class_name: 'Phcscriptcdn::Script::Version'
+
+		# Attach to Licence (None Nested)
+		belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence'
 
 	end
 end
