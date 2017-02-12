@@ -9,7 +9,7 @@
 
 		<!-- Bread Crumbs -->
 		<ol class="breadcrumb">
-			<li><%= link_to "Listing Index", phcscriptcdnpro.script_listings_path %></li>
+			<li><%= link_to "Listing Index", phcscriptcdn.script_listings_path %></li>
 			<li class="active"><%= yield(:phc_title_tagline) %></li>
 		</ol>
 		<!-- Bread Crumbs -->
@@ -26,6 +26,12 @@
 <!-- Page Header -->
 
 <!-- Main Content -->
+<div class="row">
+	<div class="col-lg-12">
 
-<%= link_to 'Edit', edit_script_listing_path(@script_listing) %> |
-<%= link_to 'Back', script_listings_path %>
+		<%= link_to 'Edit', edit_script_listing_path(@script_listing) %> |
+		<%= link_to 'Back', script_listings_path %>
+
+	</div>
+</div>
+<!-- Main Content -->
