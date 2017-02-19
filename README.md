@@ -6,9 +6,9 @@
 ### PHCScriptCDN(4) (Script Listing Engine) Documentation
 PHCScriptCDN(4) rails script management engine for website script CDN listings.
 
-- Manage script CDN listings for websites.
-- Main script title and description.
-- Script versions and script URLs.
+* Manage script CDN listings for websites.
+* Main script title and description.
+* Script versions and script URLs.
 
 #### Step 1 - Add PHCScriptCDN to your gemfile  and run command  
   

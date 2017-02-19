@@ -1,18 +1,18 @@
 class CreatePhcscriptcdnScriptExtensions < ActiveRecord::Migration[5.0]
-	def change
+  def change
 
-		create_table :phcscriptcdn_script_extensions do |t|
+    create_table :phcscriptcdn_script_extensions do |t|
 
-			t.string :scriptextensionname
-			t.text :scriptextensiondes
-			t.string :scriptextension
+      t.string :scriptextensionname
+      t.text :scriptextensiondes
+      t.string :scriptextension
+      
+      t.string :user_id
+      t.string :user_name
+      
+      t.timestamps
 
-			t.string :user_id
-			t.string :user_name
-
-			t.timestamps
-
-		end
-
-	end
+    end
+  
+  end
 end
