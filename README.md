@@ -2,6 +2,7 @@
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-scrtipcdn)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PHCNetworks/phc-scriptcdn.svg)](https://gemnasium.com/github.com/PHCNetworks/phc-scriptcdn)
 [![Gem Version](https://badge.fury.io/rb/phcscriptcdn.svg)](https://badge.fury.io/rb/phcscriptcdn)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/PHCNetworks/phc-scriptcdn/blob/master/MIT-LICENSE)
   
 ### PHCScriptCDN(4) (Script Listing Engine) Documentation
 PHCScriptCDN(4) rails script management engine for website script CDN listings.
@@ -12,7 +13,7 @@ PHCScriptCDN(4) rails script management engine for website script CDN listings.
 
 #### Step 1 - Add PHCScriptCDN to your gemfile  and run command  
   
-	gem 'phcscriptcdn', '~> 4.1'
+	gem 'phcscriptcdn', '~> 4.3'
 	bundle install
   
 #### Step 2 - Copy PHCScriptCDN Database Tables
