@@ -44,23 +44,23 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'responders', '~> 2.3'
 
   # WYSIWYG Editor Dependencies
-  spec.add_dependency 'tinymce-rails', '~> 4.5', '>= 4.5.4'
+  spec.add_dependency 'tinymce-rails', '~> 4.5', '>= 4.5.5'
 
   # Upload & Media Dependencies
   spec.add_dependency 'carrierwave', '~> 1.0'
-  spec.add_dependency 'cloudinary', '~> 1.5', '>= 1.5.2'
+  spec.add_dependency 'cloudinary', '~> 1.6'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5.2'
   spec.add_development_dependency 'factory_girl_rails', '~> 4.8'
   spec.add_development_dependency 'capybara', '~> 2.12', '>= 2.12.1'
   spec.add_development_dependency 'byebug', '~> 9.0', '>= 9.0.6'
-  
+
   spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.13'
   spec.add_development_dependency 'database_cleaner', '~> 1.5', '>= 1.5.3'
-  
+
   spec.add_development_dependency 'faker', '~> 1.7', '>= 1.7.3'
   spec.add_development_dependency 'launchy', '~> 2.4', '>= 2.4.3'
-  spec.add_development_dependency 'selenium-webdriver', '~> 3.2', '>= 3.2.2'
+  spec.add_development_dependency 'selenium-webdriver', '~> 3.3'
 
 end
