@@ -18,11 +18,11 @@
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Version</label>
-		<%= collection_select(:script_url, :version_id, Phcscriptcdnpro::Script::Version.order('scriptversion'), :id, :scriptversion, {}, {class: "form-control"}) %>
+		<%= collection_select(:script_url, :version_id, Phcscriptcdn::Script::Version.order('scriptversion'), :id, :scriptversion, {}, {class: "form-control"}) %>
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Extensions</label>
-		<%= collection_select(:script_url, :extension_id, Phcscriptcdnpro::Script::Extension.order('scriptextensionname'), :id, :scriptextension, {}, {class: "form-control"}) %>
+		<%= collection_select(:script_url, :extension_id, Phcscriptcdn::Script::Extension.order('scriptextensionname'), :id, :scriptextension, {}, {class: "form-control"}) %>
 	</div>
 	<!-- Form Input Fields -->
 
