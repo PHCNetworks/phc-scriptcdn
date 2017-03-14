@@ -1,10 +1,10 @@
 module Phcscriptcdn
-	class Script::Author < ApplicationRecord
+  class Script::Author < ApplicationRecord
 
-		# Relationships
+    # Relationships
 
-		# Listing (None Nested)
-		has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
+    # Listing (None Nested)
+    has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
 
-	end
+  end
 end

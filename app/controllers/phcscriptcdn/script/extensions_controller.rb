@@ -63,5 +63,3 @@ module Phcscriptcdn
   
   end
 end
-
-

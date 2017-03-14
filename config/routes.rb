@@ -1,23 +1,22 @@
 Phcscriptcdn::Engine.routes.draw do
 
-  # CDN Frontend
+  # Frontend Routes
   namespace :frontend do
-    # Frontend Routes
-    resources :cdnpages
+    resources :listings
   end
-  
+
   # Script CDN Listing System
   namespace :script do
     # Main Script Module
-    resources :listings, class_name: 'Phcscriptcdn::Script::Listing' do
-      resources :urls, class_name: 'Phcscriptcdn::Script::Url'
-      resources :authors, class_name: 'Phcscriptcdn::Script::Author'
+    resources :listings, class_name: 'Phcscriptcdnpro::Script::Listing' do
+      resources :urls, class_name: 'Phcscriptcdnpro::Script::Url'
     end
-    resources :extensions, class_name: 'Phcscriptcdn::Script::Extension'
-    resources :versions, class_name: 'Phcscriptcdn::Script::Version'
-    resources :licences, class_name: 'Phcscriptcdn::Script::Licence'
+    resources :authors, class_name: 'Phcscriptcdnpro::Script::Author'
+    resources :extensions, class_name: 'Phcscriptcdnpro::Script::Extension'
+    resources :versions, class_name: 'Phcscriptcdnpro::Script::Version'
+    resources :licences, class_name: 'Phcscriptcdnpro::Script::Licence'
   end
-  
+
   # Application API
   namespace :api, :path => "", :constraints => {:subdomain => "api"} do
     namespace :v1 do

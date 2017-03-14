@@ -1,11 +1,11 @@
 module Phcscriptcdn
-	class Script::Extension < ApplicationRecord
+  class Script::Extension < ApplicationRecord
 
-		# Relationships
+    # Relationships
 
-		# URLs & Extensions (None Nested)
-		has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
-		has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
+    # URLs & Extensions (None Nested)
+    has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
+    has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
-	end
+  end
 end
