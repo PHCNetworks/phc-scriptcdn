@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (4.3.7)
+    phcscriptcdn (4.3.8)
       bootstrap-sass (~> 3.3, >= 3.3.7)
       carrierwave (~> 1.0)
       cloudinary (~> 1.6)
