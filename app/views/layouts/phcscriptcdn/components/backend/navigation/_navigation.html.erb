@@ -1,0 +1,20 @@
+<section class="sidebar">
+	<ul class="sidebar-menu">
+		<li class="<%= is_active_controller('phcscriptcdnpro/script/listings') %> treeview">
+			<a href=""><i class="fa fa-code"></i> <span class="nav-label">Script Listings</span> <span class="fa arrow"></span></a>
+			<ul class="nav nav-second-level collapse">
+				<li class="<%= is_active_controller('phcscriptcdnpro/script/listings') %>"><%= link_to "All Script Listings", phcscriptcdnpro.script_listings_path %></li>
+				<li class="<%= is_active_controller('phcscriptcdnpro/script/listings#new') %>"><%= link_to "Add a New Listing", phcscriptcdnpro.new_script_listing_path %></li>
+			</ul>
+		</li>
+		<li class="<%= is_active_controller('phcscriptcdnpro/script/authors') %> <%= is_active_controller('phcscriptcdnpro/script/licences') %> <%= is_active_controller('phcscriptcdnpro/script/extensions') %> <%= is_active_controller('phcscriptcdnpro/script/versions') %> treeview">
+			<a href=""><i class="fa fa-code"></i> <span class="nav-label">Script CDN Modules</span> <span class="fa arrow"></span></a>
+			<ul class="nav nav-second-level collapse">
+				<li class="<%= is_active_controller('phcscriptcdnpro/script/authors') %>"><%= link_to "Script Authors", phcscriptcdnpro.script_authors_path %></li>
+				<li class="<%= is_active_controller('phcscriptcdnpro/script/licences') %>"><%= link_to "Script Licences", phcscriptcdnpro.script_licences_path %></li>
+				<li class="<%= is_active_controller('phcscriptcdnpro/script/extensions') %>"><%= link_to "Script Extensions", phcscriptcdnpro.script_extensions_path %></li>
+				<li class="<%= is_active_controller('phcscriptcdnpro/script/versions') %>"><%= link_to "Script Versions", phcscriptcdnpro.script_versions_path %></li>
+			</ul>
+		</li>
+	</ul>
+</section>
