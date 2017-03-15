@@ -26,26 +26,34 @@
 				</div>
 				<div class="box-body">
 
-					<table class="table table-striped table-bordered table-advance table-hover">
-						<thead>
-							<tr>
-								<th>Script URL</th>
-								<th>Release Date</th>
-								<th>CDN Update Date</th>
-							</tr>
-						</thead>
-						<tbody>
-							<% @script_urls.each do |script_url| %>
+					<!-- Index Table -->
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
 								<tr>
-									<td><%= link_to script_url.scripturl, script_listing_url_path(script_url.listing, script_url) %></td>
-									<td><%= link_to script_url.scripturlrelease, script_listing_url_path(script_url.listing, script_url) %></td>
-									<td><%= link_to script_url.scripturlcdnupdate, script_listing_url_path(script_url.listing, script_url) %></td>
+									<th>Script URL</th>
+									<th>Release Date</th>
+									<th>CDN Update Date</th>
 								</tr>
-							<% end %>
-						</tbody>
-					</table>
-					
-					<%= link_to 'New Script Url', new_script_listing_url_path, class: "btn btn-primary" %>
+							</thead>
+							<tbody>
+								<% @script_urls.each do |script_url| %>
+									<tr>
+										<td><%= link_to script_url.scripturl, script_listing_url_path(script_url.listing, script_url) %></td>
+										<td><%= link_to script_url.scripturlrelease, script_listing_url_path(script_url.listing, script_url) %></td>
+										<td><%= link_to script_url.scripturlcdnupdate, script_listing_url_path(script_url.listing, script_url) %></td>
+									</tr>
+								<% end %>
+							</tbody>
+						</table>
+					</div>
+					<!-- Index Table -->
+
+					<!-- Panel Footer -->
+					<div class="box-footer clearfix">
+						<%= link_to 'New Script Url', new_script_listing_url_path, class: "btn btn-primary" %>
+					</div>
+					<!-- Panel Footer -->
 
 				</div>
 			</div>

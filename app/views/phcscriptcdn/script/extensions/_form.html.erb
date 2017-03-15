@@ -1,9 +1,10 @@
 <%= form_for(script_extension) do |f| %>
 
-	<!-- PHCNotifi Render Validation -->
+	<!-- PHC-Notifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_extension %>
-
-	<!-- Form Input Fields -->
+	<!-- PHC-Notifi Render Validation -->
+	
+	<!-- Form Fields -->
 	<div class="form-group field_with_error">
 		<%= f.label :scriptextensionname, "Extension Name" %>
 		<%= f.text_field :scriptextensionname, placeholder: "Extension Name", class: "form-control" %>
@@ -16,12 +17,12 @@
 		<%= f.label :scriptextension, "Script Extension" %>
 		<%= f.text_field :scriptextension, placeholder: "Script Extension (.js/.css)", class: "form-control" %>
 	</div>
-	<!-- Form Input Fields -->
-
-	<!-- Form Submition Button -->
+	<!-- Form Fields -->
+	
+	<!-- Form Button -->
 	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>
-	<!-- For Submition Button -->
+	<!-- Form Button -->
 
 <% end %>

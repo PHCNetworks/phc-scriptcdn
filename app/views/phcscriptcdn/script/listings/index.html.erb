@@ -26,28 +26,36 @@
 				</div>
 				<div class="box-body">
 
-					<table class="table table-striped table-bordered table-advance table-hover">
-						<thead>
-							<tr>
-								<th>Title</th>
-								<th>Release Date</th>
-								<th>Latest Release Date</th>
-								<th>Beta Release Date</th>
-							</tr>
-						</thead>
-						<tbody>
-							<% @script_listings.each do |script_listing| %>
+					<!-- Index Table -->
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
 								<tr>
-									<td class="vert-align"><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
-									<td class="vert-align"><%= link_to script_listing.scriptinitialrelease, script_listing_path(script_listing) %></td>
-									<td class="vert-align"><%= link_to script_listing.scriptlastestrelease, script_listing_path(script_listing) %></td>
-									<td class="vert-align"><%= link_to script_listing.scriptbetarelease, script_listing_path(script_listing) %></td>
+									<th>Title</th>
+									<th>Release Date</th>
+									<th>Latest Release Date</th>
+									<th>Beta Release Date</th>
 								</tr>
-							<% end %>
-						</tbody>
-					</table>
-					
-					<%= link_to 'New Script Listing', new_script_listing_path, class: "btn btn-primary" %>
+							</thead>
+							<tbody>
+								<% @script_listings.each do |script_listing| %>
+									<tr>
+										<td class="vert-align"><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
+										<td class="vert-align"><%= link_to script_listing.scriptinitialrelease, script_listing_path(script_listing) %></td>
+										<td class="vert-align"><%= link_to script_listing.scriptlastestrelease, script_listing_path(script_listing) %></td>
+										<td class="vert-align"><%= link_to script_listing.scriptbetarelease, script_listing_path(script_listing) %></td>
+									</tr>
+								<% end %>
+							</tbody>
+						</table>
+					</div>
+					<!-- Index Table -->
+
+					<!-- Panel Footer -->
+					<div class="box-footer clearfix">
+						<%= link_to 'New Script Listing', new_script_listing_path, class: "btn btn-primary" %>
+					</div>
+					<!-- Panel Footer -->
 
 				</div>
 			</div>

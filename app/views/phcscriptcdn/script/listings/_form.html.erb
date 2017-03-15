@@ -1,9 +1,10 @@
 <%= form_for(script_listing) do |f| %>
 
-	<!-- PHCNotifi Render Validation -->
+	<!-- PHC-Notifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_listing %>
-
-	<!-- Form Input Fields -->
+	<!-- PHC-Notifi Render Validation -->
+	
+	<!-- Form Fields -->
 	<div class="form-group field_with_error">
 		<%= f.label :scripttitle, "Script Title" %>
 		<%= f.text_field :scripttitle, placeholder: "Script Title", class: "form-control"  %>
@@ -56,12 +57,12 @@
 		<%= f.label :scriptstatus, "Script Status" %>
 		<%= f.select( :scriptstatus, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control"}) %>
 	</div>
-	<!-- Form Input Fields -->
-
-	<!-- Form Submition Button -->
-	<div class="form-group field_with_error">
+	<!-- Form Fields -->
+	
+	<!-- Form Button -->
+	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>
-	<!-- For Submition Button -->
+	<!-- Form Button -->
 
 <% end %>

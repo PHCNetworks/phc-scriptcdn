@@ -1,9 +1,10 @@
 <%= form_for(script_author) do |f| %>
 
-	<!-- PHCNotifi Render Validation -->
+	<!-- PHC-Notifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_author %>
-
-	<!-- Form Input Fields -->
+	<!-- PHC-Notifi Render Validation -->
+	
+	<!-- Form Fields -->
 	<div class="form-group field_with_error">
 		<%= f.label :authorfirstname, "Author First Name" %>
 		<%= f.text_field :authorfirstname, placeholder: "Author First Name", class: "form-control"  %>
@@ -24,12 +25,12 @@
 		<%= f.label :authortwitter, "Author Twitter Addresss" %>
 		<%= f.text_field :authortwitter, placeholder: "Author Twitter Addresss", class: "form-control"  %>
 	</div>
-	<!-- Form Input Fields -->
-
-	<!-- Form Submition Button -->
+	<!-- Form Fields -->
+	
+	<!-- Form Button -->
 	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>
-	<!-- For Submition Button -->
+	<!-- Form Button -->
 
 <% end %>

@@ -1,19 +1,20 @@
 <%= form_for(script_version) do |f| %>
 
-	<!-- PHCNotifi Render Validation -->
+	<!-- PHC-Notifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_version %>
-
-	<!-- Form Input Fields -->
+	<!-- PHC-Notifi Render Validation -->
+	
+	<!-- Form Fields -->
 	<div class="form-group field_with_error">
 		<%= f.label :scriptversion, "Version Number" %>
 		<%= f.text_field :scriptversion, placeholder: "Version Number", class: "form-control"  %>
 	</div>
-	<!-- Form Input Fields -->
-
-	<!-- Form Submition Button -->
+	<!-- Form Fields -->
+	
+	<!-- Form Button -->
 	<div class="actions">
 		<%= f.submit class: "btn btn-primary" %>
 	</div>
-	<!-- For Submition Button -->
+	<!-- Form Button -->
 
 <% end %>
