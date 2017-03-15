@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (4.3.9)
+    phcscriptcdn (4.3.10)
       bootstrap-sass (~> 3.3, >= 3.3.7)
       carrierwave (~> 1.0)
       cloudinary (~> 1.6)
@@ -148,7 +148,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
-    oj (2.18.2)
+    oj (2.18.3)
     paper_trail (6.0.2)
       activerecord (>= 4.0, < 5.2)
       request_store (~> 1.1)
