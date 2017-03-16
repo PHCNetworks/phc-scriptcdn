@@ -9,5 +9,9 @@ module Phcscriptcdn
     #  Attach to URL (None Nested)
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
+    # Validation for Form Fields
+    validates :scriptversion,
+      presence: true
+
   end
 end

@@ -15,5 +15,15 @@ module Phcscriptcdn
     # Attach to Licence (None Nested)
     belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence'
 
+    # Validation for Form Fields
+    validates :scripttitle,
+      presence: true
+
+    validates :scriptdescription,
+      presence: true
+
+    validates :scriptstatus,
+      presence: true
+
   end
 end

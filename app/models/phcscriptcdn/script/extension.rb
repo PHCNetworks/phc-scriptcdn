@@ -7,5 +7,15 @@ module Phcscriptcdn
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
+    # Validation for Form Fields
+    validates :scriptextensionname,
+      presence: true
+
+    validates :scriptextensiondes,
+      presence: true
+
+    validates :scriptextension,
+      presence: true
+
   end
 end

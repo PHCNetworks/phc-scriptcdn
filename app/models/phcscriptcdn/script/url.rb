@@ -12,5 +12,15 @@ module Phcscriptcdn
     # Attach to Extension (None Nested)
     belongs_to :extension, class_name: 'Phcscriptcdn::Script::Extension'
 
+    # Validation for Form Fields
+    validates :scripturl,
+      presence: true
+
+    validates :scripturlrelease,
+      presence: true
+
+    validates :scripturlcdnupdate,
+      presence: true
+
   end
 end
