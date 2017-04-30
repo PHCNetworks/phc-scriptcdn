@@ -1,7 +1,8 @@
 module Phcscriptcdn
   class Script::Url < ApplicationRecord
 
-    # Relationships
+    # Clean URLS
+    extend FriendlyId
 
     # Attach to Listings (Nested)
     belongs_to :listing, class_name: 'Phcscriptcdn::Script::Listing'

@@ -2,7 +2,6 @@ module Phcscriptcdn
   class Engine < ::Rails::Engine
 
     # Main Dependencies
-    require 'rails'
     require 'pg'
     require 'paper_trail'
     
@@ -19,6 +18,9 @@ module Phcscriptcdn
     require 'font-awesome-rails'
     require 'country_select'
     require 'gravtastic'
+    
+    # URLS
+    require 'friendly_id'
     
     # API Dependencies
     require 'rabl'

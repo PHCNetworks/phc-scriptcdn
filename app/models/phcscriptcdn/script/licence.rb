@@ -1,7 +1,8 @@
 module Phcscriptcdn
   class Script::Licence < ApplicationRecord
 
-    # Relationships
+    # Clean URLS
+    extend FriendlyId
 
     # Listing (None Nested)
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
@@ -15,6 +16,9 @@ module Phcscriptcdn
 
     validates :lcncdescription,
       presence: true
+
+    # Clean URLS Slugs
+    friendly_id :lcncname, use: :slugged
 
   end
 end

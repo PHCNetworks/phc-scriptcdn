@@ -1,7 +1,8 @@
 module Phcscriptcdn
   class Script::Listing < ApplicationRecord
 
-    # Relationships
+    # Clean URLS
+    extend FriendlyId
 
     # Attach to URL (Nested)
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
@@ -24,6 +25,9 @@ module Phcscriptcdn
 
     validates :scriptstatus,
       presence: true
+
+    # Clean URLS Slugs
+    friendly_id :scripttitle, use: :slugged
 
   end
 end

@@ -1,7 +1,8 @@
 module Phcscriptcdn
   class Script::Version < ApplicationRecord
 
-    # Relationships
+    # Clean URLS
+    extend FriendlyId
 
     # Attach to Listing (None Nested)
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
@@ -12,6 +13,9 @@ module Phcscriptcdn
     # Validation for Form Fields
     validates :scriptversion,
       presence: true
+
+    # Clean URLS Slugs
+    friendly_id :scriptversion, use: :slugged
 
   end
 end

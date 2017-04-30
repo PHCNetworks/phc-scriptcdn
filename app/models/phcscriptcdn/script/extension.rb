@@ -1,7 +1,8 @@
 module Phcscriptcdn
   class Script::Extension < ApplicationRecord
 
-    # Relationships
+    # Clean URLS
+    extend FriendlyId
 
     # URLs & Extensions (None Nested)
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
@@ -16,6 +17,9 @@ module Phcscriptcdn
 
     validates :scriptextension,
       presence: true
+
+    # Clean URLS Slugs
+    friendly_id :scriptextensionname, use: :slugged
 
   end
 end

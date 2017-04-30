@@ -1,7 +1,8 @@
 module Phcscriptcdn
   class Script::Author < ApplicationRecord
 
-    # Relationships
+    # Clean URLS
+    extend FriendlyId
 
     # Listing (None Nested)
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
@@ -12,6 +13,9 @@ module Phcscriptcdn
 
     validates :authorlastname,
       presence: true
+
+    # Clean URLS Slugs
+    friendly_id :authorfirstname, use: :slugged
 
   end
 end
