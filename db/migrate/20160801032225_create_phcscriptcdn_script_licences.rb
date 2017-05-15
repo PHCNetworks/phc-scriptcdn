@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.0]
+class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.1]
   def change
 
     create_table :phcscriptcdn_script_licences do |t|
@@ -13,6 +13,8 @@ class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.0]
       t.string :lcncarvlcopyfree
       t.string :lcncarvldebian
       t.string :lcncarvlfedora
+
+      t.string :slug
 
       t.string :user_id
       t.string :user_name

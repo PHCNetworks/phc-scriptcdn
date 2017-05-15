@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.0]
+class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.1]
   def change
 
     create_table :phcscriptcdn_script_listings do |t|
@@ -18,12 +18,14 @@ class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.0]
 
       t.string :scriptstatus
 
-      t.string :user_id
-      t.string :user_name
-
       t.references :version
       t.references :licence
       t.references :author
+
+      t.string :slug
+
+      t.string :user_id
+      t.string :user_name
 
       t.timestamps
 

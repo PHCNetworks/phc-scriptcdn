@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.0]
+class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.1]
   def change
 
     create_table :phcscriptcdn_script_authors do |t|
@@ -9,6 +9,8 @@ class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.0]
       t.string :authorwebsite
       t.string :authorgithub
       t.string :authortwitter
+
+      t.string :slug
 
       t.string :user_id
       t.string :user_name

@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnScriptUrls < ActiveRecord::Migration[5.0]
+class CreatePhcscriptcdnScriptUrls < ActiveRecord::Migration[5.1]
   def change
 
     create_table :phcscriptcdn_script_urls do |t|
@@ -10,6 +10,8 @@ class CreatePhcscriptcdnScriptUrls < ActiveRecord::Migration[5.0]
       t.references :listing
       t.references :version
       t.references :extension
+
+      t.string :slug
 
       t.string :user_id
       t.string :user_name
