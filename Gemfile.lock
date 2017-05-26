@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (7.1.0)
+    phcscriptcdn (7.2.0)
       bootstrap-sass (~> 3.3, >= 3.3.7)
       carrierwave (~> 1.1)
       cloudinary (~> 1.8, >= 1.8.1)
@@ -18,10 +18,10 @@ PATH
       phcadmin1 (~> 10.2)
       phcadmin2 (~> 8.2)
       phcadmin3 (~> 5.2)
-      phcnotifi (~> 6.0)
+      phcnotifi (~> 6.1)
       phctheme1 (~> 14.2)
       phctheme2 (~> 5.2)
-      phctitleseo (~> 7.0)
+      phctitleseo (~> 7.1)
       rabl (~> 0.13.1)
       rails (~> 5.1, >= 5.1.1)
       responders (~> 2.4)

@@ -50,8 +50,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'friendly_id', '~> 5.2', '>= 5.2.1'
 
   # PHCEngine Dependencies
-  spec.add_dependency 'phctitleseo', '~> 7.0'
-  spec.add_dependency 'phcnotifi', '~> 6.0'
+  spec.add_dependency 'phctitleseo', '~> 7.1'
+  spec.add_dependency 'phcnotifi', '~> 6.1'
 
   # PHCTheme Dependencies
   spec.add_dependency 'phctheme1', '~> 14.2'
