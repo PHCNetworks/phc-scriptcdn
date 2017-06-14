@@ -10,7 +10,7 @@ class CreatePhcscriptcdnFriendlyIdSlugs < ActiveRecord::Migration[5.1]
     end
 
     add_index :phcscriptcdn_friendly_id_slugs, :sluggable_id
-    add_index :phcscriptcdn_friendly_id_slugs, [:slug, :sluggable_type], length: { slug: 140, sluggable_type: 50 }
+    add_index :phcscriptcdn_friendly_id_slugs, [:slug, :sluggable_type], name: 'scriptcdn_fri_id_slugable_type', length: { slug: 140, sluggable_type: 50 }
     add_index :phcscriptcdn_friendly_id_slugs, [:slug, :sluggable_type, :scope], name: 'scriptcdn_fri_id_slugable_scope_type', length: { slug: 70, sluggable_type: 50, scope: 70 }, unique: true
     add_index :phcscriptcdn_friendly_id_slugs, :sluggable_type
 
