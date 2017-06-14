@@ -1,10 +1,13 @@
 module Phcscriptcdn
   class Script::Extension < ApplicationRecord
 
-    # Clean URLS
+    # Clean URL Initialize
     extend FriendlyId
 
-    # URLs & Extensions (None Nested)
+    # Add Paper Trail
+    has_paper_trail :class_name => 'Phcscriptcdn::ExtensionVersions'
+
+    # Relationships
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
@@ -18,8 +21,15 @@ module Phcscriptcdn
     validates :scriptextension,
       presence: true
 
-    # Clean URLS Slugs
-    friendly_id :scriptextensionname, use: :slugged
+    # Clean URL Define
+    friendly_id :phcscriptcdn_extentension_slug, use: [:slugged, :finders]
+
+    # Define for Multiple Records
+    def phcscriptcdn_extentension_slug
+      [
+        [:scriptextensionname, :scriptextension]
+      ]
+    end
 
   end
 end

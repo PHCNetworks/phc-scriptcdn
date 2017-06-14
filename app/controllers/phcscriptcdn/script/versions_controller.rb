@@ -58,7 +58,7 @@ module Phcscriptcdn
 
     # Only allow a trusted parameter "white list" through.
     def script_version_params
-      params.require(:script_version).permit(:scriptversion, :user_id, :user_name)
+      params.require(:script_version).permit(:scriptversion, :slug, :user_id, :user_name)
     end
 
   end

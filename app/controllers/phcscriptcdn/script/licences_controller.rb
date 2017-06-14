@@ -58,7 +58,7 @@ module Phcscriptcdn
 
     # Whitelists
     def script_licence_params
-      params.require(:script_licence).permit(:lcncname, :lcncdescription, :lcncdescript, :lcnccomgpl, :lcncarvlfsf, :lcncarvlosi, :lcncarvlcopyfree, :lcncarvldebian, :lcncarvlfedora, :user_id, :user_name)
+      params.require(:script_licence).permit(:lcncname, :lcncdescription, :lcncdescript, :lcnccomgpl, :lcncarvlfsf, :lcncarvlosi, :lcncarvlcopyfree, :lcncarvldebian, :lcncarvlfedora, :slug, :user_id, :user_name)
     end
 
   end

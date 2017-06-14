@@ -58,7 +58,7 @@ module Phcscriptcdn
 
     # Whitelist
     def script_listing_params
-      params.require(:script_listing).permit(:scripttitle, :scriptdescription, :descriptionsource, :scriptwebsite, :scripttwitter, :scriptgithub, :scriptinitialrelease, :scriptlastestrelease, :scriptbetarelease, :scriptstatus, :user_id, :user_name, :version_id, :author_id, :licence_id)
+      params.require(:script_listing).permit(:scripttitle, :scriptdescription, :descriptionsource, :scriptwebsite, :scripttwitter, :scriptgithub, :scriptinitialrelease, :scriptlastestrelease, :scriptbetarelease, :scriptstatus, :slug, :user_id, :user_name, :version_id, :author_id, :licence_id)
     end
 
   end

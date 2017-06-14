@@ -58,7 +58,7 @@ module Phcscriptcdn
 
     # Whitelist
     def script_author_params
-      params.require(:script_author).permit(:authorfirstname, :authorlastname, :authorwebsite, :authorgithub, :authortwitter, :user_id, :user_name)
+      params.require(:script_author).permit(:authorfirstname, :authorlastname, :authorwebsite, :authorgithub, :authortwitter, :slug, :user_id, :user_name)
     end
 
   end

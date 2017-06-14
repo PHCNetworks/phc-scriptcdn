@@ -1,10 +1,13 @@
 module Phcscriptcdn
   class Script::Licence < ApplicationRecord
 
-    # Clean URLS
+    # Clean URL Initialize
     extend FriendlyId
 
-    # Listing (None Nested)
+    # Add Paper Trail
+    has_paper_trail :class_name => 'Phcscriptcdn::LicenceVersions'
+
+    # Relationships
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
 
     # Validation for Form Fields
@@ -17,8 +20,15 @@ module Phcscriptcdn
     validates :lcncdescription,
       presence: true
 
-    # Clean URLS Slugs
-    friendly_id :lcncname, use: :slugged
+    # Clean URL Define
+    friendly_id :phcscriptcdn_licence_slug, use: [:slugged, :finders]
+
+    # Define for Multiple Records
+    def phcscriptcdn_licence_slug
+      [
+        [:lcncname]
+      ]
+    end
 
   end
 end

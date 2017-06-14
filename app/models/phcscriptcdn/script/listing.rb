@@ -1,19 +1,16 @@
 module Phcscriptcdn
   class Script::Listing < ApplicationRecord
 
-    # Clean URLS
+    # Clean URL Initialize
     extend FriendlyId
 
-    # Attach to URL (Nested)
+    # Add Paper Trail
+    has_paper_trail :class_name => 'Phcscriptcdn::ListingVersions'
+
+    # Relationships
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
-
-    # Attach to Author (None Nested)
     belongs_to :author, class_name: 'Phcscriptcdn::Script::Author'
-
-    # Attach to Version (None Nested)
     belongs_to :version, class_name: 'Phcscriptcdn::Script::Version'
-
-    # Attach to Licence (None Nested)
     belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence'
 
     # Validation for Form Fields
@@ -26,8 +23,15 @@ module Phcscriptcdn
     validates :scriptstatus,
       presence: true
 
-    # Clean URLS Slugs
-    friendly_id :scripttitle, use: :slugged
+    # Clean URL Define
+    friendly_id :phcscriptcdn_listing_slug, use: [:slugged, :finders]
+
+    # Define for Multiple Records
+    def phcscriptcdn_listing_slug
+      [
+        [:scripttitle]
+      ]
+    end
 
   end
 end

@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Phcscriptcdn::Engine => "/phcscriptcdn"
+  mount Phcscriptcdn::Engine => "/"
 end
