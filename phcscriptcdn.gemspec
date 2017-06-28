@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
-  spec.add_dependency 'rails', '~> 5.1', '>= 5.1.1'
+  spec.add_dependency 'rails', '~> 5.1', '>= 5.1.2'
   spec.add_dependency 'pg', '~> 0.21.0'
   spec.add_dependency 'paper_trail', '~> 7.0', '>= 7.0.3'
 
@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'tinymce-rails', '~> 4.6', '>= 4.6.4'
 
   # API Dependencies
-  spec.add_dependency 'oj', '~> 3.0', '>= 3.0.11'
+  spec.add_dependency 'oj', '~> 3.2'
   spec.add_dependency 'rabl', '~> 0.13.1'
   spec.add_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
   spec.add_dependency 'responders', '~> 2.4'
@@ -50,22 +50,22 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'friendly_id', '~> 5.2', '>= 5.2.1'
 
   # PHCEngine Dependencies
-  spec.add_dependency 'phctitleseo', '~> 7.2'
-  spec.add_dependency 'phcnotifi', '~> 6.2'
+  spec.add_dependency 'phctitleseo', '~> 7.3'
+  spec.add_dependency 'phcnotifi', '~> 6.3'
 
   # PHCTheme Dependencies
-  spec.add_dependency 'phctheme1', '~> 14.4'
-  spec.add_dependency 'phctheme2', '~> 5.6'
+  spec.add_dependency 'phctheme1', '~> 14.5'
+  spec.add_dependency 'phctheme2', '~> 5.7'
 
   # PHCAdmin Dependencies
-  spec.add_dependency 'phcadmin1', '~> 10.4'
-  spec.add_dependency 'phcadmin2', '~> 8.4'
-  spec.add_dependency 'phcadmin3', '~> 5.4'
+  spec.add_dependency 'phcadmin1', '~> 10.5'
+  spec.add_dependency 'phcadmin2', '~> 8.5'
+  spec.add_dependency 'phcadmin3', '~> 5.5'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'rspec-rails', '~> 3.6'
   spec.add_development_dependency 'factory_girl_rails', '~> 4.8'
-  spec.add_development_dependency 'capybara', '~> 2.14', '>= 2.14.3'
+  spec.add_development_dependency 'capybara', '~> 2.14', '>= 2.14.4'
   spec.add_development_dependency 'nokogiri', '~> 1.8'
 
   spec.add_development_dependency 'byebug', '~> 9.0', '>= 9.0.6'
@@ -75,8 +75,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'faker', '~> 1.7', '>= 1.7.3'
   spec.add_development_dependency 'launchy', '~> 2.4', '>= 2.4.3'
   spec.add_development_dependency 'selenium-webdriver', '~> 3.4', '>= 3.4.3'
-
-  # Temporary Security Fix
-  spec.add_development_dependency 'mail', '~> 2.7.0.rc1'
 
 end
