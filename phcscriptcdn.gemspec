@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'tinymce-rails', '~> 4.6', '>= 4.6.4'
 
   # API Dependencies
-  spec.add_dependency 'oj', '~> 3.2'
+  spec.add_dependency 'oj', '~> 3.3'
   spec.add_dependency 'rabl', '~> 0.13.1'
   spec.add_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
   spec.add_dependency 'responders', '~> 2.4'
