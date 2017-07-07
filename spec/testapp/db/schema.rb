@@ -156,61 +156,6 @@ ActiveRecord::Schema.define(version: 20170517064427) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "phcscriptcdn_scriptcdn_authors", force: :cascade do |t|
-    t.string "authorfirstname"
-    t.string "authorlastname"
-    t.string "authorwebsite"
-    t.string "authorgithub"
-    t.string "authortwitter"
-    t.integer "main_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["main_id"], name: "index_phcscriptcdn_scriptcdn_authors_on_main_id"
-  end
-
-  create_table "phcscriptcdn_scriptcdn_information", force: :cascade do |t|
-    t.string "scripttitle"
-    t.text "scriptdescription"
-    t.string "scriptcategory"
-    t.string "scriptwebsite"
-    t.string "scripttwitter"
-    t.string "scriptgithub"
-    t.date "scriptinitialrelease"
-    t.string "scriptlicence"
-    t.string "scriptplatform"
-    t.string "scriptstatus"
-    t.integer "main_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["main_id"], name: "index_phcscriptcdn_scriptcdn_information_on_main_id"
-  end
-
-  create_table "phcscriptcdn_scriptcdn_mains", force: :cascade do |t|
-    t.string "scriptname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "phcscriptcdn_scriptcdn_urls", force: :cascade do |t|
-    t.string "scripturl"
-    t.string "scripturlext"
-    t.integer "main_id"
-    t.string "user_id"
-    t.string "membership_id"
-    t.string "oganization_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["main_id"], name: "index_phcscriptcdn_scriptcdn_urls_on_main_id"
-  end
-
-  create_table "phcscriptcdn_scriptcdn_versions", force: :cascade do |t|
-    t.string "versionnumber"
-    t.integer "main_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["main_id"], name: "index_phcscriptcdn_scriptcdn_versions_on_main_id"
-  end
-
   create_table "phcscriptcdn_scriptversion_versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
