@@ -17,9 +17,6 @@ module Phcscriptcdn
     validates :lcncdescript,
       presence: true
 
-    validates :lcncdescription,
-      presence: true
-
     # Clean URL Define
     friendly_id :phcscriptcdn_licence_slug, use: [:slugged, :finders]
 

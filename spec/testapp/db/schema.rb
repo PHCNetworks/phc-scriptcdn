@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170517064427) do
     t.index ["item_type", "item_id"], name: "scriptcdn_author_versions"
   end
 
-  create_table "phcscriptcdn_extensions_versions", force: :cascade do |t|
+  create_table "phcscriptcdn_extension_versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
     t.string "event", null: false

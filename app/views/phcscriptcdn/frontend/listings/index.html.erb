@@ -1,0 +1,46 @@
+<!-- Title System -->
+<% phc_title "PHCNetworks Script CDN" %>
+<% phc_title_tagline "Global Script Delivery Network" %>
+<!-- Title System -->
+
+<!-- Page Content -->
+<section>
+	<div class="container">
+		<div class="row">
+
+		<!-- Left Sidebar -->
+		<div class="col-md-3 col-sm-3">
+		</div>
+		<!-- Left Sidebar -->
+
+		<!-- Script CDN List -->
+		<div class="col-md-9 col-sm-9">
+
+			<% @script_listings_index.each do |script_listings_index| %>
+				<div class="blog-post-item">
+					<h2><%= link_to script_listings_index.scripttitle, phcscriptcdn.frontend_listing_path(script_listings_index) %> <small></small></h2>
+					<ul class="blog-post-info list-inline">
+						<li>
+							<%= link_to "#" do %>
+								<i class="fa fa-clock-o"></i>
+								<span class="font-lato"><%= script_listings_index.created_at %></span>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to "#" do %>
+								<i class="fa fa-user"></i>
+								<span class="font-lato">Posted By - <%= script_listings_index.user_name %></span>
+							<% end %>
+						</li>
+					</ul>
+					<div></div>
+				</div>
+			<% end %>
+
+		</div>
+		<!-- Script CDN List -->
+
+		</div>
+	</div>
+</section>
+<!-- Page Content -->
