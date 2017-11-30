@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (17.0.0)
+    phcscriptcdn (17.0.1)
       bootstrap-sass (~> 3.3, >= 3.3.7)
       carrierwave (~> 1.2, >= 1.2.1)
       cloudinary (~> 1.8, >= 1.8.2)
@@ -15,7 +15,7 @@ PATH
       oj (~> 3.3, >= 3.3.9)
       paper_trail (~> 8.0, >= 8.0.1)
       pg (~> 0.21.0)
-      phcadmin1 (~> 16.0)
+      phcadmin1 (~> 16.0, >= 16.0.1)
       phcadmin2 (~> 14.0)
       phcadmin3 (~> 11.0)
       phcnotifi (~> 12.0)
@@ -164,7 +164,7 @@ GEM
       activerecord (>= 4.2, < 5.2)
       request_store (~> 1.1)
     pg (0.21.0)
-    phcadmin1 (16.0.0)
+    phcadmin1 (16.0.1)
       country_select (~> 3.1, >= 3.1.1)
       font-awesome-rails (~> 4.7, >= 4.7.0.2)
       gravtastic (~> 3.2, >= 3.2.6)
