@@ -20,12 +20,10 @@ Gem::Specification.new do |spec|
 
   # Main Dependencies
   spec.add_dependency 'paper_trail', '~> 8.1', '>= 8.1.2'
-  spec.add_dependency 'pg', '~> 0.21.0'
+  spec.add_dependency 'pg', '~> 1.0'
   spec.add_dependency 'rails', '~> 5.1', '>= 5.1.4'
 
   # UI & Frontend Dependencies
-  spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-  spec.add_dependency 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
   spec.add_dependency 'jquery-rails', '~> 4.3', '>= 4.3.1'
   spec.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
   spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.7'
@@ -37,34 +35,34 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
   # Upload & Media Dependencies
-  spec.add_dependency 'carrierwave', '~> 1.2', '>= 1.2.1'
+  spec.add_dependency 'carrierwave', '~> 1.2', '>= 1.2.2'
   spec.add_dependency 'cloudinary', '~> 1.8', '>= 1.8.2'
 
   # PHCEngine Helper Dependencies
-  spec.add_dependency 'phcnotifi', '~> 14.0', '>= 14.0.1'
-  spec.add_dependency 'phctitleseo', '~> 15.0', '>= 15.0.1'
+  spec.add_dependency 'phcnotifi', '~> 16.0'
+  spec.add_dependency 'phctitleseo', '~> 17.0'
 
   # WYSIWYG Editor Dependencies
   spec.add_dependency 'tinymce-rails', '~> 4.7', '>= 4.7.4'
 
   # API Dependencies
-  spec.add_dependency 'multi_json', '~> 1.12', '>= 1.12.2'
-  spec.add_dependency 'oj', '~> 3.3', '>= 3.3.9'
+  spec.add_dependency 'multi_json', '~> 1.13', '>= 1.13.1'
+  spec.add_dependency 'oj', '~> 3.3', '>= 3.3.10'
   spec.add_dependency 'rabl', '~> 0.13.1'
   spec.add_dependency 'responders', '~> 2.4'
 
   # PHCTheme Dependencies
-  spec.add_dependency 'phctheme1', '~> 23.0'
-  spec.add_dependency 'phctheme2', '~> 13.0'
+  spec.add_dependency 'phctheme1', '~> 25.0'
+  spec.add_dependency 'phctheme2', '~> 15.0'
 
   # PHCAdmin Dependencies
-  spec.add_dependency 'phcadmin1', '~> 18.0'
-  spec.add_dependency 'phcadmin2', '~> 16.0'
-  spec.add_dependency 'phcadmin3', '~> 13.0'
+  spec.add_dependency 'phcadmin1', '~> 20.0'
+  spec.add_dependency 'phcadmin2', '~> 18.0'
+  spec.add_dependency 'phcadmin3', '~> 15.0'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'byebug', '~> 9.1'
-  spec.add_development_dependency 'capybara', '~> 2.16', '>= 2.16.1'
+  spec.add_development_dependency 'capybara', '~> 2.17'
   spec.add_development_dependency 'database_cleaner', '~> 1.6', '>= 1.6.2'
 
   spec.add_development_dependency 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
@@ -76,5 +74,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.13'
 
   spec.add_development_dependency 'nokogiri', '~> 1.8', '>= 1.8.1'
+  spec.add_development_dependency 'minitest', '~> 5.11', '>= 5.11.1'
+
+  # Extra Development & Testing Dependencies
+  spec.add_development_dependency 'letter_opener', '~> 1.4', '>= 1.4.1'
+  spec.add_development_dependency 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  spec.add_development_dependency 'simplecov', '~> 0.15.1'
 
 end
