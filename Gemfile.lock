@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (20.0.0)
+    phcscriptcdn (20.0.1)
       carrierwave (~> 1.2, >= 1.2.2)
       cloudinary (~> 1.8, >= 1.8.2)
       country_select (~> 3.1, >= 3.1.1)
