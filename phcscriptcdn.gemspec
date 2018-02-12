@@ -70,7 +70,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'launchy', '~> 2.4'
 
   spec.add_development_dependency 'rspec-rails', '~> 3.7'
-  spec.add_development_dependency 'selenium-webdriver', '~> 3.8'
+  spec.add_development_dependency 'selenium-webdriver', '~> 3.9'
   spec.add_development_dependency 'sqlite3', '~> 1.3'
 
   spec.add_development_dependency 'nokogiri', '~> 1.8'
