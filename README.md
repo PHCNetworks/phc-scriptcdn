@@ -12,7 +12,7 @@ PHCScriptCDN Rails 5.1 script management engine for website script CDN listings.
 
 #### Step 1 - Add PHCScriptCDN to your gemfile  and run command  
 
-	gem 'phcscriptcdn', '~> 21.0.0'
+	gem 'phcscriptcdn', '~> 22.0.0'
 	bundle install
 
 #### Step 2 - Copy PHCScriptCDN Database Tables
