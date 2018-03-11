@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jquery-rails', '~> 4.3'
   spec.add_dependency 'jquery-ui-rails', '~> 6.0'
   spec.add_dependency 'sass-rails', '~> 5.0'
-  spec.add_dependency 'webpacker', '~> 3.2'
+  spec.add_dependency 'webpacker', '~> 3.3'
 
   # UI & URL Frontend Dependencies Extras
   spec.add_dependency 'country_select', '~> 3.1'
@@ -36,29 +36,29 @@ Gem::Specification.new do |spec|
 
   # Upload & Media Dependencies
   spec.add_dependency 'carrierwave', '~> 1.2'
-  spec.add_dependency 'cloudinary', '~> 1.8'
+  spec.add_dependency 'cloudinary', '~> 1.9'
 
   # PHCEngine Helper Dependencies
-  spec.add_dependency 'phcnotifi', '~> 19.0'
-  spec.add_dependency 'phctitleseo', '~> 20.0'
+  spec.add_dependency 'phcnotifi', '~> 20.0'
+  spec.add_dependency 'phctitleseo', '~> 21.0'
 
   # WYSIWYG Editor Dependencies
   spec.add_dependency 'tinymce-rails', '~> 4.7'
 
   # API Dependencies
   spec.add_dependency 'multi_json', '~> 1.13'
-  spec.add_dependency 'oj', '~> 3.4'
+  spec.add_dependency 'oj', '~> 3.5'
   spec.add_dependency 'rabl', '~> 0.13.1'
   spec.add_dependency 'responders', '~> 2.4'
 
   # PHCTheme Dependencies
-  spec.add_dependency 'phctheme1', '~> 27.0'
-  spec.add_dependency 'phctheme2', '~> 17.0'
+  spec.add_dependency 'phctheme1', '~> 28.0'
+  spec.add_dependency 'phctheme2', '~> 18.0'
 
   # PHCAdmin Dependencies
-  spec.add_dependency 'phcadmin1', '~> 22.0'
-  spec.add_dependency 'phcadmin2', '~> 20.0'
-  spec.add_dependency 'phcadmin3', '~> 17.0'
+  spec.add_dependency 'phcadmin1', '~> 23.0'
+  spec.add_dependency 'phcadmin2', '~> 21.0'
+  spec.add_dependency 'phcadmin3', '~> 18.0'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'byebug', '~> 10.0'
@@ -70,7 +70,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'launchy', '~> 2.4'
 
   spec.add_development_dependency 'rspec-rails', '~> 3.7'
-  spec.add_development_dependency 'selenium-webdriver', '~> 3.9'
+  spec.add_development_dependency 'selenium-webdriver', '~> 3.10'
   spec.add_development_dependency 'sqlite3', '~> 1.3'
 
   spec.add_development_dependency 'nokogiri', '~> 1.8'
