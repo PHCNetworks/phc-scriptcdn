@@ -39,8 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'cloudinary', '~> 1.9'
 
   # PHCEngine Helper Dependencies
-  spec.add_dependency 'phcnotifi', '~> 20.0'
-  spec.add_dependency 'phctitleseo', '~> 21.0'
+  spec.add_dependency 'phcnotifi', '~> 20.1'
+  spec.add_dependency 'phctitleseo', '~> 21.1'
 
   # WYSIWYG Editor Dependencies
   spec.add_dependency 'tinymce-rails', '~> 4.7'
@@ -52,13 +52,13 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'responders', '~> 2.4'
 
   # PHCTheme Dependencies
-  spec.add_dependency 'phctheme1', '~> 28.0'
-  spec.add_dependency 'phctheme2', '~> 18.0'
+  spec.add_dependency 'phctheme1', '~> 29.1'
+  spec.add_dependency 'phctheme2', '~> 18.1'
 
   # PHCAdmin Dependencies
-  spec.add_dependency 'phcadmin1', '~> 23.0'
-  spec.add_dependency 'phcadmin2', '~> 21.0'
-  spec.add_dependency 'phcadmin3', '~> 18.0'
+  spec.add_dependency 'phcadmin1', '~> 23.1'
+  spec.add_dependency 'phcadmin2', '~> 21.1'
+  spec.add_dependency 'phcadmin3', '~> 18.1'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'byebug', '~> 10.0'
@@ -70,7 +70,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'launchy', '~> 2.4'
 
   spec.add_development_dependency 'rspec-rails', '~> 3.7'
-  spec.add_development_dependency 'selenium-webdriver', '~> 3.10'
+  spec.add_development_dependency 'selenium-webdriver', '~> 3.11'
   spec.add_development_dependency 'sqlite3', '~> 1.3'
 
   spec.add_development_dependency 'nokogiri', '~> 1.8'
@@ -79,6 +79,6 @@ Gem::Specification.new do |spec|
   # Extra Development & Testing Dependencies
   spec.add_development_dependency 'letter_opener', '~> 1.6'
   spec.add_development_dependency 'shoulda-matchers', '~> 3.1'
-  spec.add_development_dependency 'simplecov', '~> 0.15.1'
+  spec.add_development_dependency 'simplecov', '~> 0.16.1'
 
 end
