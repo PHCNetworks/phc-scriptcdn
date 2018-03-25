@@ -3,6 +3,7 @@ module Phcscriptcdn
 
     # Main Dependencies
     require 'paper_trail'
+		require 'phcaccountspro'
 
 		# PHCEngines & Theme Dependencies
     require 'phcnotifi'
@@ -23,6 +24,7 @@ module Phcscriptcdn
     require 'webpacker'
 
     # API Dependencies
+    require 'httparty'
     require 'rabl'
     require 'oj'
     require 'multi_json'
