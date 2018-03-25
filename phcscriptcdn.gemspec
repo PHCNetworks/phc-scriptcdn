@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jquery-rails', '~> 4.3'
   spec.add_dependency 'jquery-ui-rails', '~> 6.0'
   spec.add_dependency 'sass-rails', '~> 5.0'
-  spec.add_dependency 'webpacker', '~> 3.3'
+  spec.add_dependency 'webpacker', '~> 3.4'
 
   # UI & URL Frontend Dependencies Extras
   spec.add_dependency 'country_select', '~> 3.1'
@@ -39,8 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'cloudinary', '~> 1.9'
 
   # PHCEngine Helper Dependencies
-  spec.add_dependency 'phcnotifi', '~> 20.1'
-  spec.add_dependency 'phctitleseo', '~> 21.1'
+  spec.add_dependency 'phcnotifi', '~> 21.0'
+  spec.add_dependency 'phctitleseo', '~> 22.0'
 
   # WYSIWYG Editor Dependencies
   spec.add_dependency 'tinymce-rails', '~> 4.7'
@@ -52,13 +52,13 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'responders', '~> 2.4'
 
   # PHCTheme Dependencies
-  spec.add_dependency 'phctheme1', '~> 29.1'
-  spec.add_dependency 'phctheme2', '~> 18.1'
+  spec.add_dependency 'phctheme1', '~> 30.0'
+  spec.add_dependency 'phctheme2', '~> 19.0'
 
   # PHCAdmin Dependencies
-  spec.add_dependency 'phcadmin1', '~> 23.1'
-  spec.add_dependency 'phcadmin2', '~> 21.1'
-  spec.add_dependency 'phcadmin3', '~> 18.1'
+  spec.add_dependency 'phcadmin1', '~> 24.0'
+  spec.add_dependency 'phcadmin2', '~> 22.0'
+  spec.add_dependency 'phcadmin3', '~> 19.0'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'byebug', '~> 10.0'
