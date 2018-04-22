@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PHCNetworks/phc-scriptcdn/blob/master/MIT-LICENSE)
 
 ### PHCScriptCDN (Script Listing Engine) Documentation
-PHCScriptCDN Rails 5.1 script management engine for website script CDN listings.
+PHCScriptCDN Rails script management engine for website script CDN listings.
 
 * Manage script CDN listings for websites.
 * Main script title and description.
@@ -12,7 +12,7 @@ PHCScriptCDN Rails 5.1 script management engine for website script CDN listings.
 
 #### Step 1 - Add PHCScriptCDN to your gemfile  and run command  
 
-	gem 'phcscriptcdn', '~> 24.0'
+	gem 'phcscriptcdn', '~> 25.0'
 	bundle install
 
 #### Step 2 - Copy PHCScriptCDN Database Tables
