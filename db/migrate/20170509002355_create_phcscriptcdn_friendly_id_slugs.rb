@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnFriendlyIdSlugs < ActiveRecord::Migration[5.1]
+class CreatePhcscriptcdnFriendlyIdSlugs < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcscriptcdn_friendly_id_slugs do |t|

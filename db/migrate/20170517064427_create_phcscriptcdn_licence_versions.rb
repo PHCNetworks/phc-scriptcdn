@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnLicenceVersions < ActiveRecord::Migration[5.1]
+class CreatePhcscriptcdnLicenceVersions < ActiveRecord::Migration[5.2]
   TEXT_BYTES = 1_073_741_823
   def change
 

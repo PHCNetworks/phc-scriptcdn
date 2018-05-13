@@ -3,17 +3,19 @@ module Phcscriptcdn
 
     # Main Dependencies
     require 'paper_trail'
-		require 'phcaccountspro'
 
-		# PHCEngines & Theme Dependencies
+    # PHCEngines & Theme Dependencies
     require 'phcnotifi'
     require 'phctitleseo'
 
     require 'phctheme1'
     require 'phctheme2'
+
     require 'phcadmin1'
     require 'phcadmin2'
     require 'phcadmin3'
+    require 'phcadmin4'
+    require 'phcadmin5'
 
     # UI & Frontend Dependencies
     require 'country_select'

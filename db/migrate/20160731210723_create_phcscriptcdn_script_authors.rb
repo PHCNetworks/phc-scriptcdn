@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.1]
+class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcscriptcdn_script_authors do |t|

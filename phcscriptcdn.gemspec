@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jquery-rails', '~> 4.3'
   spec.add_dependency 'jquery-ui-rails', '~> 6.0'
   spec.add_dependency 'sass-rails', '~> 5.0'
-  spec.add_dependency 'webpacker', '~> 3.4'
+  spec.add_dependency 'webpacker', '~> 3.5'
 
   # UI & URL Frontend Dependencies Extras
   spec.add_dependency 'country_select', '~> 3.1'
@@ -39,8 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'cloudinary', '~> 1.9'
 
   # PHCEngine Helper Dependencies
-  spec.add_dependency 'phcnotifi', '~> 22.0'
-  spec.add_dependency 'phctitleseo', '~> 23.0'
+  spec.add_dependency 'phcnotifi', '~> 22.1'
+  spec.add_dependency 'phctitleseo', '~> 23.1'
 
   # WYSIWYG Editor Dependencies
   spec.add_dependency 'tinymce-rails', '~> 4.7'
@@ -48,27 +48,28 @@ Gem::Specification.new do |spec|
   # API Dependencies
   spec.add_dependency 'httparty', '~> 0.16.2'
   spec.add_dependency 'multi_json', '~> 1.13'
-  spec.add_dependency 'oj', '~> 3.5'
+  spec.add_dependency 'oj', '~> 3.6'
   spec.add_dependency 'rabl', '~> 0.13.1'
   spec.add_dependency 'responders', '~> 2.4'
 
   # PHCTheme Dependencies
-  spec.add_dependency 'phcthemebasic', '~> 1.0'
-  spec.add_dependency 'phctheme1', '~> 31.0'
-  spec.add_dependency 'phctheme2', '~> 20.0'
+  spec.add_dependency 'phcthemebasic', '~> 1.1'
+  spec.add_dependency 'phctheme1', '~> 31.1'
+  spec.add_dependency 'phctheme2', '~> 20.1'
 
   # PHCAdmin Dependencies
-  spec.add_dependency 'phcadmin1', '~> 25.0'
-  spec.add_dependency 'phcadmin2', '~> 23.0'
-  spec.add_dependency 'phcadmin3', '~> 20.0'
-  spec.add_dependency 'phcadmin4', '~> 2.0'
+  spec.add_dependency 'phcadmin1', '~> 25.1'
+  spec.add_dependency 'phcadmin2', '~> 23.1'
+  spec.add_dependency 'phcadmin3', '~> 20.1'
+  spec.add_dependency 'phcadmin4', '~> 2.1'
+  spec.add_dependency 'phcadmin5', '~> 2.1'
 
   # Security Dependencies
-  spec.add_dependency 'phcaccounts', '~> 2.0'
+  spec.add_dependency 'phcaccounts', '~> 5.3'
 
   # Development & Testing Dependencies
   spec.add_development_dependency 'byebug', '~> 10.0'
-  spec.add_development_dependency 'capybara', '~> 3.0'
+  spec.add_development_dependency 'capybara', '~> 3.1'
   spec.add_development_dependency 'database_cleaner', '~> 1.7'
 
   spec.add_development_dependency 'factory_bot_rails', '~> 4.8'
@@ -76,7 +77,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'launchy', '~> 2.4'
 
   spec.add_development_dependency 'rspec-rails', '~> 3.7'
-  spec.add_development_dependency 'selenium-webdriver', '~> 3.11'
+  spec.add_development_dependency 'selenium-webdriver', '~> 3.12'
   spec.add_development_dependency 'sqlite3', '~> 1.3'
 
   spec.add_development_dependency 'nokogiri', '~> 1.8'

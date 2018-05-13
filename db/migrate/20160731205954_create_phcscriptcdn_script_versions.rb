@@ -1,4 +1,4 @@
-class CreatePhcscriptcdnScriptVersions < ActiveRecord::Migration[5.1]
+class CreatePhcscriptcdnScriptVersions < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcscriptcdn_script_versions do |t|
