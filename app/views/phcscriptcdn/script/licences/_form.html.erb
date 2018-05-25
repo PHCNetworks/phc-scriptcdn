@@ -1,0 +1,47 @@
+<%= form_for(script_licence) do |f| %>
+
+	<!-- PHCNotifi Render Validation -->
+	<%= render 'phcnotifi/validations', :object => @script_licence %>
+
+	<!-- Form Input Fields -->
+	<div class="form-group field_with_error">
+		<%= f.label :lcncname, "Licence Name" %>
+		<%= f.text_field :lcncname, placeholder: "Licence Name", class: "form-control"  %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcncdescript, "Licence Description" %>
+		<%= f.text_area :lcncdescript, placeholder: "Licence Descirption", class: "form-control"  %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcnccomgpl, "GPL(v3) Compatible" %>
+		<%= f.select( :lcnccomgpl, [['No','No'],['Yes','Yes']], {}, {class: "form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcncarvlfsf, "FSF Approval" %>
+		<%= f.select( :lcncarvlfsf, [['No','No'],['Yes','Yes']], {}, {class: "form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcncarvlosi, "OSI Approval" %>
+		<%= f.select( :lcncarvlosi, [['No','No'],['Yes','Yes']], {}, {class: "form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcncarvlcopyfree, "Copyfree Approval" %>
+		<%= f.select( :lcncarvlcopyfree, [['No','No'],['Yes','Yes']], {}, {class: "form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcncarvldebian, "Debian Approval" %>
+		<%= f.select( :lcncarvldebian, [['No','No'],['Yes','Yes']], {}, {class: "form-control"}) %>
+	</div>
+	<div class="form-group field_with_error">
+		<%= f.label :lcncarvlfedora, "Fedora Approval" %>
+		<%= f.select( :lcncarvlfedora, [['No','No'],['Yes','Yes']], {}, {class: "form-control"}) %>
+	</div>
+	<!-- Form Input Fields -->
+
+	<!-- Form Submition Button -->
+	<div class="actions">
+		<%= f.submit class: "btn btn-primary" %>
+	</div>
+	<!-- For Submition Button -->
+
+<% end %>
