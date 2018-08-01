@@ -8,7 +8,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.authors     = ["BradPotts"]
   phc_gem_spec.email       = ["info@phcnetworks.net"]
   phc_gem_spec.homepage    = "https://phcnetworks.net/"
-  phc_gem_spec.summary     = "Rails 5.1 Engine - PHCScriptCDN(2018)"
+  phc_gem_spec.summary     = "Rails 5.2 Full App Engine"
   phc_gem_spec.description = "PHCScriptCDN(2018) Rails script management engine for website script CDN listings."
   phc_gem_spec.license     = "MIT"
 
@@ -19,23 +19,23 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency "rails", "~> 5.2", ">= 5.2.0"
 
   # Admin Panel Theme Dependencies
-  phc_gem_spec.add_dependency "phcadmin1", "~> 27.0"
-  phc_gem_spec.add_dependency "phcadmin2", "~> 27.0"
-  phc_gem_spec.add_dependency "phcadmin3", "~> 22.0"
-  phc_gem_spec.add_dependency "phcadmin4", "~> 4.0"
-  phc_gem_spec.add_dependency "phcadmin5", "~> 4.0"
+  phc_gem_spec.add_dependency "phcadmin1", "~> 28.0"
+  phc_gem_spec.add_dependency "phcadmin2", "~> 28.0"
+  phc_gem_spec.add_dependency "phcadmin3", "~> 23.0"
+  phc_gem_spec.add_dependency "phcadmin4", "~> 5.0"
+  phc_gem_spec.add_dependency "phcadmin5", "~> 5.0"
 
   # Website Theme Dependencies
-  phc_gem_spec.add_dependency "phctheme1", "~> 33.0"
-  phc_gem_spec.add_dependency "phctheme2", "~> 22.0"
-  phc_gem_spec.add_dependency 'phctheme3', "~> 3.0"
+  phc_gem_spec.add_dependency "phctheme1", "~> 34.0"
+  phc_gem_spec.add_dependency "phctheme2", "~> 23.0"
+  phc_gem_spec.add_dependency 'phctheme3', "~> 4.0"
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency "phcnotifi", "~> 24.0"
-  phc_gem_spec.add_dependency "phctitleseo", "~> 25.0"
+  phc_gem_spec.add_dependency "phcnotifi", "~> 25.0"
+  phc_gem_spec.add_dependency "phctitleseo", "~> 26.0"
 
   # UI & URL Frontend Dependencies
-  phc_gem_spec.add_dependency "country_select", "~> 3.1"
+  phc_gem_spec.add_dependency 'country_select', '~> 3.1'
   phc_gem_spec.add_dependency "friendly_id", "~> 5.2"
   phc_gem_spec.add_dependency "gravtastic", "~> 3.2"
 
@@ -51,27 +51,27 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency "pg", "~> 0.21.0"
 
   # Security Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 12.0'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 13.0'
 
   # Development Dependencies
-  phc_gem_spec.add_development_dependency "rspec-rails", "~> 3.7"
   phc_gem_spec.add_development_dependency "byebug", "~> 10.0"
-  phc_gem_spec.add_development_dependency "capybara", "~> 3.3"
+  phc_gem_spec.add_development_dependency "capybara", "~> 3.4"
+  phc_gem_spec.add_development_dependency "minitest", "~> 5.11"
+  phc_gem_spec.add_development_dependency "rspec-rails", "~> 3.7"
 
   phc_gem_spec.add_development_dependency "factory_bot_rails", "~> 4.10"
-  phc_gem_spec.add_development_dependency "faker", "~> 1.8"
+  phc_gem_spec.add_development_dependency "faker", "~> 1.9"
   phc_gem_spec.add_development_dependency "launchy", "~> 2.4"
 
-  phc_gem_spec.add_development_dependency "database_cleaner", "~> 1.7"
-  phc_gem_spec.add_development_dependency "selenium-webdriver", "~> 3.12"
   phc_gem_spec.add_development_dependency "sqlite3", "~> 1.3"
-
-  phc_gem_spec.add_development_dependency "nokogiri", "~> 1.8"
-  phc_gem_spec.add_development_dependency "minitest", "~> 5.11"
 
   # Extra Development & Testing Dependencies
   phc_gem_spec.add_development_dependency "letter_opener", "~> 1.6"
   phc_gem_spec.add_development_dependency "shoulda-matchers", "~> 3.1"
   phc_gem_spec.add_development_dependency "simplecov", "~> 0.16.1"
+
+  phc_gem_spec.add_development_dependency "nokogiri", "~> 1.8"
+  phc_gem_spec.add_development_dependency "database_cleaner", "~> 1.7"
+  phc_gem_spec.add_development_dependency "selenium-webdriver", "~> 3.13"
 
 end
