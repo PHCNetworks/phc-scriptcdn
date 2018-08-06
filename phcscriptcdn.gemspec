@@ -28,16 +28,20 @@ Gem::Specification.new do |phc_gem_spec|
   # Website Theme Dependencies
   phc_gem_spec.add_dependency "phctheme1", "~> 34.0"
   phc_gem_spec.add_dependency "phctheme2", "~> 23.0"
-  phc_gem_spec.add_dependency 'phctheme3', "~> 4.0"
+  phc_gem_spec.add_dependency "phctheme3", "~> 4.0"
 
   # PHC Helper Dependencies
   phc_gem_spec.add_dependency "phcnotifi", "~> 25.0"
   phc_gem_spec.add_dependency "phctitleseo", "~> 26.0"
 
   # UI & URL Frontend Dependencies
-  phc_gem_spec.add_dependency 'country_select', '~> 3.1'
+  phc_gem_spec.add_dependency "country_select", "~> 3.1"
   phc_gem_spec.add_dependency "friendly_id", "~> 5.2"
   phc_gem_spec.add_dependency "gravtastic", "~> 3.2"
+
+  # Service Support Dependencies
+  phc_gem_spec.add_dependency "aws-sdk-s3", "~> 1.17"
+  phc_gem_spec.add_dependency "google-cloud-storage", "~> 1.13"
 
   # API Dependencies
   phc_gem_spec.add_dependency "httparty", "~> 0.16.2"
@@ -51,7 +55,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency "pg", "~> 0.21.0"
 
   # Security Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 13.0'
+  phc_gem_spec.add_dependency "phcaccounts", "~> 14.0"
 
   # Development Dependencies
   phc_gem_spec.add_development_dependency "byebug", "~> 10.0"

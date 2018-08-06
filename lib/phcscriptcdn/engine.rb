@@ -1,40 +1,34 @@
 module Phcscriptcdn
   class Engine < ::Rails::Engine
 
-    # Main Dependencies
-    require 'phcaccountspro'
-    require 'paper_trail'
-
-    # PHCEngines & Theme Dependencies
-    require 'phcnotifi'
-    require 'phctitleseo'
-
-    require 'phctheme1'
-    require 'phctheme2'
-
+    # Admin Panel Theme Dependencies
     require 'phcadmin1'
     require 'phcadmin2'
     require 'phcadmin3'
     require 'phcadmin4'
     require 'phcadmin5'
 
-    # UI & Frontend Dependencies
+    # Website Theme Dependencies
+    require 'phctheme1'
+    require 'phctheme2'
+    require 'phctheme3'
+
+    # PHC Helper Dependencies
+    require 'phcnotifi'
+    require 'phctitleseo'
+
+    # UI & URL Frontend Dependencies
     require 'country_select'
     require 'gravtastic'
-
-    # API Dependencies
-    require 'httparty'
-    require 'rabl'
-    require 'oj'
-    require 'multi_json'
-    require 'responders'
-
-    # Clean URLS
     require 'friendly_id'
 
-    # Upload & Media Dependencies
-    require 'carrierwave'
-    require 'cloudinary'
+    # File Upload Service Dependencies
+    require 'aws-sdk-s3'
+    require 'google-cloud-storage'
+
+    # Database & Paper Trail Dependencies
+    require 'paper_trail'
+    require 'pg'
 
     # Isolate Namespace
     isolate_namespace Phcscriptcdn
