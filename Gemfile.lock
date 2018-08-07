@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (31.0.0)
+    phcscriptcdn (32.0.0)
       aws-sdk-s3 (~> 1.17)
       country_select (~> 3.1)
       friendly_id (~> 5.2)
@@ -155,7 +155,7 @@ GEM
       google-api-client (~> 0.23)
       google-cloud-core (~> 1.2)
       googleauth (~> 0.6.2)
-    googleauth (0.6.3)
+    googleauth (0.6.4)
       faraday (~> 0.12)
       jwt (>= 1.4, < 3.0)
       memoist (~> 0.12)
@@ -397,7 +397,7 @@ GEM
     retriable (3.1.2)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.0)
+    rspec-expectations (3.8.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-mocks (3.8.0)

@@ -17,6 +17,9 @@ module Phcscriptcdn
     require 'phcnotifi'
     require 'phctitleseo'
 
+    # PHC Engine Dependencies
+    require 'phcaccounts'
+
     # UI & URL Frontend Dependencies
     require 'country_select'
     require 'gravtastic'
