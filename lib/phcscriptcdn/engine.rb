@@ -27,7 +27,6 @@ module Phcscriptcdn
 
     # File Upload & Service Dependencies
     require 'aws-sdk-s3'
-    require 'gmaps-autocomplete-rails'
     require 'google-cloud-storage'
     require 'mini_magick'
 

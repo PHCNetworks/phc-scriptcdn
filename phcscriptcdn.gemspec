@@ -19,20 +19,20 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'rails', '~> 5.2', '>= 5.2.1'
 
   # Admin Panel Theme Dependencies
-  phc_gem_spec.add_dependency 'phcadmin1', '~> 29.0'
-  phc_gem_spec.add_dependency 'phcadmin2', '~> 29.0'
-  phc_gem_spec.add_dependency 'phcadmin3', '~> 24.0'
-  phc_gem_spec.add_dependency 'phcadmin4', '~> 6.0'
-  phc_gem_spec.add_dependency 'phcadmin5', '~> 6.0'
+  phc_gem_spec.add_dependency 'phcadmin1', '~> 30.0'
+  phc_gem_spec.add_dependency 'phcadmin2', '~> 30.0'
+  phc_gem_spec.add_dependency 'phcadmin3', '~> 25.0'
+  phc_gem_spec.add_dependency 'phcadmin4', '~> 7.0'
+  phc_gem_spec.add_dependency 'phcadmin5', '~> 7.0'
 
   # Website Theme Dependencies
-  phc_gem_spec.add_dependency 'phctheme1', '~> 35.0'
-  phc_gem_spec.add_dependency 'phctheme2', '~> 24.0'
-  phc_gem_spec.add_dependency 'phctheme3', '~> 5.0'
+  phc_gem_spec.add_dependency 'phctheme1', '~> 36.0'
+  phc_gem_spec.add_dependency 'phctheme2', '~> 25.0'
+  phc_gem_spec.add_dependency 'phctheme3', '~> 6.0'
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency 'phcnotifi', '~> 26.0'
-  phc_gem_spec.add_dependency 'phctitleseo', '~> 27.0'
+  phc_gem_spec.add_dependency 'phcnotifi', '~> 27.0'
+  phc_gem_spec.add_dependency 'phctitleseo', '~> 28.0'
 
   # UI & URL Frontend Dependencies
   phc_gem_spec.add_dependency 'country_select', '~> 3.1'
@@ -41,7 +41,6 @@ Gem::Specification.new do |phc_gem_spec|
 
   # Images & Service Support Dependencies
   phc_gem_spec.add_dependency 'aws-sdk-s3', '~> 1.17'
-  phc_gem_spec.add_dependency 'gmaps-autocomplete-rails', '~> 0.3.1'
   phc_gem_spec.add_dependency 'google-cloud-storage', '~> 1.13'
   phc_gem_spec.add_dependency 'mini_magick', '~> 4.8'
 
@@ -57,7 +56,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'pg', '~> 0.21.0'
 
   # Security & User Account Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 15.0'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 16.0'
 
   # Development Dependencies
   phc_gem_spec.add_development_dependency 'byebug', '~> 10.0'
