@@ -19,20 +19,22 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'rails', '~> 5.2', '>= 5.2.1'
 
   # Admin Panel Theme Dependencies
-  phc_gem_spec.add_dependency 'phcadmin1', '~> 30.0'
-  phc_gem_spec.add_dependency 'phcadmin2', '~> 30.0'
-  phc_gem_spec.add_dependency 'phcadmin3', '~> 25.0'
-  phc_gem_spec.add_dependency 'phcadmin4', '~> 7.0'
-  phc_gem_spec.add_dependency 'phcadmin5', '~> 7.0'
+  phc_gem_spec.add_dependency 'phcadmin1', '~> 33.0'
+  phc_gem_spec.add_dependency 'phcadmin2', '~> 33.0'
+  phc_gem_spec.add_dependency 'phcadmin3', '~> 28.0'
+  phc_gem_spec.add_dependency 'phcadmin4', '~> 9.0'
+  phc_gem_spec.add_dependency 'phcadmin5', '~> 10.0'
 
   # Website Theme Dependencies
-  phc_gem_spec.add_dependency 'phctheme1', '~> 36.0'
-  phc_gem_spec.add_dependency 'phctheme2', '~> 25.0'
-  phc_gem_spec.add_dependency 'phctheme3', '~> 6.0'
+  phc_gem_spec.add_dependency 'phctheme1', '~> 38.0'
+  phc_gem_spec.add_dependency 'phctheme2', '~> 28.0'
+  phc_gem_spec.add_dependency 'phctheme3', '~> 8.0'
+  phc_gem_spec.add_dependency 'phctheme4', '~> 5.0'
+  phc_gem_spec.add_dependency 'phctheme5', '~> 2.0'
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency 'phcnotifi', '~> 27.0'
-  phc_gem_spec.add_dependency 'phctitleseo', '~> 28.0'
+  phc_gem_spec.add_dependency 'phcnotifi', '~> 29.0'
+  phc_gem_spec.add_dependency 'phctitleseo', '~> 30.0'
 
   # UI & URL Frontend Dependencies
   phc_gem_spec.add_dependency 'country_select', '~> 3.1'
@@ -40,7 +42,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'gravtastic', '~> 3.2'
 
   # Images & Service Support Dependencies
-  phc_gem_spec.add_dependency 'aws-sdk-s3', '~> 1.17'
+  phc_gem_spec.add_dependency 'aws-sdk-s3', '~> 1.19'
   phc_gem_spec.add_dependency 'google-cloud-storage', '~> 1.13'
   phc_gem_spec.add_dependency 'mini_magick', '~> 4.8'
 
@@ -52,15 +54,15 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'responders', '~> 2.4'
 
   # Database & Paper Trail Dependencies
-  phc_gem_spec.add_dependency 'paper_trail', '~> 9.2'
+  phc_gem_spec.add_dependency 'paper_trail', '~> 10.0'
   phc_gem_spec.add_dependency 'pg', '~> 0.21.0'
 
   # Security & User Account Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 16.0'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 17.0'
 
   # Development Dependencies
   phc_gem_spec.add_development_dependency 'byebug', '~> 10.0'
-  phc_gem_spec.add_development_dependency 'capybara', '~> 3.6'
+  phc_gem_spec.add_development_dependency 'capybara', '~> 3.7'
   phc_gem_spec.add_development_dependency 'minitest', '~> 5.11'
   phc_gem_spec.add_development_dependency 'rspec-rails', '~> 3.8'
 
