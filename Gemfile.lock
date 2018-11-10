@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcscriptcdn (39.0.0)
+    phcscriptcdn (40.0.0)
       aws-sdk-s3 (~> 1.23)
       country_select (~> 3.1)
       friendly_id (~> 5.2)
