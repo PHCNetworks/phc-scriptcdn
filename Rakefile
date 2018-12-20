@@ -5,6 +5,7 @@ rescue LoadError
 end
 
 require 'rdoc/task'
+
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'Phcscriptcdn'
@@ -15,5 +16,7 @@ end
 
 APP_RAKEFILE = File.expand_path("spec/test_app/Rakefile", __dir__)
 load 'rails/tasks/engine.rake'
+
 load 'rails/tasks/statistics.rake'
+
 require 'bundler/gem_tasks'
