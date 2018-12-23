@@ -1,7 +1,7 @@
-class CreatePhcscriptcdnproScriptUrls < ActiveRecord::Migration[5.2]
+class CreatePhcscriptcdnScriptUrls < ActiveRecord::Migration[5.2]
   def change
 
-    create_table :phcscriptcdnpro_script_urls do |t|
+    create_table :phcscriptcdn_script_urls do |t|
 
       t.string :scripturl
       t.date :scripturlrelease
@@ -14,7 +14,7 @@ class CreatePhcscriptcdnproScriptUrls < ActiveRecord::Migration[5.2]
       t.string :slug
 
       t.string :user_id
-      t.string :org_id
+      t.string :user_name
 
       t.timestamps
 

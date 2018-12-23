@@ -1,7 +1,7 @@
-class CreatePhcscriptcdnproScriptExtensions < ActiveRecord::Migration[5.2]
+class CreatePhcscriptcdnScriptExtensions < ActiveRecord::Migration[5.2]
   def change
 
-    create_table :phcscriptcdnpro_script_extensions do |t|
+    create_table :phcscriptcdn_script_extensions do |t|
 
       t.string :scriptextensionname
       t.text :scriptextensiondes
@@ -10,7 +10,7 @@ class CreatePhcscriptcdnproScriptExtensions < ActiveRecord::Migration[5.2]
       t.string :slug
 
       t.string :user_id
-      t.string :org_id
+      t.string :user_name
 
       t.timestamps
 
