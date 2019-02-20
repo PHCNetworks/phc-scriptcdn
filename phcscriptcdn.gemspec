@@ -19,24 +19,25 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'rails', '~> 5.2', '>= 5.2.2'
 
   # Admin Panel Theme Dependencies
-  phc_gem_spec.add_dependency 'phcadmin1', '~> 43.0'
-  phc_gem_spec.add_dependency 'phcadmin2', '~> 43.0'
-  phc_gem_spec.add_dependency 'phcadmin3', '~> 39.0'
-  phc_gem_spec.add_dependency 'phcadmin4', '~> 19.0'
-  phc_gem_spec.add_dependency 'phcadmin5', '~> 20.0'
-  phc_gem_spec.add_dependency 'phcadmin6', '~> 7.0'
+  phc_gem_spec.add_dependency 'phcadmin1', '~> 44.0'
+  phc_gem_spec.add_dependency 'phcadmin2', '~> 45.0'
+  phc_gem_spec.add_dependency 'phcadmin3', '~> 40.0'
+  phc_gem_spec.add_dependency 'phcadmin4', '~> 20.0'
+  phc_gem_spec.add_dependency 'phcadmin5', '~> 21.0'
+  phc_gem_spec.add_dependency 'phcadmin6', '~> 8.0'
+  phc_gem_spec.add_dependency 'phcadmin7', '~> 3.0'
 
   # Website Theme Dependencies
-  phc_gem_spec.add_dependency 'phctheme1', '~> 49.0'
-  phc_gem_spec.add_dependency 'phctheme2', '~> 38.0'
-  phc_gem_spec.add_dependency 'phctheme3', '~> 17.0'
-  phc_gem_spec.add_dependency 'phctheme4', '~> 15.0'
-  phc_gem_spec.add_dependency 'phctheme5', '~> 11.0'
-  phc_gem_spec.add_dependency 'phctheme6', '~> 4.0'
+  phc_gem_spec.add_dependency 'phctheme1', '~> 50.0'
+  phc_gem_spec.add_dependency 'phctheme2', '~> 39.0'
+  phc_gem_spec.add_dependency 'phctheme3', '~> 18.0'
+  phc_gem_spec.add_dependency 'phctheme4', '~> 16.0'
+  phc_gem_spec.add_dependency 'phctheme5', '~> 12.0'
+  phc_gem_spec.add_dependency 'phctheme6', '~> 5.0'
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency 'phcnotifi', '~> 40.0'
-  phc_gem_spec.add_dependency 'phctitleseo', '~> 41.0'
+  phc_gem_spec.add_dependency 'phcnotifi', '~> 41.0'
+  phc_gem_spec.add_dependency 'phctitleseo', '~> 42.0'
 
   # UI & URL Frontend Dependencies
   phc_gem_spec.add_dependency 'country_select', '~> 4.0'
@@ -60,11 +61,11 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'pg', '~> 1.1'
 
   # Security Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 28.0'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 29.0'
 
   # Development Dependencies
-  phc_gem_spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.13'
-  phc_gem_spec.add_development_dependency 'byebug', '~> 10.0'
+  phc_gem_spec.add_development_dependency 'sqlite3', '~> 1.3', '< 1.4'
+  phc_gem_spec.add_development_dependency 'byebug', '~> 11.0'
   phc_gem_spec.add_development_dependency 'capybara', '~> 3.13'
   phc_gem_spec.add_development_dependency 'minitest', '~> 5.11'
   phc_gem_spec.add_development_dependency 'rspec-rails', '~> 3.8'
@@ -75,7 +76,7 @@ Gem::Specification.new do |phc_gem_spec|
 
   # Extra Development & Testing Dependencies
   phc_gem_spec.add_development_dependency 'letter_opener', '~> 1.7'
-  phc_gem_spec.add_development_dependency 'shoulda-matchers', '~> 3.1'
+  phc_gem_spec.add_development_dependency 'shoulda-matchers', '~> 4.0'
   phc_gem_spec.add_development_dependency 'simplecov', '~> 0.16.1'
 
   phc_gem_spec.add_development_dependency 'nokogiri', '~> 1.10'
