@@ -16,37 +16,36 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
-  phc_gem_spec.add_dependency 'rails', '~> 5.2', '>= 5.2.2.1'
+  phc_gem_spec.add_dependency 'rails', '~> 5.2', '>= 5.2.3'
 
   # Admin Panel Theme Dependencies
-  phc_gem_spec.add_dependency 'phcadmin1', '~> 47.0'
-  phc_gem_spec.add_dependency 'phcadmin2', '~> 49.0'
-  phc_gem_spec.add_dependency 'phcadmin3', '~> 42.0'
-  phc_gem_spec.add_dependency 'phcadmin4', '~> 24.0'
-  phc_gem_spec.add_dependency 'phcadmin5', '~> 23.0'
-  phc_gem_spec.add_dependency 'phcadmin6', '~> 12.0'
-  phc_gem_spec.add_dependency 'phcadmin7', '~> 6.0'
+  phc_gem_spec.add_dependency 'phcadmin1', '~> 48.0'
+  phc_gem_spec.add_dependency 'phcadmin2', '~> 50.0'
+  phc_gem_spec.add_dependency 'phcadmin3', '~> 43.0'
+  phc_gem_spec.add_dependency 'phcadmin4', '~> 25.0'
+  phc_gem_spec.add_dependency 'phcadmin5', '~> 24.0'
+  phc_gem_spec.add_dependency 'phcadmin6', '~> 13.0'
+  phc_gem_spec.add_dependency 'phcadmin7', '~> 7.0'
 
   # Website Theme Dependencies
-  phc_gem_spec.add_dependency 'phctheme1', '~> 52.0'
-  phc_gem_spec.add_dependency 'phctheme2', '~> 41.0'
-  phc_gem_spec.add_dependency 'phctheme3', '~> 21.0'
-  phc_gem_spec.add_dependency 'phctheme4', '~> 18.0'
-  phc_gem_spec.add_dependency 'phctheme5', '~> 14.0'
-  phc_gem_spec.add_dependency 'phctheme6', '~> 7.0'
-  phc_gem_spec.add_dependency 'phctheme7', '~> 1.0'
+  phc_gem_spec.add_dependency 'phctheme1', '~> 53.0'
+  phc_gem_spec.add_dependency 'phctheme2', '~> 42.0'
+  phc_gem_spec.add_dependency 'phctheme3', '~> 22.0'
+  phc_gem_spec.add_dependency 'phctheme4', '~> 19.0'
+  phc_gem_spec.add_dependency 'phctheme5', '~> 15.0'
+  phc_gem_spec.add_dependency 'phctheme6', '~> 8.0'
+  phc_gem_spec.add_dependency 'phctheme7', '~> 2.0'
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency 'phcnotifi', '~> 43.0'
-  phc_gem_spec.add_dependency 'phctitleseo', '~> 44.0'
+  phc_gem_spec.add_dependency 'phcnotifi', '~> 44.1'
+  phc_gem_spec.add_dependency 'phctitleseo', '~> 45.1'
 
   # UI & URL Frontend Dependencies
-  phc_gem_spec.add_dependency 'country_select', '~> 4.0'
   phc_gem_spec.add_dependency 'friendly_id', '~> 5.2'
   phc_gem_spec.add_dependency 'gravtastic', '~> 3.2'
 
   # Images & Service Support Dependencies
-  phc_gem_spec.add_dependency 'aws-sdk-s3', '~> 1.34'
+  phc_gem_spec.add_dependency 'aws-sdk-s3', '~> 1.36'
   phc_gem_spec.add_dependency 'google-cloud-storage', '~> 1.17'
   phc_gem_spec.add_dependency 'mini_magick', '~> 4.9'
 
@@ -62,12 +61,12 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'pg', '~> 1.1'
 
   # Security Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 31.0'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 33.0'
 
   # Development Dependencies
   phc_gem_spec.add_development_dependency 'sqlite3', '~> 1.3', '< 1.4'
   phc_gem_spec.add_development_dependency 'byebug', '~> 11.0'
-  phc_gem_spec.add_development_dependency 'capybara', '~> 3.15'
+  phc_gem_spec.add_development_dependency 'capybara', '~> 3.16'
   phc_gem_spec.add_development_dependency 'minitest', '~> 5.11'
   phc_gem_spec.add_development_dependency 'rspec-rails', '~> 3.8'
 
