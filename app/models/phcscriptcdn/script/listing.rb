@@ -9,19 +9,9 @@ module Phcscriptcdn
 
     # Relationships
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
-    belongs_to :author, class_name: 'Phcscriptcdn::Script::Author'
-    belongs_to :version, class_name: 'Phcscriptcdn::Script::Version'
-    belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence'
-
-    # Validation for Form Fields
-    validates :scripttitle,
-      presence: true
-
-    validates :scriptdescription,
-      presence: true
-
-    validates :scriptstatus,
-      presence: true
+    belongs_to :author, class_name: 'Phcscriptcdn::Script::Author', optional: true
+    belongs_to :version, class_name: 'Phcscriptcdn::Script::Version', optional: true
+    belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence', optional: true
 
     # Clean URL Define
     friendly_id :phcscriptcdn_listing_slug, use: [:slugged, :finders]

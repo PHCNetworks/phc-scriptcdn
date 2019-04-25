@@ -1,40 +1,50 @@
 <!-- Title System -->
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Listing Details" %>
-<% phc_breadcrumb_one link_to "Listing Index", phcscriptcdn.script_listings_path %>
+<% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
-<!-- Page Title Bar -->
-<section class="content-header">
-	<!-- Page Title and BreadCrumb -->
-	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
-	<ol class="breadcrumb">
-		<li><%= yield(:phc_breadcrumb_one) %></li>
-		<li class="active"><%= yield(:phc_breadcrumb_two) %></li>
-	</ol>
-	<!-- Page Title and BreadCrumb -->
-</section>
-<!-- Page Title Bar -->
+<!-- Page Bradcrumbs -->
+<ol class="breadcrumb pull-right">
+	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+</ol>
+<!-- Page Bradcrumbs -->
 
-<!-- Main Content -->
-<section class="content">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="box">
-				<div class="box-header with-border">
-					<h3 class="box-title"><%= yield(:phc_title) %></h3>
-				</div>
-				<div class="box-body">
+<!-- Page Header -->
+<h1 class="page-header"><%= yield(:phc_title) %></h1>
+<!-- Page Header -->
 
-					<!-- Show Content -->
-					<%= link_to 'Edit', edit_script_listing_path(@script_listing) %> |
-					<%= link_to 'Back', script_listings_path %>
-					<!-- Show Content -->
+<!-- Page Content -->
+<div class="row">
 
+	<!-- Button Panel -->
+	<div class="col-lg-4">
+
+		<div class="panel panel-inverse">
+			<div class="panel-heading">
+				<div class="panel-heading-btn">
 				</div>
 			</div>
+			<div class="panel-body">
+
+				<div class="btn-group d-flex" role="group">
+					<%= link_to 'Update', phcscriptcdn.edit_script_listing_path, class: "btn btn-primary" %>
+					<%= link_to 'Remove', phcscriptcdn.script_listing_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+				</div>		
+
+			</div>
 		</div>
+
 	</div>
-</section>
-<!-- Main Content -->
+	<!-- Button Panel -->
+
+	<!-- Main Panel -->
+	<div class="col-lg-8">
+
+	</div>
+	<!-- Main Panel -->
+
+</div>
+<!-- Page Content -->

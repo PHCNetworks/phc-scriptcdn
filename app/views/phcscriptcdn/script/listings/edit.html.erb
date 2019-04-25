@@ -1,39 +1,38 @@
 <!-- Title System -->
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Update Script Listing" %>
-<% phc_breadcrumb_one link_to "Listing Index", phcscriptcdn.script_listings_path %>
+<% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
-<!-- Page Title Bar -->
-<section class="content-header">
-	<!-- Page Title and BreadCrumb -->
-	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
-	<ol class="breadcrumb">
-		<li><%= yield(:phc_breadcrumb_one) %></li>
-		<li class="active"><%= yield(:phc_breadcrumb_two) %></li>
-	</ol>
-	<!-- Page Title and BreadCrumb -->
-</section>
-<!-- Page Title Bar -->
+<!-- Page Bradcrumbs -->
+<ol class="breadcrumb pull-right">
+	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+</ol>
+<!-- Page Bradcrumbs -->
 
-<!-- Main Content -->
-<section class="content">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="box">
-				<div class="box-header with-border">
-					<h3 class="box-title"><%= yield(:phc_title) %></h3>
-				</div>
-				<div class="box-body">
-
-					<!-- Page Form (Edit) -->
-					<%= render 'form', script_listing: @script_listing %>
-					<!-- Page Form (Edit) -->
-
-				</div>
-			</div>
+<!-- Page Header -->
+<h1 class="page-header"><%= yield(:phc_title) %></h1>
+<!-- Page Header -->
+			
+<!-- Page Content -->
+<div class="panel panel-inverse">
+	<div class="panel-heading">
+		<div class="panel-heading-btn">
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
 		</div>
+		<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
 	</div>
-</section>
-<!-- Main Content -->
+	<div class="panel-body">
+
+		<!--  -->
+		<%= render 'form', script_listing: @script_listing %>
+		<!-- Form for Edit Script Listings -->
+		<!--  -->
+		
+	</div>
+</div>
+<!-- Page Content -->

@@ -19,6 +19,8 @@ module Phcscriptcdn
 		require 'phcadmin7'
 		
 		# PHC Helper Dependencies
+		require 'phccorehelpers'
+		require 'phcmenus'
 		require 'phcnotifi'
 		require 'phctitleseo'
 		
@@ -39,7 +41,7 @@ module Phcscriptcdn
 		require 'phcaccounts'
 
 		# Isolate Namespace
-    isolate_namespace Phcscriptcdn
+		isolate_namespace Phcscriptcdn
 		
 		# Testing Generator
 		config.generators do |g|
@@ -56,6 +58,9 @@ module Phcscriptcdn
 		
 		# Load Requried Helper Files
 		config.to_prepare do
+			Phcaccounts::ApplicationController.helper(ApplicationHelper)
+			Phccorehelpers::ApplicationController.helper(ApplicationHelper)
+			Phcmenus::ApplicationController.helper(ApplicationHelper)
 			Phcnotifi::ApplicationController.helper(ApplicationHelper)
 			Phctitleseo::ApplicationController.helper(ApplicationHelper)
 		end

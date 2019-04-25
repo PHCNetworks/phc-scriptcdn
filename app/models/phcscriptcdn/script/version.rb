@@ -13,7 +13,7 @@ module Phcscriptcdn
 
     # Validation for Form Fields
     validates :scriptversion,
-      presence: true
+    presence: true
 
     # Clean URL Define
     friendly_id :phcscriptcdn_version_slug, use: [:slugged, :finders]

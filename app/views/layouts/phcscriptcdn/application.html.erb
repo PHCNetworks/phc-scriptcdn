@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html>
+<head>
 
-	<head>
+  <% phc_seo_title "PHCScriptCDN CDNSM" %>
+  <% phc_seo_description "Script CDN Listings Management System by PHCDevworks" %>
 
-		<title>PHCScriptCDN - Script Listing Manager</title>
+  <!-- -PHC- SEO and Site Description -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= yield(:phc_seo_title) %></title>
+  <meta name="description" content="<%= yield(:phc_seo_description) %>">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <link rel="canonical" href="http://phcmembers.com">
+  <!-- -PHC- SEO and Site Description -->
+  
+  <!-- -PHC- Security -->
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <!-- -PHC- Security -->
+  
+  <!-- -PHC- CSS -->
+  <%= stylesheet_link_tag 'phcscriptcdn/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <!-- -PHC- CSS -->
 
-		<%= stylesheet_link_tag    "phcscriptcdn/application", media: "all" %>
-		<%= javascript_include_tag "phcscriptcdn/application" %>
-		<%= csrf_meta_tags %>
+  <!-- Font -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"/>
+  <!-- Font -->
 
-	</head>
+</head>
+<body>
 
-	<body class="hold-transition skin-blue sidebar-mini">
+  <!-- Page Container -->
+  <div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed">
+    <!-- Page Header -->
+    <div id="header" class="header navbar-default">
+      <%= render 'layouts/phcscriptcdn/components/backend/navigation/top_menu' %>
+    </div>
+    <!-- Page Header -->
 
-		<div class="wrapper">
-			<div class="main_container">
+    <!-- Page Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <%= render 'layouts/phcscriptcdn/components/backend/sidebars/side_menu' %>
+    </div>
+    <div class="sidebar-bg"></div>
+    <!-- Page Sidebar -->
 
-				<header class="main-header">
+    <!-- Page Content -->
+    <div id="content" class="content">
+      <%= yield %>
+    </div>
+    <!-- Page Content -->
 
-					<!-- Logo with Link -->
-					<%= link_to phcscriptcdn.script_listings_path, class: "logo" do %>
-						<span class="logo-mini">PHC</span>
-						<span class="logo-lg"><b>PHC</b>ScriptCDN</span>
-					<% end %>
-					<!-- Logo with Link -->
+    <!-- Footer Content -->
+    <div id="footer" class="footer">
+      <%= render 'layouts/phcscriptcdn/components/backend/footer/footer' %>
+    </div>
+    <!-- Footer Content -->
 
-					<!-- Top Navbar -->
-					<nav class="navbar navbar-static-top">
-						<%= render 'layouts/phcscriptcdn/components/backend/topbar/topbar' %>
-					</nav>
-					<!-- Top Navbar -->
+    <!-- Scroll to Top -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Scroll to Top -->
 
-				</header>
+  </div>
+  <!-- Page Container -->
 
-				<aside class="main-sidebar">
-					<%= render 'layouts/phcscriptcdn/components/backend/navigation/navigation' %>
-				</aside>
+  <!-- Requried JavaScripts -->
+  <%= javascript_include_tag "phcscriptcdn/application", 'data-turbolinks-track': 'reload' %>
+  <script src="https://cdn.ckeditor.com/4.10.0/full/ckeditor.js"></script>
+  <script>
+		$(document).ready(function() {
+			App.init();
+		});
+	</script>
+  <!-- Requried JavaScripts -->
 
-				<!-- Page Content -->
-				<div class="content-wrapper">
-					<%= yield %>
-				</div>
-				<!-- Page Content -->
-
-			</div>
-		</div>
-
-		<!-- Footer -->
-		<footer class="main-footer">
-			<%= render 'layouts/phcscriptcdn/components/backend/footer/footer' %>
-		</footer>
-		<!-- Footer -->
-
-	</body>
+</body>
 </html>

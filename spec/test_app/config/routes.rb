@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  mount Phcscriptcdn::Engine => "/phcscriptcdn"
+
+    # Index
+    root :to => 'website/pages#index'
+    
+    # Mount PHCEngines
+    mount Phcscriptcdn::Engine => "/"
+
 end

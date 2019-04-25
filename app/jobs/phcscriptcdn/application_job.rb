@@ -1,4 +1,4 @@
 module Phcscriptcdn
-	class ApplicationJob < ActiveJob::Base
-	end
+  class ApplicationJob < ActiveJob::Base
+  end
 end

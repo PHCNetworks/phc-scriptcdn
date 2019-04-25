@@ -1,71 +1,64 @@
 <!-- Title System -->
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Licence Index" %>
-<% phc_breadcrumb_one yield(:phc_title_tagline) %>
+<% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
+<% phc_breadcrumb_two link_to "Script Licence Index", phcscriptcdn.script_licences_path %>
+<% phc_breadcrumb_three yield(:phc_title_tagline) %>
 <!-- Title System -->
 
-<!-- Page Title Bar -->
-<section class="content-header">
-	<!-- Page Title and BreadCrumb -->
-	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
-	<ol class="breadcrumb">
-		<li><%= yield(:phc_breadcrumb_one) %></li>
-		<li class="active"><%= yield(:phc_breadcrumb_two) %></li>
-	</ol>
-	<!-- Page Title and BreadCrumb -->
-</section>
-<!-- Page Title Bar -->
+<!-- Page Bradcrumbs -->
+<ol class="breadcrumb pull-right">
+	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
+	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
+</ol>
+<!-- Page Bradcrumbs -->
 
-<!-- Main Content -->
-<section class="content">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="box">
-				<div class="box-header with-border">
-					<h3 class="box-title"><%= yield(:phc_title) %></h3>
-				</div>
-				<div class="box-body">
+<!-- Page Header -->
+<h1 class="page-header"><%= yield(:phc_title) %></h1>
+<!-- Page Header -->
+			
+<!-- Page Content -->
+<div class="panel panel-inverse">
+	<div class="panel-heading">
+		<div class="panel-heading-btn">
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+		</div>
+		<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
+	</div>
+	<div class="panel-body">
+		<!-- Table - Article Index -->
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Licence Name</th>
+						<th>GPLv3 Compatible</th>
+						<th>FSF Approval</th>
+						<th>OSI Approval</th>
+						<th>CopyFree Approval</th>
+						<th>Debian Approval</th>
+						<th>Fedora Approval</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @script_licences.each do |script_licence| %>
+						<tr>
+							<td><%= link_to script_licence.lcncname, script_licence %></td>
+							<td><%= link_to script_licence.lcnccomgpl, script_licence %></td>
+							<td><%= link_to script_licence.lcncarvlfsf, script_licence %></td>
+							<td><%= link_to script_licence.lcncarvlosi, script_licence %></td>
+							<td><%= link_to script_licence.lcncarvlcopyfree, script_licence %></td>
+							<td><%= link_to script_licence.lcncarvldebian, script_licence %></td>
+							<td><%= link_to script_licence.lcncarvlfedora, script_licence %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
 
-					<!-- Index Table -->
-					<div class="table-responsive">
-						<table class="table table-bordered table-striped table-hover">
-							<thead>
-								<tr>
-									<th>Licence Name</th>
-									<th>GPLv3 Compatible</th>
-									<th>FSF Approval</th>
-									<th>OSI Approval</th>
-									<th>CopyFree Approval</th>
-									<th>Debian Approval</th>
-									<th>Fedora Approval</th>
-								</tr>
-							</thead>
-							<tbody>
-								<% @script_licences.each do |script_licence| %>
-									<tr>
-										<td><%= link_to script_licence.lcncname, script_licence %></td>
-										<td><%= link_to script_licence.lcnccomgpl, script_licence %></td>
-										<td><%= link_to script_licence.lcncarvlfsf, script_licence %></td>
-										<td><%= link_to script_licence.lcncarvlosi, script_licence %></td>
-										<td><%= link_to script_licence.lcncarvlcopyfree, script_licence %></td>
-										<td><%= link_to script_licence.lcncarvldebian, script_licence %></td>
-										<td><%= link_to script_licence.lcncarvlfedora, script_licence %></td>
-									</tr>
-								<% end %>
-							</tbody>
-						</table>
-					</div>
-					<!-- Index Table -->
-
-					<!-- Panel Footer -->
-					<div class="box-footer clearfix">
-						<%= link_to 'New Script Licence', new_script_licence_path, class: "btn btn-primary" %>
-					</div>
-					<!-- Panel Footer -->
-
-				</div>
-			</div>
 		</div>
 	</div>
-</section>
-<!-- Main Content -->
+</div>
+<!-- Page Content -->

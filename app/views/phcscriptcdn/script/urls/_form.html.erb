@@ -1,21 +1,20 @@
-<%= form_for([@script_url.listing, @script_url], url: form_url) do |f| %>
+<%= form_for([@script_url.listing, @script_url], url: form_url) do |form_phc_scriptcdn_urls| %>
 
-	<!-- PHC-Notifi Render Validation -->
+	<!-- PHCNotifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_url %>
-	<!-- PHC-Notifi Render Validation -->
 
-	<!-- Form Fields -->
+	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">
-		<%= f.label :scripturl, "Script URL" %>
-		<%= f.text_field :scripturl, placeholder: "Script URL", class: "form-control"  %>
+		<%= form_phc_scriptcdn_urls.label :scripturl, "Script URL" %>
+		<%= form_phc_scriptcdn_urls.text_field :scripturl, placeholder: "Script URL", class: "form-control"  %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= f.label :scripturlrelease, "Initial Release" %>
-		<%= f.date_select :scripturlrelease, class: "form-control" %>
+		<%= form_phc_scriptcdn_urls.label :scripturlrelease, "Initial Release" %>
+		<%= form_phc_scriptcdn_urls.date_select :scripturlrelease, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= f.label :scripturlcdnupdate, "Latest Release" %>
-		<%= f.date_select :scripturlcdnupdate, class: "form-control" %>
+		<%= form_phc_scriptcdn_urls.label :scripturlcdnupdate, "Latest Release" %>
+		<%= form_phc_scriptcdn_urls.date_select :scripturlcdnupdate, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Version</label>
@@ -25,12 +24,12 @@
 		<label>Script Extensions</label>
 		<%= collection_select(:script_url, :extension_id, Phcscriptcdn::Script::Extension.order('scriptextensionname'), :id, :scriptextension, {}, {class: "form-control"}) %>
 	</div>
-	<!-- Form Fields -->
+	<!-- Form Input Fields -->
 
-	<!-- Form Button -->
+	<!-- Form Submition Button -->
 	<div class="actions">
-		<%= f.submit class: "btn btn-primary" %>
+		<%= form_phc_scriptcdn_urls.submit class: "btn btn-primary" %>
 	</div>
-	<!-- Form Button -->
+	<!-- For Submition Button -->
 
 <% end %>

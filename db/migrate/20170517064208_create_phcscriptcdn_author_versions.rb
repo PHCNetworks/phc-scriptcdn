@@ -10,6 +10,7 @@ class CreatePhcscriptcdnAuthorVersions < ActiveRecord::Migration[5.2]
       t.text     :object, limit: TEXT_BYTES
       t.datetime :created_at
     end
+
     add_index :phcscriptcdn_author_versions, %i(item_type item_id), :name => 'scriptcdn_author_versions'
 
   end

@@ -9,8 +9,8 @@ module Phcscriptcdn
 
     # Relationships
     belongs_to :listing, class_name: 'Phcscriptcdn::Script::Listing'
-    belongs_to :version, class_name: 'Phcscriptcdn::Script::Version'
-    belongs_to :extension, class_name: 'Phcscriptcdn::Script::Extension'
+    belongs_to :version, class_name: 'Phcscriptcdn::Script::Version', optional: true
+    belongs_to :extension, class_name: 'Phcscriptcdn::Script::Extension', optional: true
 
     # Validation for Form Fields
     validates :scripturl,
