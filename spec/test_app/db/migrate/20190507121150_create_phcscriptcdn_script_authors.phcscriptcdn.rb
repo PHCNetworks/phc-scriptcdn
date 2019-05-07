@@ -4,16 +4,15 @@ class CreatePhcscriptcdnScriptAuthors < ActiveRecord::Migration[5.2]
 
     create_table :phcscriptcdn_script_authors do |t|
 
-      t.string :authorfirstname
-      t.string :authorlastname
+      t.string :author_first_name
+      t.string :author_last_name
 
-      t.string :authorwebsite
-      t.string :authorgithub
+      t.string :author_website
+      t.string :author_github
 
       t.string :slug
 
       t.string :user_id
-      t.string :org_id
 
       t.timestamps
 

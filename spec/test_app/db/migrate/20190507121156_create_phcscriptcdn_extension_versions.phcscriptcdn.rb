@@ -12,7 +12,7 @@ class CreatePhcscriptcdnExtensionVersions < ActiveRecord::Migration[5.2]
       t.datetime :created_at
     end
 
-    add_index :phcscriptcdn_extension_versions, %i(item_type item_id), :name => 'scriptcdn_ext_versions'
+    add_index :phcscriptcdn_extension_versions, %i(item_type item_id), :name => 'scriptcdnpro_ext_versions'
 
   end
 end

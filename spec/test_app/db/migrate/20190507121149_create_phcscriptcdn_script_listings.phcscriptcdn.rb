@@ -1,3 +1,4 @@
+# This migration comes from phcscriptcdn (originally 20160821183652)
 class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.2]
   def change
 

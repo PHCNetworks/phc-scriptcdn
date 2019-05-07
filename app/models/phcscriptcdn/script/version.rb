@@ -8,11 +8,11 @@ module Phcscriptcdn
     has_paper_trail :class_name => 'Phcscriptcdn::ScriptversionVersions'
 
     # Relationships
-    has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
+    has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
     # Validation for Form Fields
-    validates :scriptversion,
+    validates :script_version_number,
     presence: true
 
     # Clean URL Define
@@ -21,7 +21,7 @@ module Phcscriptcdn
     # Define for Multiple Records
     def phcscriptcdn_version_slug
       [
-        [:scriptversion]
+        [:script_version_number]
       ]
     end
 

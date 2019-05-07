@@ -2,25 +2,27 @@
 <html>
 <head>
 
-  <% phc_seo_title "PHCScriptCDN CDNSM" %>
-  <% phc_seo_description "Script CDN Listings Management System by PHCDevworks" %>
+  <!-- SEO System -->
+  <% phc_seo_title "PHCScriptCDN by PHCDevworks" %>
+  <% phc_seo_description "Application to manage CDN Script Listings." %>
+  <!-- SEO System -->
 
-  <!-- -PHC- SEO and Site Description -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO and Site Description -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><%= yield(:phc_seo_title) %></title>
   <meta name="description" content="<%= yield(:phc_seo_description) %>">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-  <link rel="canonical" href="http://phcmembers.com">
-  <!-- -PHC- SEO and Site Description -->
-  
-  <!-- -PHC- Security -->
+  <link rel="canonical" href="http://phcdevworks.com">
+  <!-- SEO and Site Description -->
+
+  <!-- Rails Security Tags -->
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <!-- -PHC- Security -->
-  
-  <!-- -PHC- CSS -->
+  <!-- Rails Security Tags -->
+
+  <!-- CSS Styles -->
   <%= stylesheet_link_tag 'phcscriptcdn/application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <!-- -PHC- CSS -->
+  <!-- CSS Styles -->
 
   <!-- Font -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"/>
@@ -31,6 +33,7 @@
 
   <!-- Page Container -->
   <div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed">
+
     <!-- Page Header -->
     <div id="header" class="header navbar-default">
       <%= render 'layouts/phcscriptcdn/components/backend/navigation/top_menu' %>
@@ -51,29 +54,25 @@
     <!-- Page Content -->
 
     <!-- Footer Content -->
-    <div id="footer" class="footer">
+    <div id="footer" class="footer mb-4">
       <%= render 'layouts/phcscriptcdn/components/backend/footer/footer' %>
     </div>
     <!-- Footer Content -->
 
-    <!-- Scroll to Top -->
-    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
-    <!-- Scroll to Top -->
-
   </div>
   <!-- Page Container -->
 
-  <!-- Requried JavaScripts -->
+  <!-- JavaScript -->
   <%= javascript_include_tag "phcscriptcdn/application", 'data-turbolinks-track': 'reload' %>
-  <script src="https://cdn.ckeditor.com/4.10.0/full/ckeditor.js"></script>
+  <!-- JavaScript -->
+
+  <!-- JavaScript Loader -->
   <script>
 		$(document).ready(function() {
 			App.init();
 		});
 	</script>
-  <!-- Requried JavaScripts -->
+  <!-- JavaScript Loader -->
 
 </body>
 </html>

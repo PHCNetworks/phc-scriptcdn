@@ -25,8 +25,6 @@ module Phcscriptcdn
     def new
       script_listing = Script::Listing.find(params[:listing_id])
       @script_url = script_listing.urls.build
-      @script_url.user_id = current_user.id
-      @script_url.org_id = current_user.org_id
     end
 
     # EDIT - Script Athors
@@ -40,7 +38,6 @@ module Phcscriptcdn
       @script_listing = Script::Listing.find(params[:listing_id])
       @script_url = @script_listing.urls.create(script_url_params)
       @script_url.user_id = current_user.id
-      @script_url.org_id = current_user.org_id
       if @script_url.save
         redirect_to script_listing_urls_path, notice: 'Author was successfully created.'
         else
@@ -50,8 +47,6 @@ module Phcscriptcdn
 
     # PATCH/PUT - Script Athors
     def update
-      @script_url.user_id = current_user.id
-      @script_url.org_id = current_user.org_id
       if @script_url.update(script_url_params)
         redirect_to script_listing_urls_path, notice: 'Author was successfully updated.'
         else
@@ -76,7 +71,7 @@ module Phcscriptcdn
 
     # Whitelists
     def script_url_params
-      params.require(:script_url).permit(:scripturl, :scripturlrelease, :scripturlcdnupdate, :slug, :user_id, :org_id, :listing_id, :version_id, :extension_id)
+      params.require(:script_url).permit(:script_url, :script_url_release, :script_url_cdn_update, :slug, :user_id, :listing_id, :version_id, :extension_id)
     end
 
   end

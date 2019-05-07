@@ -9,17 +9,17 @@ module Phcscriptcdn
 
     # Relationships
     belongs_to :listing, class_name: 'Phcscriptcdn::Script::Listing'
+    belongs_to :extension, class_name: 'Phcscriptcdn::Script::Extension'
     belongs_to :version, class_name: 'Phcscriptcdn::Script::Version', optional: true
-    belongs_to :extension, class_name: 'Phcscriptcdn::Script::Extension', optional: true
 
     # Validation for Form Fields
-    validates :scripturl,
+    validates :script_url,
       presence: true
 
-    validates :scripturlrelease,
+    validates :script_url_release,
       presence: true
 
-    validates :scripturlcdnupdate,
+    validates :script_url_cdn_update,
       presence: true
 
     # Clean URL Define
@@ -28,7 +28,7 @@ module Phcscriptcdn
     # Define for Multiple Records
     def phcscriptcdn_url_slug
       [
-        [:scripturl]
+        [:id]
       ]
     end
 

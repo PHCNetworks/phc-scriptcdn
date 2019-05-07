@@ -2,15 +2,13 @@
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script URL Index" %>
 <% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
-<% phc_breadcrumb_two link_to "Script Urls", phcscriptcdn.script_listing_urls_path %>
-<% phc_breadcrumb_three yield(:phc_title_tagline) %>
+<% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
-	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -42,14 +40,17 @@
 				<tbody>
 					<% @script_urls.each do |script_url| %>
 						<tr>
-							<td><%= link_to script_url.scripturl, script_listing_url_path(script_url.listing, script_url) %></td>
-							<td><%= link_to script_url.scripturlrelease, script_listing_url_path(script_url.listing, script_url) %></td>
-							<td><%= link_to script_url.scripturlcdnupdate, script_listing_url_path(script_url.listing, script_url) %></td>
+							<td><%= link_to script_url.script_url, script_listing_url_path(script_url.listing, script_url) %></td>
+							<td><%= link_to script_url.script_url_release, script_listing_url_path(script_url.listing, script_url) %></td>
+							<td><%= link_to script_url.script_url_cdn_update, script_listing_url_path(script_url.listing, script_url) %></td>
 						</tr>
 					<% end %>
 				</tbody>
 			</table>
-
+			<%= link_to phcscriptcdn.new_script_listing_url_path, class: "btn btn-primary" do %>
+				<i class="fas fa-plus-circle"></i>
+				<%= "Add a New CDN URL" %>
+			<% end %>
 		</div>
 	</div>
 </div>

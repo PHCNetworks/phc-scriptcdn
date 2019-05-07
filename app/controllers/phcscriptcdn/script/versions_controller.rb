@@ -11,7 +11,7 @@ module Phcscriptcdn
 
     # INDEX - Script Versions
     def index
-      @script_versions = Script::Version.where(org_id: current_user.org_id)
+      @script_versions = Script::Version.all
     end
 
     # DETAILS - Script Versions
@@ -23,8 +23,6 @@ module Phcscriptcdn
     # NEW - Script Versions
     def new
       @script_version = Script::Version.new
-      @script_version.user_id = current_user.id
-      @script_version.org_id = current_user.org_id
     end
 
     # EDIT - Script Versions
@@ -35,7 +33,6 @@ module Phcscriptcdn
     def create
       @script_version = Script::Version.new(script_version_params)
       @script_version.user_id = current_user.id
-      @script_version.org_id = current_user.org_id
       if @script_version.save
         redirect_to script_versions_url, notice: 'Version was successfully created.'
         else
@@ -45,8 +42,6 @@ module Phcscriptcdn
 
     # PATCH/PUT - Script Versions
     def update
-      @script_version.user_id = current_user.id
-      @script_version.org_id = current_user.org_id
       if @script_version.update(script_version_params)
         redirect_to script_versions_url, notice: 'Version was successfully updated.'
         else
@@ -69,7 +64,7 @@ module Phcscriptcdn
 
     # Only allow a trusted parameter "white list" through.
     def script_version_params
-      params.require(:script_version).permit(:scriptversion, :slug, :user_id, :org_id, :listing_id)
+      params.require(:script_version).permit(:script_version_number, :slug, :user_id, :org_id)
     end
 
   end

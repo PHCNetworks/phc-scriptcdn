@@ -1,67 +1,60 @@
-<%= form_with(model: script_listing, local: true) do |form_phc_scriptcdn_listings| %>
+<%= form_with(model: script_listing, local: true) do |phc_scriptcdn_pro_listings| %>
 
-	<!-- PHCNotifi Render Validation -->
+	<!-- Validation System -->
 	<%= render 'phcnotifi/validations', :object => @script_listing %>
+	<!-- Validation System -->
 
-	<!-- Form_phc_scriptcdn_listings Input Fields -->
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scripttitle, "Script Title" %>
-		<%= form_phc_scriptcdn_listings.text_field :scripttitle, placeholder: "Script Title", class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_tittle %>
+		<%= phc_scriptcdn_pro_listings.text_field :script_tittle, placeholder: "Script Title", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptdescription, "Script Description" %>
-		<%= form_phc_scriptcdn_listings.text_area :scriptdescription, placeholder: "Script Description", class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_description, "Script Description" %>
+		<%= phc_scriptcdn_pro_listings.text_area :script_description, placeholder: "Script Description", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :descriptionsource, "Script Source" %>
-		<%= form_phc_scriptcdn_listings.text_field :descriptionsource, placeholder: "Script Source", class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_source, "Script Source Code" %>
+		<%= phc_scriptcdn_pro_listings.text_field :script_source, placeholder: "Script Source", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptwebsite, "Script Website" %>
-		<%= form_phc_scriptcdn_listings.text_field :scriptwebsite, placeholder: "Script Website", class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_website, "Script Website" %>
+		<%= phc_scriptcdn_pro_listings.text_field :script_website, placeholder: "Script Website", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptgithub, "Script Github" %>
-		<%= form_phc_scriptcdn_listings.text_field :scriptgithub, placeholder: "Script Github Address", class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_github, "Script Github" %>
+		<%= phc_scriptcdn_pro_listings.text_field :script_github, placeholder: "Script Github Address", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptinitialrelease, "Initial Release" %>
-		<%= form_phc_scriptcdn_listings.date_select :scriptinitialrelease, start_year: 1981, class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_initial_release, "Initial Release" %>
+		<%= phc_scriptcdn_pro_listings.date_select :script_initial_release, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptlastestrelease, "Latest Release" %>
-		<%= form_phc_scriptcdn_listings.date_select :scriptlastestrelease, start_year: 1981, class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_lastest_release, "Latest Release" %>
+		<%= phc_scriptcdn_pro_listings.date_select :script_lastest_release, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptbetarelease, "Preview Release" %>
-		<%= form_phc_scriptcdn_listings.date_select :scriptbetarelease, start_year: 1981, class: "form-control" %>
+		<%= phc_scriptcdn_pro_listings.label :script_beta_release, "Preview Release" %>
+		<%= phc_scriptcdn_pro_listings.date_select :script_beta_release, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptlastestreleasecdn, "Script CDN Release" %>
-		<%= form_phc_scriptcdn_listings.date_select :scriptlastestreleasecdn, start_year: 1981, class: "form-control" %>
-	</div>
-	<div class="form-group field_with_errors">
-		<label>Script Version</label>
-		<%= collection_select(:script_listing, :version_id, Phcscriptcdn::Script::Version.order('scriptversion'), :id, :scriptversion, {}, {class: "form-control"}) %>
+		<%= phc_scriptcdn_pro_listings.label :script_lastest_release_cdn, "Script CDN Release" %>
+		<%= phc_scriptcdn_pro_listings.date_select :script_lastest_release_cdn, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Licence</label>
-		<%= collection_select(:script_listing, :licence_id, Phcscriptcdn::Script::Licence.order('lcncname'), :id, :lcncname, {}, {class: "form-control"}) %>
+		<%= collection_select(:script_listing, :licence_id, Phcscriptcdn::Script::Licence.order('licence_name'), :id, :licence_name, {}, {class: "form-control"}) %>
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Author</label>
-		<%= collection_select(:script_listing, :author_id, Phcscriptcdn::Script::Author.order('authorfirstname'), :id, :authorfirstname, {}, {class: "form-control"}) %>
+		<%= collection_select(:script_listing, :author_id, Phcscriptcdn::Script::Author.order('author_first_name'), :id, :author_first_name, {}, {class: "form-control"}) %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_listings.label :scriptstatus, "Script Status" %>
-		<%= form_phc_scriptcdn_listings.select( :scriptstatus, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control"}) %>
+		<%= phc_scriptcdn_pro_listings.label :script_status, "Script Status" %>
+		<%= phc_scriptcdn_pro_listings.select( :script_status, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control"}) %>
 	</div>
-	<!-- Form_phc_scriptcdn_listings Input Fields -->
 
-	<!-- Form_phc_scriptcdn_listings Submition Button -->
 	<div class="actions">
-		<%= form_phc_scriptcdn_listings.submit class: "btn btn-primary" %>
+		<%= phc_scriptcdn_pro_listings.submit class: "btn btn-primary" %>
 	</div>
-	<!-- For Submition Button -->
 
 <% end %>

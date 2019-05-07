@@ -11,7 +11,7 @@ module Phcscriptcdn
 
     # INDEX - Script Licences
     def index
-      @script_licences = Script::Licence.where(org_id: current_user.org_id)
+      @script_licences = Script::Licence.all
     end
 
     # DETAILS - Script Licences
@@ -23,8 +23,6 @@ module Phcscriptcdn
     # NEW - Script Licences
     def new
       @script_licence = Script::Licence.new
-      @script_licence.user_id = current_user.id
-      @script_licence.org_id = current_user.org_id
     end
 
     # EDIT - Script Licences
@@ -35,7 +33,6 @@ module Phcscriptcdn
     def create
       @script_licence = Script::Licence.new(script_licence_params)
       @script_licence.user_id = current_user.id
-      @script_licence.org_id = current_user.org_id
       if @script_licence.save
         redirect_to script_licences_url, notice: 'Licence was successfully created.'
         else
@@ -45,8 +42,6 @@ module Phcscriptcdn
 
     # PATCH/PUT - Script Licences
     def update
-      @script_licence.user_id = current_user.id
-      @script_licence.org_id = current_user.org_id
       if @script_licence.update(script_licence_params)
         redirect_to script_licences_url, notice: 'Licence was successfully updated.'
         else
@@ -69,7 +64,7 @@ module Phcscriptcdn
 
     # Whitelists
     def script_licence_params
-      params.require(:script_licence).permit(:lcncname, :lcncdescription, :lcncdescript, :lcnccomgpl, :lcncarvlfsf, :lcncarvlosi, :lcncarvlcopyfree, :lcncarvldebian, :lcncarvlfedora, :slug, :user_id, :org_id, :listing_id)
+      params.require(:script_licence).permit(:licence_name, :licence_description, :licence_compatible_gpl, :licence_approval_fsf, :licence_approval_osi, :licence_approval_copyfree, :licence_approval_debian, :licence_approval_fedora, :slug, :user_id, :org_id, :listing_id)
     end
 
   end

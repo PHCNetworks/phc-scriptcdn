@@ -2,15 +2,13 @@
 <% phc_title "Script Authors" %>
 <% phc_title_tagline "Author Index" %>
 <% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
-<% phc_breadcrumb_two link_to "Author Index", phcscriptcdn.script_authors_path %>
-<% phc_breadcrumb_three yield(:phc_title_tagline) %>
+<% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
-	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -43,14 +41,18 @@
 				<tbody>
 					<% @script_authors.each do |script_author| %>
 						<tr>
-							<td><%= link_to script_author.authorfirstname, script_author %></td>
-							<td><%= link_to script_author.authorlastname, script_author %></td>
-							<td><%= link_to script_author.authorwebsite, script_author %></td>
-							<td><%= link_to script_author.authorgithub, script_author %></td>
+							<td><%= link_to script_author.author_first_name, script_author %></td>
+							<td><%= link_to script_author.author_last_name, script_author %></td>
+							<td><%= link_to script_author.author_website, script_author %></td>
+							<td><%= link_to script_author.author_github, script_author %></td>
 						</tr>
 					<% end %>
 				</tbody>
 			</table>
+			<%= link_to phcscriptcdn.new_script_author_path, class: "btn btn-primary btn-sm" do %>
+				<i class="fas fa-plus-circle"></i>
+				<%= "Add a New Script Author" %>
+			<% end %>
 		</div>
 	</div>
 </div>

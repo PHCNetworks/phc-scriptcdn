@@ -12,13 +12,13 @@ module Phcscriptcdn
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
     # Validation for Form Fields
-    validates :scriptextensionname,
+    validates :script_extension_name,
       presence: true
 
-    validates :scriptextensiondes,
+    validates :script_extension_description,
       presence: true
 
-    validates :scriptextension,
+    validates :script_extension,
       presence: true
 
     # Clean URL Define
@@ -27,7 +27,7 @@ module Phcscriptcdn
     # Define for Multiple Records
     def phcscriptcdn_extentension_slug
       [
-        [:scriptextensionname, :scriptextension]
+        [:script_extension]
       ]
     end
 

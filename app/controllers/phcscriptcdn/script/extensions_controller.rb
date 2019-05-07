@@ -11,7 +11,7 @@ module Phcscriptcdn
 
     # INDEX - Script Extension
     def index
-      @script_extensions = Script::Extension.where(org_id: current_user.org_id)
+      @script_extensions = Script::Extension.all
     end
 
     # DETAILS - Script Extension
@@ -23,8 +23,6 @@ module Phcscriptcdn
     # NEW - Script Extension
     def new
       @script_extension = Script::Extension.new
-      @script_extension.user_id = current_user.id
-      @script_extension.org_id = current_user.org_id
     end
 
     # EDIT - Script Extension
@@ -35,7 +33,6 @@ module Phcscriptcdn
     def create
       @script_extension = Script::Extension.new(script_extension_params)
       @script_extension.user_id = current_user.id
-      @script_extension.org_id = current_user.org_id
       if @script_extension.save
         redirect_to script_extensions_url, notice: 'Extension was successfully created.'
         else
@@ -45,8 +42,6 @@ module Phcscriptcdn
 
     # PATCH/PUT - Script Extension
     def update
-      @script_extension.user_id = current_user.id
-      @script_extension.org_id = current_user.org_id
       if @script_extension.update(script_extension_params)
         redirect_to script_extensions_url, notice: 'Extension was successfully updated.'
         else
@@ -56,7 +51,7 @@ module Phcscriptcdn
 
     # DELETE - Script Extension
     def destroy
-    @script_extension.destroy
+      @script_extension.destroy
       redirect_to script_extensions_url, notice: 'Extension was successfully destroyed.'
     end
 
@@ -69,7 +64,7 @@ module Phcscriptcdn
 
     # Whitelists
     def script_extension_params
-      params.require(:script_extension).permit(:scriptextensionname, :scriptextensiondes, :scriptextension, :slug, :user_id, :org_id, :listing_id)
+      params.require(:script_extension).permit(:script_extension_name, :script_extension_description, :script_extension, :slug, :user_id)
     end
 
   end

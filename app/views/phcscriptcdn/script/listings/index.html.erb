@@ -2,13 +2,11 @@
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Listing Index" %>
 <% phc_breadcrumb_one yield(:phc_title_tagline) %>
-<% phc_breadcrumb_two link_to "Script Index", phcscriptcdn.script_listings_path %>
 <!-- Title System -->
 
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
-	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_one) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -37,19 +35,22 @@
 						<th>Latest Release Date</th>
 						<th>Beta Release Date</th>
 					</tr>
-					</thead>
-					<tbody>
-						<% @script_listings.each do |script_listing| %>
-						<tr>
-							<td class="vert-align"><%= link_to script_listing.scripttitle, script_listing_path(script_listing) %></td>
-							<td class="vert-align"><%= link_to script_listing.scriptinitialrelease, script_listing_path(script_listing) %></td>
-							<td class="vert-align"><%= link_to script_listing.scriptlastestrelease, script_listing_path(script_listing) %></td>
-							<td class="vert-align"><%= link_to script_listing.scriptbetarelease, script_listing_path(script_listing) %></td>
-						</tr>
+				</thead>
+				<tbody>
+					<% @script_listings.each do |script_listing| %>
+					<tr>
+						<td class="vert-align"><%= link_to script_listing.script_tittle, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to script_listing.script_initial_release, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to script_listing.script_lastest_release, script_listing_path(script_listing) %></td>
+						<td class="vert-align"><%= link_to script_listing.script_beta_release, script_listing_path(script_listing) %></td>
+					</tr>
 					<% end %>
 				</tbody>
 			</table>
-
+			<%= link_to phcscriptcdn.new_script_listing_path, class: "btn btn-primary" do %>
+				<i class="fas fa-plus-circle"></i>
+				<%= "Add a New Script CDN Listing" %>
+			<% end %>
 		</div>
 	</div>
 </div>

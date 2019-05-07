@@ -1,3 +1,4 @@
+# This migration comes from phcscriptcdn (originally 20160821183805)
 class CreatePhcscriptcdnScriptLicences < ActiveRecord::Migration[5.2]
   def change
 

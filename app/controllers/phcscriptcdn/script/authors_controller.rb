@@ -11,7 +11,7 @@ module Phcscriptcdn
 
     # INDEX - Script Author
     def index
-      @script_authors = Script::Author.where(org_id: current_user.org_id)
+      @script_authors = Script::Author.all
     end
 
     # DETAILS - Script Author
@@ -23,8 +23,6 @@ module Phcscriptcdn
     # NEW - Script Author
     def new
       @script_author = Script::Author.new
-      @script_author.user_id = current_user.id
-      @script_author.org_id = current_user.org_id
     end
 
     # EDIT - Script Author
@@ -35,7 +33,6 @@ module Phcscriptcdn
     def create
       @script_author = Script::Author.new(script_author_params)
       @script_author.user_id = current_user.id
-      @script_author.org_id = current_user.org_id
       if @script_author.save
         redirect_to script_authors_url, notice: 'Author was successfully created.'
         else
@@ -45,8 +42,6 @@ module Phcscriptcdn
 
     # PATCH/PUT - Script Author
     def update
-      @script_author.user_id = current_user.id
-      @script_author.org_id = current_user.org_id
       if @script_author.update(script_author_params)
           redirect_to script_authors_url, notice: 'Author was successfully updated.'
           else
@@ -69,7 +64,7 @@ module Phcscriptcdn
 
     # Whitelist
     def script_author_params
-      params.require(:script_author).permit(:authorfirstname, :authorlastname, :authorwebsite, :authorgithub, :slug, :user_id, :org_id, :listing_id)
+      params.require(:script_author).permit(:author_first_name, :author_last_name, :author_website, :author_github, :slug, :user_id, :listing_id)
     end
 
   end

@@ -2,15 +2,13 @@
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Extension Index" %>
 <% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
-<% phc_breadcrumb_two link_to "Script Extension Index", phcscriptcdn.script_extensions_path %>
-<% phc_breadcrumb_three yield(:phc_title_tagline) %>
+<% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
-	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -41,13 +39,16 @@
 				<tbody>
 					<% @script_extensions.each do |script_extension| %>
 						<tr>
-							<td><%= link_to script_extension.scriptextensionname, script_extension %></td>
-							<td><%= link_to script_extension.scriptextension, script_extension %></td>
+							<td><%= link_to script_extension.script_extension_name, script_extension %></td>
+							<td><%= link_to script_extension.script_extension, script_extension %></td>
 						</tr>
 					<% end %>
 				</tbody>
 			</table>
-
+			<%= link_to phcscriptcdn.new_script_extension_path, class: "btn btn-primary" do %>
+				<i class="fas fa-plus-circle"></i>
+				<%= "Add a New Extension" %>
+			<% end %>
 		</div>
 	</div>
 </div>

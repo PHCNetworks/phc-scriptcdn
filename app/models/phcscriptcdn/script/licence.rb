@@ -11,10 +11,10 @@ module Phcscriptcdn
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
 
     # Validation for Form Fields
-    validates :lcncname,
+    validates :licence_name,
       presence: true
 
-    validates :lcncdescript,
+    validates :licence_description,
       presence: true
 
     # Clean URL Define
@@ -23,7 +23,7 @@ module Phcscriptcdn
     # Define for Multiple Records
     def phcscriptcdn_licence_slug
       [
-        [:lcncname]
+        [:licence_name]
       ]
     end
 

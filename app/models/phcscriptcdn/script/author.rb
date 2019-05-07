@@ -16,7 +16,7 @@ module Phcscriptcdn
     # Define for Multiple Records
     def phcscriptcdn_author_slug
       [
-        [:authorfirstname, :authorlastname]
+        [:author_first_name, :author_last_name]
       ]
     end
 

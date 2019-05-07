@@ -2,15 +2,13 @@
 <% phc_title "Script Listings Manager" %>
 <% phc_title_tagline "Script Licence Index" %>
 <% phc_breadcrumb_one link_to "Script Index", phcscriptcdn.script_listings_path %>
-<% phc_breadcrumb_two link_to "Script Licence Index", phcscriptcdn.script_licences_path %>
-<% phc_breadcrumb_three yield(:phc_title_tagline) %>
+<% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
-	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -46,18 +44,21 @@
 				<tbody>
 					<% @script_licences.each do |script_licence| %>
 						<tr>
-							<td><%= link_to script_licence.lcncname, script_licence %></td>
-							<td><%= link_to script_licence.lcnccomgpl, script_licence %></td>
-							<td><%= link_to script_licence.lcncarvlfsf, script_licence %></td>
-							<td><%= link_to script_licence.lcncarvlosi, script_licence %></td>
-							<td><%= link_to script_licence.lcncarvlcopyfree, script_licence %></td>
-							<td><%= link_to script_licence.lcncarvldebian, script_licence %></td>
-							<td><%= link_to script_licence.lcncarvlfedora, script_licence %></td>
+							<td><%= link_to script_licence.licence_name, script_licence %></td>
+							<td><%= link_to script_licence.licence_compatible_gpl, script_licence %></td>
+							<td><%= link_to script_licence.licence_approval_fsf, script_licence %></td>
+							<td><%= link_to script_licence.licence_approval_osi, script_licence %></td>
+							<td><%= link_to script_licence.licence_approval_copyfree, script_licence %></td>
+							<td><%= link_to script_licence.licence_approval_debian, script_licence %></td>
+							<td><%= link_to script_licence.licence_approval_fedora, script_licence %></td>
 						</tr>
 					<% end %>
 				</tbody>
 			</table>
-
+			<%= link_to phcscriptcdn.new_script_licence_path, class: "btn btn-primary btn-sm" do %>
+				<i class="fas fa-plus-circle"></i>
+				<%= "Add a New Licence" %>
+			<% end %>
 		</div>
 	</div>
 </div>
