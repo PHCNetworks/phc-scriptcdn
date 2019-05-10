@@ -1,26 +1,26 @@
-<%= form_with(model: script_extension, local: true) do |form_phc_scriptcdn_extension| %>
+<%= form_with(model: script_extension, local: true) do |form| %>
 
 	<!-- PHCNotifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_extension %>
 
-	<!-- Form_phc_scriptcdn_extension Input Fields -->
+	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_extension.label :script_extension_name, "Extension Name" %>
-		<%= form_phc_scriptcdn_extension.text_field :script_extension_name, placeholder: "Extension Name", class: "form-control" %>
+		<%= form.label :script_extension_name, "Extension Name" %>
+		<%= form.text_field :script_extension_name, placeholder: "Extension Name", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_extension.label :script_extension_description, "Extension Description" %>
-		<%= form_phc_scriptcdn_extension.text_area :script_extension_description, placeholder: "Extension Description", class: "form-control" %>
+		<%= form.label :script_extension_description, "Extension Description" %>
+		<%= form.text_area :script_extension_description, placeholder: "Extension Description", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_extension.label :script_extension, "Script Extension" %>
-		<%= form_phc_scriptcdn_extension.text_field :script_extension, placeholder: "Script Extension (.js/.css)", class: "form-control" %>
+		<%= form.label :script_extension, "Script Extension" %>
+		<%= form.text_field :script_extension, placeholder: "Script Extension (.js/.css)", class: "form-control" %>
 	</div>
-	<!-- Form_phc_scriptcdn_extension Input Fields -->
+	<!-- Form Input Fields -->
 
-	<!-- Form_phc_scriptcdn_extension Submition Button -->
+	<!-- Form Submition Button -->
 	<div class="actions">
-		<%= form_phc_scriptcdn_extension.submit class: "btn btn-primary" %>
+		<%= form.submit class: "btn btn-primary" %>
 	</div>
 	<!-- For Submition Button -->
 

@@ -6,8 +6,8 @@ class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.2]
 
       t.string :script_tittle
       t.text :script_description
-      t.string :script_source
 
+      t.string :script_source
       t.string :script_website
       t.string :script_github
 
@@ -15,7 +15,6 @@ class CreatePhcscriptcdnScriptListings < ActiveRecord::Migration[5.2]
       t.date :script_lastest_release
       t.date :script_beta_release
       t.date :script_lastest_release_cdn
-
       t.string :script_status
 
       t.string :slug

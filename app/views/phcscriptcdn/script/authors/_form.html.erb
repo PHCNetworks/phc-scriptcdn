@@ -1,30 +1,30 @@
-<%= form_with(model: script_author, local: true) do |form_phc_scriptcdn_author| %>
+<%= form_with(model: script_author, local: true) do |form| %>
 
 	<!-- PHCNotifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_author %>
 
-	<!-- Form_phc_scriptcdn_author Input Fields -->
+	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_author.label :author_first_name, "Author First Name" %>
-		<%= form_phc_scriptcdn_author.text_field :author_first_name, placeholder: "Author First Name", class: "form-control"  %>
+		<%= form.label :author_first_name, "Author First Name" %>
+		<%= form.text_field :author_first_name, placeholder: "Author First Name", class: "form-control"  %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_author.label :author_last_name, "Author Last Name" %>
-		<%= form_phc_scriptcdn_author.text_field :author_last_name, placeholder: "Author Last Name", class: "form-control"  %>
+		<%= form.label :author_last_name, "Author Last Name" %>
+		<%= form.text_field :author_last_name, placeholder: "Author Last Name", class: "form-control"  %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_author.label :author_website, "Author Website" %>
-		<%= form_phc_scriptcdn_author.text_field :author_website, placeholder: "Author Website", class: "form-control"  %>
+		<%= form.label :author_website, "Author Website" %>
+		<%= form.text_field :author_website, placeholder: "Author Website", class: "form-control"  %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_author.label :author_github, "Author Github Address" %>
-		<%= form_phc_scriptcdn_author.text_field :author_github, placeholder: "Author Github Address", class: "form-control"  %>
+		<%= form.label :author_github, "Author Github Address" %>
+		<%= form.text_field :author_github, placeholder: "Author Github Address", class: "form-control"  %>
 	</div>
-	<!-- Form_phc_scriptcdn_author Input Fields -->
+	<!-- Form Input Fields -->
 
-	<!-- Form_phc_scriptcdn_author Submition Button -->
+	<!-- Form Submition Button -->
 	<div class="actions">
-		<%= form_phc_scriptcdn_author.submit class: "btn btn-primary" %>
+		<%= form.submit class: "btn btn-primary" %>
 	</div>
 	<!-- For Submition Button -->
 

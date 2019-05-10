@@ -1,20 +1,20 @@
-<%= form_for([@script_url.listing, @script_url], url: form_url) do |form_phc_scriptcdn_urls| %>
+<%= form_with(model: [ @script_listing, @script_url], url: form_url, local: true) do |form| %>
 
 	<!-- PHCNotifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_url %>
 
 	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_urls.label :script_url, "Script URL" %>
-		<%= form_phc_scriptcdn_urls.text_field :script_url, placeholder: "Script URL", class: "form-control"  %>
+		<%= form.label :script_url, "Script URL" %>
+		<%= form.text_field :script_url, placeholder: "Script URL", class: "form-control"  %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_urls.label :script_url_release, "Initial Release" %>
-		<%= form_phc_scriptcdn_urls.date_select :script_url_release, class: "form-control" %>
+		<%= form.label :script_url_release, "Initial Release" %>
+		<%= form.date_select :script_url_release, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_urls.label :script_url_cdn_update, "Latest Release" %>
-		<%= form_phc_scriptcdn_urls.date_select :script_url_cdn_update, class: "form-control" %>
+		<%= form.label :script_url_cdn_update, "Latest Release" %>
+		<%= form.date_select :script_url_cdn_update, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Version</label>
@@ -28,7 +28,7 @@
 
 	<!-- Form Submition Button -->
 	<div class="actions">
-		<%= form_phc_scriptcdn_urls.submit class: "btn btn-primary" %>
+		<%= form.submit class: "btn btn-primary" %>
 	</div>
 	<!-- For Submition Button -->
 

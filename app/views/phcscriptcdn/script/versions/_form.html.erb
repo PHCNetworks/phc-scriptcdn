@@ -1,18 +1,18 @@
-<%= form_with(model: script_version, local: true) do |form_phc_scriptcdn_versions| %>
+<%= form_with(model: script_version, local: true) do |form| %>
 
 	<!-- PHCNotifi Render Validation -->
 	<%= render 'phcnotifi/validations', :object => @script_version %>
 
 	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">
-		<%= form_phc_scriptcdn_versions.label :script_version_number, "Version Number" %>
-		<%= form_phc_scriptcdn_versions.text_field :script_version_number, placeholder: "Version Number", class: "form-control"  %>
+		<%= form.label :script_version_number, "Version Number" %>
+		<%= form.text_field :script_version_number, placeholder: "Version Number", class: "form-control"  %>
 	</div>
 	<!-- Form Input Fields -->
 
 	<!-- Form Submition Button -->
 	<div class="actions">
-		<%= form_phc_scriptcdn_versions.submit class: "btn btn-primary" %>
+		<%= form.submit class: "btn btn-primary" %>
 	</div>
 	<!-- For Submition Button -->
 

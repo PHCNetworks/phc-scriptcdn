@@ -8,7 +8,7 @@ module Phcscriptcdn
     has_paper_trail :class_name => 'Phcscriptcdn::ListingVersions'
 
     # Relationships
-    has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
+    has_many :urls, class_name: 'Phcscriptcdn::Script::Url', :dependent => :destroy
     belongs_to :author, class_name: 'Phcscriptcdn::Script::Author'
     belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence'
 

@@ -1,44 +1,44 @@
-<%= form_with(model: script_listing, local: true) do |phc_scriptcdn_pro_listings| %>
+<%= form_with(model: script_listing, local: true) do |form| %>
 
 	<!-- Validation System -->
 	<%= render 'phcnotifi/validations', :object => @script_listing %>
 	<!-- Validation System -->
 
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_tittle %>
-		<%= phc_scriptcdn_pro_listings.text_field :script_tittle, placeholder: "Script Title", class: "form-control" %>
+		<%= form.label :script_tittle %>
+		<%= form.text_field :script_tittle, placeholder: "Script Title", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_description, "Script Description" %>
-		<%= phc_scriptcdn_pro_listings.text_area :script_description, placeholder: "Script Description", class: "form-control" %>
+		<%= form.label :script_description, "Script Description" %>
+		<%= form.text_area :script_description, placeholder: "Script Description", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_source, "Script Source Code" %>
-		<%= phc_scriptcdn_pro_listings.text_field :script_source, placeholder: "Script Source", class: "form-control" %>
+		<%= form.label :script_source, "Script Source Code" %>
+		<%= form.text_field :script_source, placeholder: "Script Source", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_website, "Script Website" %>
-		<%= phc_scriptcdn_pro_listings.text_field :script_website, placeholder: "Script Website", class: "form-control" %>
+		<%= form.label :script_website, "Script Website" %>
+		<%= form.text_field :script_website, placeholder: "Script Website", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_github, "Script Github" %>
-		<%= phc_scriptcdn_pro_listings.text_field :script_github, placeholder: "Script Github Address", class: "form-control" %>
+		<%= form.label :script_github, "Script Github" %>
+		<%= form.text_field :script_github, placeholder: "Script Github Address", class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_initial_release, "Initial Release" %>
-		<%= phc_scriptcdn_pro_listings.date_select :script_initial_release, start_year: 1981, class: "form-control" %>
+		<%= form.label :script_initial_release, "Initial Release" %>
+		<%= form.date_select :script_initial_release, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_lastest_release, "Latest Release" %>
-		<%= phc_scriptcdn_pro_listings.date_select :script_lastest_release, start_year: 1981, class: "form-control" %>
+		<%= form.label :script_lastest_release, "Latest Release" %>
+		<%= form.date_select :script_lastest_release, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_beta_release, "Preview Release" %>
-		<%= phc_scriptcdn_pro_listings.date_select :script_beta_release, start_year: 1981, class: "form-control" %>
+		<%= form.label :script_beta_release, "Preview Release" %>
+		<%= form.date_select :script_beta_release, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_lastest_release_cdn, "Script CDN Release" %>
-		<%= phc_scriptcdn_pro_listings.date_select :script_lastest_release_cdn, start_year: 1981, class: "form-control" %>
+		<%= form.label :script_lastest_release_cdn, "Script CDN Release" %>
+		<%= form.date_select :script_lastest_release_cdn, start_year: 1981, class: "form-control" %>
 	</div>
 	<div class="form-group field_with_errors">
 		<label>Script Licence</label>
@@ -49,12 +49,12 @@
 		<%= collection_select(:script_listing, :author_id, Phcscriptcdn::Script::Author.order('author_first_name'), :id, :author_first_name, {}, {class: "form-control"}) %>
 	</div>
 	<div class="form-group field_with_error">
-		<%= phc_scriptcdn_pro_listings.label :script_status, "Script Status" %>
-		<%= phc_scriptcdn_pro_listings.select( :script_status, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control"}) %>
+		<%= form.label :script_status, "Script Status" %>
+		<%= form.select( :script_status, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control"}) %>
 	</div>
 
 	<div class="actions">
-		<%= phc_scriptcdn_pro_listings.submit class: "btn btn-primary" %>
+		<%= form.submit class: "btn btn-primary" %>
 	</div>
 
 <% end %>
