@@ -34,7 +34,7 @@ module Phcscriptcdn
       @script_licence = Script::Licence.new(script_licence_params)
       @script_licence.user_id = current_user.id
       if @script_licence.save
-        redirect_to script_licences_url, notice: 'Licence was successfully created.'
+        redirect_to script_licences_url, :flash => { :success => 'Licence was successfully created.' }
         else
         render :new
       end
@@ -43,7 +43,7 @@ module Phcscriptcdn
     # PATCH/PUT - Script Licences
     def update
       if @script_licence.update(script_licence_params)
-        redirect_to script_licences_url, notice: 'Licence was successfully updated.'
+        redirect_to script_licences_url, :flash => { :success => 'Licence was successfully updated.' }
         else
           render :edit
       end
@@ -52,7 +52,7 @@ module Phcscriptcdn
     # DELETE - Script Licences
     def destroy
       @script_licence.destroy
-      redirect_to script_licences_url, notice: 'Licence was successfully destroyed.'
+      redirect_to script_licences_url, :flash => { :error => 'Licence was successfully destroyed.' }
     end
 
     private

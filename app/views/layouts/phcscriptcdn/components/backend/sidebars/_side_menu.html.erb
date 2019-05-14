@@ -1,4 +1,4 @@
-<!-- Sidebar for Users and Admin -->
+<!-- Sidebar for PHCDevworks Engines -->
 <div data-scrollbar="true" data-height="100%">
 
   <!-- Sidebar - User Profile Menu -->
@@ -34,11 +34,29 @@
     <% end %>
   </ul>
   <!-- Sidebar - User Profile Menu -->
+
   <!-- Sidebar - Sidebar Navigation -->
   <ul class="nav">
-    
+
+    <% if defined?phccodesnipper %>
+      <!-- Sidebar - Sidebar Navigation - PHCCodeSnipper -->
+      <li class="nav-header">Code Snippets</li>
+      <li class="has-sub">
+        <a href="javascript:;">
+          <b class="caret"></b>
+          <i class="fas fa-newspaper"></i>
+          <span>Code Snippets</span>
+        </a>
+        <ul class="sub-menu">
+          <li class="<%= phc_menus_active_controller('phccodesnipper/script/posts') %>"><%= link_to 'Snippet Index', phccodesnipper.script_snippets_path %></li>
+          <li class="<%= phc_menus_active_controller('phccodesnipper/script/posts#new') %>"><%= link_to 'New Snippet', phccodesnipper.new_script_snippet_path %></li>
+        </ul>
+      </li>
+      <!-- Sidebar - Sidebar Navigation - PHCCodeSnipper -->
+    <% end %>
+
     <% if defined?phcpress %>
-      <!-- Sidebar - Sidebar Navigation - PHCPress(Pro) -->
+      <!-- Sidebar - Sidebar Navigation - PHCPress -->
       <li class="nav-header">Article Management</li>
       <li class="has-sub">
         <a href="javascript:;">
@@ -62,11 +80,11 @@
           <li class="<%= phc_menus_active_controller('phcpress/article/categories#new') %>"><%= link_to('New Category', phcpress.new_article_category_path) %></li>
         </ul>
       </li>
-      <!-- Sidebar - Sidebar Navigation - PHCPress(Pro) -->
+      <!-- Sidebar - Sidebar Navigation - PHCPress -->
     <% end %>
 
     <% if defined?phcmembers %>
-      <!-- Sidebar - Sidebar Navigation - PHCPress(Pro) -->
+      <!-- Sidebar - Sidebar Navigation - PHCMembers -->
       <li class="nav-header">Membership Manager</li>
       <li class="has-sub">
         <a href="javascript:;">
@@ -90,11 +108,11 @@
           <li class="<%= phc_menus_active_controller('phcmembers/directory/categories#new') %>"><%= link_to('New Directory Listing', phcmembers.new_directory_category_path) %></li>
         </ul>
       </li>
-      <!-- Sidebar - Sidebar Navigation - PHCPress(Pro) -->
+      <!-- Sidebar - Sidebar Navigation - PHCMembers -->
     <% end %>
 
     <% if defined?phcscriptcdn %>
-      <!-- Sidebar - Sidebar Navigation - PHCScriptCDN(Pro) -->
+      <!-- Sidebar - Sidebar Navigation - PHCScriptCDN -->
       <li class="nav-header">Script Management</li>
       <li class="has-sub">
         <a href="javascript:;">
@@ -104,7 +122,7 @@
         </a>
         <ul class="sub-menu">
           <li class="<%= phc_menus_active_controller('phcscriptcdn/script/listings') %>"><%= link_to "All Script Listings", phcscriptcdn.script_listings_path %></li>
-      		<li class="<%= phc_menus_active_controller('phcscriptcdn/script/listings#new') %>"><%= link_to "Add a New Listing", phcscriptcdn.new_script_listing_path %></li>
+          <li class="<%= phc_menus_active_controller('phcscriptcdn/script/listings#new') %>"><%= link_to "Add a New Listing", phcscriptcdn.new_script_listing_path %></li>
         </ul>
       </li>
       <li class="has-sub">
@@ -114,41 +132,58 @@
           <span>Script Extras</span>
         </a>
         <ul class="sub-menu">
-      		<li class="<%= phc_menus_active_controller('phcscriptcdn/script/authors') %>"><%= link_to "Script Authors", phcscriptcdn.script_authors_path %></li>
-      		<li class="<%= phc_menus_active_controller('phcscriptcdn/script/licences') %>"><%= link_to "Script Licences", phcscriptcdn.script_licences_path %></li>
-      		<li class="<%= phc_menus_active_controller('phcscriptcdn/script/extensions') %>"><%= link_to "Script Extensions", phcscriptcdn.script_extensions_path %></li>
+          <li class="<%= phc_menus_active_controller('phcscriptcdn/script/authors') %>"><%= link_to "Script Authors", phcscriptcdn.script_authors_path %></li>
+          <li class="<%= phc_menus_active_controller('phcscriptcdn/script/licences') %>"><%= link_to "Script Licences", phcscriptcdn.script_licences_path %></li>
+          <li class="<%= phc_menus_active_controller('phcscriptcdn/script/extensions') %>"><%= link_to "Script Extensions", phcscriptcdn.script_extensions_path %></li>
           <li class="<%= phc_menus_active_controller('phcscriptcdn/script/versions') %>"><%= link_to "Script Versions", phcscriptcdn.script_versions_path %></li>
         </ul>
       </li>
-      <!-- Sidebar - Sidebar Navigation - PHCScriptCDN(Pro) -->
+      <!-- Sidebar - Sidebar Navigation - PHCScriptCDN -->
+    <% end %>
+
+    <% if current_user && current_user.admin? %>
+      <!-- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
+      <li class="nav-header">User Administration</li>
+        <li class="has-sub">
+          <a href="javascript:;">
+            <b class="caret"></b>
+            <i class="fas fa-user"></i>
+            <span>Admin</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="<%= phc_menus_active_controller('phcaccounts/admin/users') %>"><%= link_to 'User List', phcaccounts.admin_users_path %></li>
+        </ul>
+      </li>
+      <!-- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
     <% end %>
 
     <% if current_user %>
-      <!-- Sidebar - Sidebar Navigation - PHCAccounts -->
-      <li class="nav-header">Account Settings</li>
+      <!-- Sidebar - Sidebar Navigation - PHCAccounts User Options -->
+      <li class="nav-header">Your Account</li>
       <li class="has-sub">
         <a href="javascript:;">
           <b class="caret"></b>
           <i class="fas fa-user"></i>
-          <span>Accounts Dashboard</span>
+          <span>Accounts Settings</span>
         </a>
         <ul class="sub-menu">
-          <li class="<%= phc_menus_active_controller('phcaccounts/admin/edit') %>"><%= link_to('Settings', phcaccounts.edit_user_registration_path) %></li>
-          <li class="<%= phc_menus_active_controller('phcaccounts/admin/new') %>"><%= link_to('Logout', phcaccounts.destroy_user_session_path, method: :delete) %></li>
+          <li class="<%= phc_menus_active_controller('phcaccounts/user/edit') %>"><%= link_to 'Settings', phcaccounts.edit_user_registration_path %></li>
+          <li class="<%= phc_menus_active_controller('phcaccounts/user/new') %>"><%= link_to 'Logout', phcaccounts.destroy_user_session_path, method: :delete %></li>
         </ul>
       </li>
-      <!-- Sidebar - Sidebar Navigation - PHCAccounts -->
-      <!-- Sidebar - Sidebar Minifier -->
-      <li>
-        <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify">
-          <i class="fa fa-angle-double-left"></i>
-        </a>
-      </li>
-      <!-- Sidebar - Sidebar Minifier -->
+      <!-- Sidebar - Sidebar Navigation - PHCAccounts User Options -->
     <% end %>
+    
+    <!-- Sidebar - Sidebar Minifier -->
+    <li>
+      <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify">
+        <i class="fa fa-angle-double-left"></i>
+      </a>
+    </li>
+    <!-- Sidebar - Sidebar Minifier -->
 
   </ul>
   <!-- Sidebar - Sidebar Navigation -->
 
 </div>
-<!-- Sidebar for Users and Admin -->
+<!-- Sidebar for PHCDevworks Engines -->

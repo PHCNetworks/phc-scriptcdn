@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TestApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+  <!-- SEO System -->
+  <% phc_seo_title "PHCScriptCDN by PHCDevworks" %>
+  <% phc_seo_description "Application to manage CDN Script Listings." %>
+  <!-- SEO System -->
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- SEO and Site Description -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><%= yield(:phc_seo_title) %></title>
+  <meta name="description" content="<%= yield(:phc_seo_description) %>">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <link rel="canonical" href="http://phcdevworks.com">
+  <!-- SEO and Site Description -->
+
+  <!-- Rails Security Tags -->
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <!-- Rails Security Tags -->
+
+  <!-- CSS Styles -->
+  <%= stylesheet_link_tag 'phcscriptcdn/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <!-- CSS Styles -->
+
+  <!-- Font -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"/>
+  <!-- Font -->
+
+</head>
+<body>
+
+  <!-- Page Container -->
+  <div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed">
+
+    <!-- Page Header -->
+    <div id="header" class="header navbar-default">
+      <%= render 'layouts/phcscriptcdn/components/backend/navigation/top_menu' %>
+    </div>
+    <!-- Page Header -->
+
+    <!-- Page Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <%= render 'layouts/phcscriptcdn/components/backend/sidebars/side_menu' %>
+    </div>
+    <div class="sidebar-bg"></div>
+    <!-- Page Sidebar -->
+
+    <!-- Page Content -->
+    <div id="content" class="content">
+      <%= render 'phcnotifi/default/notifications' %>
+      <%= yield %>
+    </div>
+    <!-- Page Content -->
+
+    <!-- Footer Content -->
+    <div id="footer" class="footer mb-4">
+      <%= render 'layouts/phcscriptcdn/components/backend/footer/footer' %>
+    </div>
+    <!-- Footer Content -->
+
+  </div>
+  <!-- Page Container -->
+
+  <!-- JavaScript -->
+  <%= javascript_include_tag "phcscriptcdn/application", 'data-turbolinks-track': 'reload' %>
+  <!-- JavaScript -->
+
+  <!-- JavaScript Loader -->
+  <script>
+		$(document).ready(function() {
+			App.init();
+		});
+	</script>
+  <!-- JavaScript Loader -->
+
+</body>
 </html>

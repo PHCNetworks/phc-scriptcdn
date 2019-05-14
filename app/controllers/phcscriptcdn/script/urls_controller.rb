@@ -39,7 +39,7 @@ module Phcscriptcdn
       @script_url = @script_listing.urls.create(script_url_params)
       @script_url.user_id = current_user.id
       if @script_url.save
-        redirect_to script_listing_urls_path, notice: 'Author was successfully created.'
+        redirect_to script_listing_urls_path, :flash => { :success => 'Author was successfully created.' }
         else
           render :new
       end
@@ -48,7 +48,7 @@ module Phcscriptcdn
     # PATCH/PUT - Script Athors
     def update
       if @script_url.update(script_url_params)
-        redirect_to script_listing_urls_path, notice: 'Author was successfully updated.'
+        redirect_to script_listing_urls_path, :flash => { :success => 'Author was successfully updated.' }
         else
           render :edit
       end
@@ -59,7 +59,7 @@ module Phcscriptcdn
       @script_listing = Script::Listing.find(params[:listing_id])
       @script_url = @script_listing.urls.find(params[:id])
       @script_url.destroy
-      redirect_to script_listing_urls_path, notice: 'Author was successfully destroyed.'
+      redirect_to script_listing_urls_path, :flash => { :error => 'Author was successfully destroyed.' }
     end
 
     private

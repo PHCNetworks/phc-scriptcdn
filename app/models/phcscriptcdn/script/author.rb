@@ -10,6 +10,18 @@ module Phcscriptcdn
     # Relationships
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing'
 
+    # Validation for Form Fields
+    validates :author_first_name,
+      presence: true
+
+    validates :author_website,
+      presence: true,
+    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+
+    validates :author_github,
+      presence: true,
+    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+
     # Clean URL Define
     friendly_id :phcscriptcdn_author_slug, use: [:slugged, :finders]
 

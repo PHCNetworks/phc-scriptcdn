@@ -1,31 +1,36 @@
 <%= form_with(model: [ @script_listing, @script_url], url: form_url, local: true) do |form| %>
 
 	<!-- PHCNotifi Render Validation -->
-	<%= render 'phcnotifi/validations', :object => @script_url %>
+	<%= render 'phcnotifi/default/validations', :object => @script_url %>
+	<!-- PHCNotifi Render Validation -->
 
 	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">
 		<%= form.label :script_url, "Script URL" %>
 		<%= form.text_field :script_url, placeholder: "Script URL", class: "form-control"  %>
 	</div>
+	
 	<div class="form-group field_with_error">
 		<%= form.label :script_url_release, "Initial Release" %>
 		<%= form.date_select :script_url_release, class: "form-control" %>
 	</div>
+	
 	<div class="form-group field_with_error">
 		<%= form.label :script_url_cdn_update, "Latest Release" %>
 		<%= form.date_select :script_url_cdn_update, class: "form-control" %>
 	</div>
+	
 	<div class="form-group field_with_errors">
 		<label>Script Version</label>
 		<%= collection_select(:script_url, :version_id, Phcscriptcdn::Script::Version.order('script_version_number'), :id, :script_version_number, {}, {class: "form-control"}) %>
 	</div>
+	
 	<div class="form-group field_with_errors">
 		<label>Script Extensions</label>
 		<%= collection_select(:script_url, :extension_id, Phcscriptcdn::Script::Extension.order('script_extension_name'), :id, :script_extension, {}, {class: "form-control"}) %>
 	</div>
 	<!-- Form Input Fields -->
-
+	
 	<!-- Form Submition Button -->
 	<div class="actions">
 		<%= form.submit class: "btn btn-primary" %>

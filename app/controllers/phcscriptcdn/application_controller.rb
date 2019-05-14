@@ -3,7 +3,6 @@ module Phcscriptcdn
 
         # Security Filters
         protect_from_forgery with: :exception
-        before_action :set_default_locale
 
         # Load Requried Helper Files
         helper Phccorehelpers::Engine.helpers
@@ -18,10 +17,6 @@ module Phcscriptcdn
         end
 
         private
-
-        def set_default_locale
-            I18n.default_locale = :en
-        end
 
     end
 end

@@ -34,7 +34,7 @@ module Phcscriptcdn
       @script_extension = Script::Extension.new(script_extension_params)
       @script_extension.user_id = current_user.id
       if @script_extension.save
-        redirect_to script_extensions_url, notice: 'Extension was successfully created.'
+        redirect_to script_extensions_url, :flash => { :success => 'Extension was successfully created.' }
         else
         render :new
       end
@@ -43,7 +43,7 @@ module Phcscriptcdn
     # PATCH/PUT - Script Extension
     def update
       if @script_extension.update(script_extension_params)
-        redirect_to script_extensions_url, notice: 'Extension was successfully updated.'
+        redirect_to script_extensions_url, :flash => { :success => 'Extension was successfully updated.' }
         else
           render :edit
       end
@@ -52,7 +52,7 @@ module Phcscriptcdn
     # DELETE - Script Extension
     def destroy
       @script_extension.destroy
-      redirect_to script_extensions_url, notice: 'Extension was successfully destroyed.'
+      redirect_to script_extensions_url, :flash => { :error => 'Extension was successfully destroyed.' }
     end
 
     private

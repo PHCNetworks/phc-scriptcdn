@@ -34,7 +34,7 @@ module Phcscriptcdn
       @script_author = Script::Author.new(script_author_params)
       @script_author.user_id = current_user.id
       if @script_author.save
-        redirect_to script_authors_url, notice: 'Author was successfully created.'
+        redirect_to script_authors_url, :flash => { :success => 'Author was successfully created.' }
         else
         render :new
       end
@@ -43,7 +43,7 @@ module Phcscriptcdn
     # PATCH/PUT - Script Author
     def update
       if @script_author.update(script_author_params)
-          redirect_to script_authors_url, notice: 'Author was successfully updated.'
+          redirect_to script_authors_url, :flash => { :success => 'Author was successfully updated.' }
           else
             render :edit
       end
@@ -52,7 +52,7 @@ module Phcscriptcdn
     # DELETE - Script Author
     def destroy
       @script_author.destroy
-      redirect_to script_authors_url, notice: 'Author was successfully destroyed.'
+      redirect_to script_authors_url, :flash => { :error => 'Author was successfully destroyed.' }
     end
 
     private

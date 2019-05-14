@@ -1,7 +1,8 @@
 <%= form_with(model: script_licence, local: true) do |form| %>
 
 	<!-- PHCNotifi Render Validation -->
-	<%= render 'phcnotifi/validations', :object => @script_licence %>
+	<%= render 'phcnotifi/default/validations', :object => @script_licence %>
+	<!-- PHCNotifi Render Validation -->
 
 	<!-- Form Input Fields -->
 	<div class="form-group field_with_error">

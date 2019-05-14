@@ -14,7 +14,8 @@ module Phcscriptcdn
 
     # Validation for Form Fields
     validates :script_url,
-      presence: true
+      presence: true,
+    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     validates :script_url_release,
       presence: true

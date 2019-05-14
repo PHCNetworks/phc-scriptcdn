@@ -22,13 +22,16 @@ module Phcscriptcdn
       length: { minimum: 4 }
 
     validates :script_source,
-      length: { minimum: 5 }
+      length: { minimum: 5 },
+    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
      validates :script_website,
-      length: { minimum: 5 }
+      length: { minimum: 5 },
+    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     validates :script_github,
-      length: { minimum: 5 }
+      length: { minimum: 5 },
+    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     # Clean URL Define
     friendly_id :phcscriptcdn_listing_slug, use: [:slugged, :finders]

@@ -37,9 +37,9 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'phctheme7', '~> 3.0'
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency 'phccorehelpers', '~> 4.0'
+  phc_gem_spec.add_dependency 'phccorehelpers', '~> 5.0'
   phc_gem_spec.add_dependency 'phcmenus', '~> 3.0'
-  phc_gem_spec.add_dependency 'phcnotifi', '~> 45.0'
+  phc_gem_spec.add_dependency 'phcnotifi', '~> 47.2'
   phc_gem_spec.add_dependency 'phctitleseo', '~> 46.0'
 
   # UI & URL Frontend Dependencies
@@ -63,7 +63,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'pg', '~> 1.1'
 
   # Security Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 37.0'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 38.2'
 
   # Development Dependencies
   phc_gem_spec.add_development_dependency 'sqlite3', '~> 1.3', '< 1.4'

@@ -34,7 +34,7 @@ module Phcscriptcdn
       @script_version = Script::Version.new(script_version_params)
       @script_version.user_id = current_user.id
       if @script_version.save
-        redirect_to script_versions_url, notice: 'Version was successfully created.'
+        redirect_to script_versions_url, :flash => { :success => 'Version was successfully created.' }
         else
           render :new
       end
@@ -43,7 +43,7 @@ module Phcscriptcdn
     # PATCH/PUT - Script Versions
     def update
       if @script_version.update(script_version_params)
-        redirect_to script_versions_url, notice: 'Version was successfully updated.'
+        redirect_to script_versions_url, :flash => { :success => 'Version was successfully updated.' }
         else
           render :edit
       end
@@ -52,7 +52,7 @@ module Phcscriptcdn
     # DELETE - Script Versions
     def destroy
       @script_version.destroy
-      redirect_to script_versions_url, notice: 'Version was successfully destroyed.'
+      redirect_to script_versions_url, :flash => { :error => 'Version was successfully destroyed.' }
     end
 
     private

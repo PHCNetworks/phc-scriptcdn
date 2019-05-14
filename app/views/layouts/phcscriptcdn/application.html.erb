@@ -22,6 +22,7 @@
 
   <!-- CSS Styles -->
   <%= stylesheet_link_tag 'phcscriptcdn/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
   <!-- CSS Styles -->
 
   <!-- Font -->
@@ -49,6 +50,7 @@
 
     <!-- Page Content -->
     <div id="content" class="content">
+      <%= render 'phcnotifi/default/notifications' %>
       <%= yield %>
     </div>
     <!-- Page Content -->

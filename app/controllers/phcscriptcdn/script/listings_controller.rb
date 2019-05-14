@@ -34,7 +34,7 @@ module Phcscriptcdn
       @script_listing = Script::Listing.new(script_listing_params)
       @script_listing.user_id = current_user.id
       if @script_listing.save
-        redirect_to script_listings_path, notice: 'Listing was successfully created.'
+        redirect_to script_listings_path, :flash => { :success => 'Listing was successfully created.' }
       else
         render :new
       end
@@ -43,7 +43,7 @@ module Phcscriptcdn
     # PATCH/PUT - Script Listings
     def update
       if @script_listing.update(script_listing_params)
-        redirect_to script_listings_path, notice: 'Listing was successfully updated.'
+        redirect_to script_listings_path, :flash => { :success => 'Listing was successfully updated.' }
       else
         render :edit
       end
@@ -52,7 +52,7 @@ module Phcscriptcdn
     # DELETE - Script Listings
     def destroy
       @script_listing.destroy
-      redirect_to script_listings_path, notice: 'Listing was successfully destroyed.'
+      redirect_to script_listings_path, :flash => { :error => 'Listing was successfully destroyed.' }
     end
 
     private
