@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root :to => 'website/pages#index'
 
   # Engine Routes
-  mount Phcaccounts::Engine => "/"
+  mount Phcscriptcdn::Engine => "/"
 
 end

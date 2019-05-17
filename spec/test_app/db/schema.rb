@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_042738) do
+ActiveRecord::Schema.define(version: 2019_05_17_061174) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -149,7 +149,7 @@ ActiveRecord::Schema.define(version: 2019_05_14_042738) do
   end
 
   create_table "phcscriptcdn_script_listings", force: :cascade do |t|
-    t.string "script_tittle"
+    t.string "script_title"
     t.text "script_description"
     t.string "script_source"
     t.string "script_website"

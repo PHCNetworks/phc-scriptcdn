@@ -14,7 +14,7 @@ module Phcscriptcdn
 
     # Form Fields Validation
     validates :script_title,
-    presence: true,
+    presence: true
 
     validates :script_description,
     presence: true
