@@ -8,7 +8,8 @@
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -28,12 +29,10 @@
 				</div>
 			</div>
 			<div class="panel-body">
-
 				<div class="btn-group d-flex" role="group">
 					<%= link_to 'Update', phcscriptcdn.edit_script_listing_path, class: "btn btn-primary" %>
 					<%= link_to 'Remove', phcscriptcdn.script_listing_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-				</div>		
-
+				</div>
 			</div>
 		</div>
 
@@ -42,7 +41,6 @@
 
 	<!-- Main Panel -->
 	<div class="col-lg-8">
-
 	</div>
 	<!-- Main Panel -->
 

@@ -9,47 +9,47 @@ module Phcscriptcdn
     before_action :set_paper_trail_whodunnit
     before_action :set_script_author, only: [:show, :edit, :update, :destroy]
 
-    # INDEX - Script Author
+    # INDEX
     def index
       @script_authors = Script::Author.all
     end
 
-    # DETAILS - Script Author
+    # SHOW
     def show
       @script_authors = Script::Author.friendly.find(params[:id])
       @versions = Phcscriptcdn::AuthorVersions.where(item_id: params[:id], item_type: 'Phcscriptcdn::Script::Author')
     end
 
-    # NEW - Script Author
+    # NEW
     def new
       @script_author = Script::Author.new
     end
 
-    # EDIT - Script Author
+    # EDIT
     def edit
     end
 
-    # CREATE - Script Author
+    # CREATE
     def create
       @script_author = Script::Author.new(script_author_params)
       @script_author.user_id = current_user.id
       if @script_author.save
         redirect_to script_authors_url, :flash => { :success => 'Author was successfully created.' }
-        else
+      else
         render :new
       end
     end
 
-    # PATCH/PUT - Script Author
+    # UPDATE
     def update
       if @script_author.update(script_author_params)
-          redirect_to script_authors_url, :flash => { :success => 'Author was successfully updated.' }
-          else
-            render :edit
+        redirect_to script_authors_url, :flash => { :success => 'Author was successfully updated.' }
+      else
+        render :edit
       end
     end
 
-    # DELETE - Script Author
+    # DELETE
     def destroy
       @script_author.destroy
       redirect_to script_authors_url, :flash => { :error => 'Author was successfully destroyed.' }

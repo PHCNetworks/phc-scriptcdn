@@ -144,14 +144,14 @@
     <% if current_user && current_user.admin? %>
       <!-- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
       <li class="nav-header">User Administration</li>
-        <li class="has-sub">
-          <a href="javascript:;">
-            <b class="caret"></b>
-            <i class="fas fa-user"></i>
-            <span>Admin</span>
-          </a>
-          <ul class="sub-menu">
-            <li class="<%= phc_menus_active_controller('phcaccounts/admin/users') %>"><%= link_to 'User List', phcaccounts.admin_users_path %></li>
+      <li class="has-sub">
+        <a href="javascript:;">
+          <b class="caret"></b>
+          <i class="fas fa-user"></i>
+          <span>Admin</span>
+        </a>
+        <ul class="sub-menu">
+          <li class="<%= phc_menus_active_controller('phcaccounts/admin/users') %>"><%= link_to 'User List', phcaccounts.admin_users_path %></li>
         </ul>
       </li>
       <!-- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
@@ -173,7 +173,7 @@
       </li>
       <!-- Sidebar - Sidebar Navigation - PHCAccounts User Options -->
     <% end %>
-    
+
     <!-- Sidebar - Sidebar Minifier -->
     <li>
       <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify">

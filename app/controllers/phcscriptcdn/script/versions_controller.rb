@@ -9,47 +9,47 @@ module Phcscriptcdn
     before_action :set_paper_trail_whodunnit
     before_action :set_script_version, only: [:show, :edit, :update, :destroy]
 
-    # INDEX - Script Versions
+    # INDEX
     def index
       @script_versions = Script::Version.all
     end
 
-    # DETAILS - Script Versions
+    # SHOW
     def show
       @script_versions = Script::Version.friendly.find(params[:id])
       @versions = Phcscriptcdn::ScriptversionVersions.where(item_id: params[:id], item_type: 'Phcscriptcdn::Script::Version')
     end
 
-    # NEW - Script Versions
+    # NEW
     def new
       @script_version = Script::Version.new
     end
 
-    # EDIT - Script Versions
+    # EDIT
     def edit
     end
 
-    # POST - Script Versions
+    # CREATE
     def create
       @script_version = Script::Version.new(script_version_params)
       @script_version.user_id = current_user.id
       if @script_version.save
         redirect_to script_versions_url, :flash => { :success => 'Version was successfully created.' }
-        else
-          render :new
+      else
+        render :new
       end
     end
 
-    # PATCH/PUT - Script Versions
+    # UPDATE
     def update
       if @script_version.update(script_version_params)
         redirect_to script_versions_url, :flash => { :success => 'Version was successfully updated.' }
-        else
-          render :edit
+      else
+        render :edit
       end
     end
 
-    # DELETE - Script Versions
+    # DELETE
     def destroy
       @script_version.destroy
       redirect_to script_versions_url, :flash => { :error => 'Version was successfully destroyed.' }
@@ -62,7 +62,7 @@ module Phcscriptcdn
       @script_version = Script::Version.friendly.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Whitelist
     def script_version_params
       params.require(:script_version).permit(:script_version_number, :slug, :user_id, :org_id)
     end

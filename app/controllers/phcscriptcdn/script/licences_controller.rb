@@ -9,47 +9,47 @@ module Phcscriptcdn
     before_action :set_paper_trail_whodunnit
     before_action :set_script_licence, only: [:show, :edit, :update, :destroy]
 
-    # INDEX - Script Licences
+    # INDEX
     def index
       @script_licences = Script::Licence.all
     end
 
-    # DETAILS - Script Licences
+    # SHOW
     def show
       @script_licences = Script::Licence.friendly.find(params[:id])
       @versions = Phcscriptcdn::LicenceVersions.where(item_id: params[:id], item_type: 'Phcscriptcdn::Script::Licence')
     end
 
-    # NEW - Script Licences
+    # NEW
     def new
       @script_licence = Script::Licence.new
     end
 
-    # EDIT - Script Licences
+    # EDIT
     def edit
     end
 
-    # POST - Script Licences
+    # CREATE
     def create
       @script_licence = Script::Licence.new(script_licence_params)
       @script_licence.user_id = current_user.id
       if @script_licence.save
         redirect_to script_licences_url, :flash => { :success => 'Licence was successfully created.' }
-        else
+      else
         render :new
       end
     end
 
-    # PATCH/PUT - Script Licences
+    # UPDATE
     def update
       if @script_licence.update(script_licence_params)
         redirect_to script_licences_url, :flash => { :success => 'Licence was successfully updated.' }
-        else
-          render :edit
+      else
+        render :edit
       end
     end
 
-    # DELETE - Script Licences
+    # DELETE
     def destroy
       @script_licence.destroy
       redirect_to script_licences_url, :flash => { :error => 'Licence was successfully destroyed.' }

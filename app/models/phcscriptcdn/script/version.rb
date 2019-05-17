@@ -4,25 +4,22 @@ module Phcscriptcdn
     # Clean URL Initialize
     extend FriendlyId
 
-    # Add Paper Trail
+    # Paper Trail Initialize
     has_paper_trail :class_name => 'Phcscriptcdn::ScriptversionVersions'
 
     # Relationships
     has_many :listings, class_name: 'Phcscriptcdn::Script::Listing', :through => :urls
     has_many :urls, class_name: 'Phcscriptcdn::Script::Url'
 
-    # Validation for Form Fields
+    # Form Fields Validation
     validates :script_version_number,
-      presence: true
+    presence: true
 
     # Clean URL Define
-    friendly_id :phcscriptcdn_version_slug, use: [:slugged, :finders]
+    friendly_id :phc_nice_url_slug, use: [:slugged, :finders]
 
-    # Define for Multiple Records
-    def phcscriptcdn_version_slug
-      [
-        [:script_version_number]
-      ]
+    def phc_nice_url_slug
+      [:script_version_number]
     end
 
   end

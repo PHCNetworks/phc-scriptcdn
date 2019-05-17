@@ -17,7 +17,7 @@
 <!-- Page Header -->
 <h1 class="page-header"><%= yield(:phc_title) %></h1>
 <!-- Page Header -->
-			
+
 <!-- Page Content -->
 <div class="panel panel-inverse">
 	<div class="panel-heading">
@@ -26,12 +26,12 @@
 			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
 			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
 		</div>
-		<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
+		<h4 class="panel-title"><%= yield(:phc_title) %></h4>
 	</div>
 	<div class="panel-body">
-		<!-- Form for Script Author New  -->
+		<!-- Form for New Author -->
 		<%= render 'form', script_author: @script_author %>
-		<!-- Form for Script Author New  -->
+		<!-- Form for New Author -->
 	</div>
 </div>
 <!-- Page Content -->

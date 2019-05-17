@@ -9,47 +9,47 @@ module Phcscriptcdn
     before_action :set_paper_trail_whodunnit
     before_action :set_script_extension, only: [:show, :edit, :update, :destroy]
 
-    # INDEX - Script Extension
+    # INDEX
     def index
       @script_extensions = Script::Extension.all
     end
 
-    # DETAILS - Script Extension
+    # SHOW
     def show
       @script_extensions = Script::Extension.friendly.find(params[:id])
       @versions = Phcscriptcdn::ExtensionVersions.where(item_id: params[:id], item_type: 'Phcscriptcdn::Script::Extension')
     end
 
-    # NEW - Script Extension
+    # NEW
     def new
       @script_extension = Script::Extension.new
     end
 
-    # EDIT - Script Extension
+    # EDIT
     def edit
     end
 
-    # CREATE - Script Extension
+    # CREATE
     def create
       @script_extension = Script::Extension.new(script_extension_params)
       @script_extension.user_id = current_user.id
       if @script_extension.save
         redirect_to script_extensions_url, :flash => { :success => 'Extension was successfully created.' }
-        else
+      else
         render :new
       end
     end
 
-    # PATCH/PUT - Script Extension
+    # UPDATE
     def update
       if @script_extension.update(script_extension_params)
         redirect_to script_extensions_url, :flash => { :success => 'Extension was successfully updated.' }
-        else
-          render :edit
+      else
+        render :edit
       end
     end
 
-    # DELETE - Script Extension
+    # DELETE
     def destroy
       @script_extension.destroy
       redirect_to script_extensions_url, :flash => { :error => 'Extension was successfully destroyed.' }
@@ -58,8 +58,8 @@ module Phcscriptcdn
     private
 
     # Common Callbacks
-    def set_script_extension
-      @script_extension = Script::Extension.friendly.find(params[:id])
+      def set_script_extension
+        @script_extension = Script::Extension.friendly.find(params[:id])
     end
 
     # Whitelists

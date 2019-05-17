@@ -9,52 +9,52 @@ module Phcscriptcdn
     before_action :set_paper_trail_whodunnit
     before_action :set_script_url, only: [:show, :edit, :update, :destroy]
 
-    # INDEX - Script Authors
+    # INDEX
     def index
       script_listing = Script::Listing.find(params[:listing_id])
       @script_urls = script_listing.urls
     end
 
-    # DETAILED PROFILE - Script Authors
+    # SHOW
     def show
       script_listing = Script::Listing.find(params[:listing_id])
       @script_url = script_listing.urls.friendly.find(params[:id])
     end
 
-    # NEW - Script Athors
+    # NEW
     def new
       script_listing = Script::Listing.find(params[:listing_id])
       @script_url = script_listing.urls.build
     end
 
-    # EDIT - Script Athors
+    # EDIT
     def edit
       script_listing = Script::Listing.find(params[:listing_id])
       @script_url = script_listing.urls.find(params[:id])
     end
 
-    # POST - Script Athors
+    # CREATE
     def create
       @script_listing = Script::Listing.find(params[:listing_id])
       @script_url = @script_listing.urls.create(script_url_params)
       @script_url.user_id = current_user.id
       if @script_url.save
         redirect_to script_listing_urls_path, :flash => { :success => 'Author was successfully created.' }
-        else
-          render :new
+      else
+        render :new
       end
     end
 
-    # PATCH/PUT - Script Athors
+    # UPDATE
     def update
       if @script_url.update(script_url_params)
         redirect_to script_listing_urls_path, :flash => { :success => 'Author was successfully updated.' }
-        else
-          render :edit
+      else
+        render :edit
       end
     end
 
-    # DELETE - Script Athors
+    # DELETE
     def destroy
       @script_listing = Script::Listing.find(params[:listing_id])
       @script_url = @script_listing.urls.find(params[:id])

@@ -5,67 +5,56 @@
 	<!-- PHCNotifi Render Validation -->
 
 	<!-- Form Input Fields -->
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_tittle, "Script Title" %>
 		<%= form.text_field :script_tittle, placeholder: "Script Title", class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_description, "Script Description" %>
 		<%= form.text_area :script_description, placeholder: "Script Description", class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_source, "Script Source Code" %>
 		<%= form.text_field :script_source, placeholder: "Script Source", class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_website, "Script Website" %>
 		<%= form.text_field :script_website, placeholder: "Script Website", class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_github, "Script Github" %>
 		<%= form.text_field :script_github, placeholder: "Script Github Address", class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_initial_release, "Initial Release" %>
 		<%= form.date_select :script_initial_release, start_year: 1981, class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_lastest_release, "Latest Release" %>
 		<%= form.date_select :script_lastest_release, start_year: 1981, class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_beta_release, "Preview Release" %>
 		<%= form.date_select :script_beta_release, start_year: 1981, class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_lastest_release_cdn, "Script CDN Release" %>
 		<%= form.date_select :script_lastest_release_cdn, start_year: 1981, class: "form-control" %>
 	</div>
-
-	<div class="form-group field_with_errors">
+	<div class="form-group field_with_errorss">
 		<label>Script Licence</label>
 		<%= collection_select(:script_listing, :licence_id, Phcscriptcdn::Script::Licence.order('licence_name'), :id, :licence_name, {}, {class: "form-control"}) %>
 	</div>
-
-	<div class="form-group field_with_errors">
+	<div class="form-group field_with_errorss">
 		<label>Script Author</label>
 		<%= collection_select(:script_listing, :author_id, Phcscriptcdn::Script::Author.order('author_first_name'), :id, :author_first_name, {}, {class: "form-control"}) %>
 	</div>
-
-	<div class="form-group field_with_error">
+	<div class="form-group field_with_errors">
 		<%= form.label :script_status, "Script Status" %>
 		<%= form.select( :script_status, [['Active','Active'],['Outdated','Out Dated'],['Deactivated','Not Active']], {}, {class: "form-control"}) %>
 	</div>
 	<!-- Form Input Fields -->
-	
+
 	<!-- Form Submition Button -->
 	<div class="actions">
 		<%= form.submit class: "btn btn-primary" %>

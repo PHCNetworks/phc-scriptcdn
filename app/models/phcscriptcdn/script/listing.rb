@@ -4,7 +4,7 @@ module Phcscriptcdn
     # Clean URL Initialize
     extend FriendlyId
 
-    # Add Paper Trail
+    # Paper Trail Initialize
     has_paper_trail :class_name => 'Phcscriptcdn::ListingVersions'
 
     # Relationships
@@ -12,35 +12,27 @@ module Phcscriptcdn
     belongs_to :author, class_name: 'Phcscriptcdn::Script::Author'
     belongs_to :licence, class_name: 'Phcscriptcdn::Script::Licence'
 
-    # Validation for Form Fields
-    validates :script_tittle,
-      presence: true,
-      length: { minimum: 3 }
+    # Form Fields Validation
+    validates :script_title,
+    presence: true,
 
     validates :script_description,
-      presence: true,
-      length: { minimum: 4 }
+    presence: true
 
     validates :script_source,
-      length: { minimum: 5 },
-    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+    format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
-     validates :script_website,
-      length: { minimum: 5 },
-    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+    validates :script_website,
+    format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     validates :script_github,
-      length: { minimum: 5 },
-    	format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+    format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     # Clean URL Define
-    friendly_id :phcscriptcdn_listing_slug, use: [:slugged, :finders]
+    friendly_id :phc_nice_url_slug, use: [:slugged, :finders]
 
-    # Define for Multiple Records
-    def phcscriptcdn_listing_slug
-      [
-        [:script_tittle]
-      ]
+    def phc_nice_url_slug
+      [:script_title]
     end
 
   end

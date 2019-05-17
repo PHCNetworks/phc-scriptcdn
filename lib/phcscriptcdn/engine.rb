@@ -1,6 +1,6 @@
 module Phcscriptcdn
 	class Engine < ::Rails::Engine
-		
+
 		# PHCTheme Dependencies
 		require 'phctheme1'
 		require 'phctheme2'
@@ -9,7 +9,8 @@ module Phcscriptcdn
 		require 'phctheme5'
 		require 'phctheme6'
 		require 'phctheme7'
-		
+
+		# PHCAdmin Dependencies
 		require 'phcadmin1'
 		require 'phcadmin2'
 		require 'phcadmin3'
@@ -17,32 +18,32 @@ module Phcscriptcdn
 		require 'phcadmin5'
 		require 'phcadmin6'
 		require 'phcadmin7'
-		
-		# PHC Helper Dependencies
+
+		# PHCHelper Dependencies
 		require 'phccorehelpers'
 		require 'phcmenus'
 		require 'phcnotifi'
 		require 'phctitleseo'
-		
-		# UI & URL Frontend Dependencies
+
+		# Frontend Dependencies
 		require 'gravtastic'
 		require 'friendly_id'
-		
-		# File Upload & Service Dependencies
+
+		# Upload Dependencies
 		require 'aws-sdk-s3'
 		require 'google-cloud-storage'
 		require 'mini_magick'
-		
-		# Database & Paper Trail Dependencies
+
+		# Database Dependencies
 		require 'paper_trail'
 		require 'pg'
-		
-		# Security Dependencies
+
+		# Payment Dependencies
 		require 'phcaccounts'
 
 		# Isolate Namespace
 		isolate_namespace Phcscriptcdn
-		
+
 		# Testing Generator
 		config.generators do |g|
 			g.test_framework :rspec,
@@ -55,7 +56,7 @@ module Phcscriptcdn
 			g.fixture_replacement :factory_bot,
 				dir: "spec/factories"
 		end
-		
+
 		# Load Requried Helper Files
 		config.to_prepare do
 			Phcaccounts::ApplicationController.helper(ApplicationHelper)
@@ -64,6 +65,6 @@ module Phcscriptcdn
 			Phcnotifi::ApplicationController.helper(ApplicationHelper)
 			Phctitleseo::ApplicationController.helper(ApplicationHelper)
 		end
-	
+
 	end
 end
