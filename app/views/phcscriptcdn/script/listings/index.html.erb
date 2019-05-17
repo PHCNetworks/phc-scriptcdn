@@ -43,7 +43,7 @@
 				<tbody>
 					<% @script_listings.each do |script_listing| %>
 						<tr>
-							<td class="vert-align"><%= link_to script_listing.script_tittle, script_listing_path(script_listing) %></td>
+							<td class="vert-align"><%= link_to script_listing.script_title, script_listing_path(script_listing) %></td>
 							<td class="vert-align"><%= link_to script_listing.script_initial_release, script_listing_path(script_listing) %></td>
 							<td class="vert-align"><%= link_to script_listing.script_lastest_release, script_listing_path(script_listing) %></td>
 							<td class="vert-align"><%= link_to script_listing.script_beta_release, script_listing_path(script_listing) %></td>
