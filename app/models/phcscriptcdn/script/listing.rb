@@ -14,19 +14,19 @@ module Phcscriptcdn
 
     # Form Fields Validation
     validates :script_title,
-    presence: true
+      presence: true
 
     validates :script_description,
-    presence: true
+      presence: true
 
     validates :script_source,
-    format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+      format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     validates :script_website,
-    format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+      format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     validates :script_github,
-    format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
+      format: { with: URI::regexp(%w(http https)), message: "Please follow this URL format http or https://www.**********.com" }
 
     # Clean URL Define
     friendly_id :phc_nice_url_slug, use: [:slugged, :finders]
