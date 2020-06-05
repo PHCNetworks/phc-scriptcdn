@@ -5,7 +5,7 @@ Gem::Specification.new do |phc_gem_spec|
 
   phc_gem_spec.name        = "phcscriptcdn"
   phc_gem_spec.version     = Phcscriptcdn::VERSION
-  phc_gem_spec.authors     = ["BradPotts"]
+  phc_gem_spec.authors     = ["PHCDevworks"]
   phc_gem_spec.email       = ["info@phcdevworks.com"]
   phc_gem_spec.homepage    = "https://phcdevworks.com/"
   phc_gem_spec.summary     = "Rails 5.2 App Engine"
@@ -16,7 +16,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
-  phc_gem_spec.add_dependency "rails", "~> 5.2", ">= 5.2.3"
+  phc_gem_spec.add_dependency 'rails', '~> 5.2', '>= 5.2.4.3'
 
   # Admin Panel Theme Dependencies
   phc_gem_spec.add_dependency "phcadmin1", "~> 51.2"
@@ -37,25 +37,25 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency "phctheme7", "~> 5.2"
   
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency "phccorehelpers", "~> 7.2"
-  phc_gem_spec.add_dependency "phcmenus", "~> 5.2"
-  phc_gem_spec.add_dependency "phcnotifi", "~> 49.2"
-  phc_gem_spec.add_dependency "phctitleseo", "~> 48.2"
+  phc_gem_spec.add_dependency "phccorehelpers", "~> 7.3"
+  phc_gem_spec.add_dependency "phcmenus", "~> 5.3"
+  phc_gem_spec.add_dependency "phcnotifi", "~> 49.3"
+  phc_gem_spec.add_dependency "phctitleseo", "~> 48.3"
   
   # Frontend Dependencies
   phc_gem_spec.add_dependency "friendly_id", "~> 5.3"
   phc_gem_spec.add_dependency "gravtastic", "~> 3.2"
   
   # Images & Service Support Dependencies
-  phc_gem_spec.add_dependency "aws-sdk-s3", "~> 1.60"
-  phc_gem_spec.add_dependency "google-cloud-storage", "~> 1.25"
-  phc_gem_spec.add_dependency "mini_magick", "~> 4.9"
+  phc_gem_spec.add_dependency "aws-sdk-s3", "~> 1.67"
+  phc_gem_spec.add_dependency "google-cloud-storage", "~> 1.26"
+  phc_gem_spec.add_dependency "mini_magick", "~> 4.10"
   
   # API Dependencies
-  phc_gem_spec.add_dependency "httparty", "~> 0.17"
+  phc_gem_spec.add_dependency "httparty", "~> 0.18"
   phc_gem_spec.add_dependency "multi_json", "~> 1.14"
   phc_gem_spec.add_dependency "oj", "~> 3.10"
-  phc_gem_spec.add_dependency "rabl", "~> 0.14.2"
+  phc_gem_spec.add_dependency "rabl", "~> 0.14.3"
   phc_gem_spec.add_dependency "responders", "~> 3.0"
   
   # Database & Paper Trail Dependencies
@@ -63,22 +63,22 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency "pg", "~> 1.2"
 
   # Security Dependencies
-  phc_gem_spec.add_dependency 'phcaccounts', '~> 42.2'
+  phc_gem_spec.add_dependency 'phcaccounts', '~> 42.3'
   
   # Development Dependencies
   phc_gem_spec.add_development_dependency "sqlite3", "~> 1.4"
-  phc_gem_spec.add_development_dependency "byebug", "~> 11.0"
-  phc_gem_spec.add_development_dependency "capybara", "~> 3.30"
-  phc_gem_spec.add_development_dependency "minitest", "~> 5.13"
-  phc_gem_spec.add_development_dependency "rspec-rails", "~> 3.9"
+  phc_gem_spec.add_development_dependency "byebug", "~> 11.1"
+  phc_gem_spec.add_development_dependency "capybara", "~> 3.32"
+  phc_gem_spec.add_development_dependency "minitest", "~> 5.14"
+  phc_gem_spec.add_development_dependency "rspec-rails", "~> 4.0"
 
-  phc_gem_spec.add_development_dependency "factory_bot_rails", "~> 5.1"
-  phc_gem_spec.add_development_dependency "faker", "~> 2.10"
-  phc_gem_spec.add_development_dependency "launchy", "~> 2.4"
+  phc_gem_spec.add_development_dependency "factory_bot_rails", "~> 5.2"
+  phc_gem_spec.add_development_dependency "faker", "~> 2.12"
+  phc_gem_spec.add_development_dependency "launchy", "~> 2.5"
   
   # Extra Development Dependencies
   phc_gem_spec.add_development_dependency "nokogiri", "~> 1.10"
-  phc_gem_spec.add_development_dependency "database_cleaner", "~> 1.7"
+  phc_gem_spec.add_development_dependency "database_cleaner", "~> 1.8"
   phc_gem_spec.add_development_dependency "selenium-webdriver", "~> 3.142"
 
 end
