@@ -1,3 +1,3 @@
 module Phcscriptcdn
-  VERSION = "54.3.0"
+  VERSION = "54.4.0"
 end
